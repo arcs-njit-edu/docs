@@ -1,6 +1,0 @@
-[submodule "ARCS-HPC-News"]
-	path = news
-	url = https://github.com/arcs-njit-edu/ARCS-HPC-News
-[submodule "reveal.js"]
-	path = reveal.js
-	url = https://github.com/hakimel/reveal.js.git
