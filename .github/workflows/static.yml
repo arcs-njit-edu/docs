@@ -17,6 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
+          git config --global user.email "am2455@njit.edu"
+          git config --global user.name "absrocks"
           git submodule add https://github.com/arcs-njit-edu/news.git
           git submodule update --init --recursive
           git commit -m "Add submodule"
