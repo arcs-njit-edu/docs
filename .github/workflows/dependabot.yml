@@ -1,0 +1,12 @@
+version: 2
+registries:
+  news-github:
+    type: arcs-news
+    url: https://github.com/arcs-njit-edu/news
+updates:
+  - package-ecosystem: gitsubmodule
+    directory: "/Docs"
+    registries:
+      - news-github
+    schedule:
+      interval: "monthly"
