@@ -19,6 +19,7 @@ jobs:
       - run: |
           git config --global user.email "am2455@njit.edu"
           git config --global user.name "absrocks"
+          git rm -r --cached .
           git submodule add https://github.com/arcs-njit-edu/news.git docs/news
           git submodule update --init --recursive
           git commit -m "Add submodule"
