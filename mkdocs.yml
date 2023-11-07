@@ -103,6 +103,6 @@ plugins:
   - awesome-pages
   - autolinks
   - blog:
-      blog_dir: docs/news
+      blog_dir: news
       authors: false
       archive: false
