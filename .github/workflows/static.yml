@@ -12,21 +12,15 @@ on:
 permissions:
   contents: write
 jobs:
-  add_submodule:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Add Git Submodule
+      - uses: actions/checkout@v4
       - run: |
           git submodule add https://github.com/arcs-njit-edu/news.git
           git submodule update --init --recursive
           git commit -m "Add submodule"
           git push
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
