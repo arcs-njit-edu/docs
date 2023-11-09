@@ -1,4 +1,4 @@
-# Incoming cluster
+# Current cluster
 
 * [Lochness](lochness.md)
 
