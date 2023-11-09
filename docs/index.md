@@ -13,10 +13,6 @@ NJIT provides High Performance Computing resources to support scientific computi
 
     See the list of availble clusters and their specifications, how to access them in [Clusters](clusters).
 
-!!! njit inline "Cluster Access"
-
-    See [Cluster Access](cluster_access.md) for instructions to access NJIT HPC clusters from a local computer.
-
 !!! njit inline "Software Modules"
 
     See [Software Modules](Software/index.md) for list of software packages installed on our cluster.
