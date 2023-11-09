@@ -29,9 +29,9 @@ For prompt response, please consider the following when submitting a ticket.
      - To use HPC in courses, the course instructor should submit a request and including UCID's for the accounts to be created.
      - Guest Accounts: Faculty can use [Service Now](https://njit.service-now.com/sp?id=sc_cat_item&sys_id=3b5796001b9b59507241400abc4bcb80&sysparm_category=405f99b41b5b1d507241400abc4bcb6b) to request Guest Access on *HPC resources only* for their external collaborators for a period of 1 year (can be renewed annually). 
   
-- Storage Requests 
-  - Requests for storage must come from faculty advisors by sending an email to [hpc@njit.edu](mailto:hpc@njit.edu). The request should include the amount of storage needed.
+- Storage Requests
+     - Requests for storage must come from faculty advisors by sending an email to [hpc@njit.edu](mailto:hpc@njit.edu). The request should include the amount of storage needed.
 
 - Consultations
-  - We also provide one-on-one consultations for HPC related issues. Schedule an appointment directly from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc). Please note that, when requesting assistance provide the information described above (where applicable), so we can most effectively assist you. Before requesting one-on-one consultations, please send you query to [hpc@njit.edu](mailto:hpc@njit.edu), so that an incident number will be created which is required to schedule an appointment. 
+     - We also provide one-on-one consultations for HPC related issues. Schedule an appointment directly from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc). Please note that, when requesting assistance provide the information described above (where applicable), so we can most effectively assist you. Before requesting one-on-one consultations, please send you query to [hpc@njit.edu](mailto:hpc@njit.edu), so that an incident number will be created which is required to schedule an appointment. 
 
