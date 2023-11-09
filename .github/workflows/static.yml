@@ -23,11 +23,6 @@ jobs:
           git config --global user.name "absrocks"
           git submodule add https://github.com/arcs-njit-edu/news.git docs/news
           git submodule update --init --recursive
-          git status --ignore-submodules=none
-          git add .
-          git diff --cached --submodule
-          git commit -m "Add submodule"
-          git push
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
