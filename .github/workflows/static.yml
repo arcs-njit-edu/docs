@@ -17,6 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: |
+          git rm docs/news
           rm -rf docs/news
           git config --global user.email "am2455@njit.edu"
           git config --global user.name "absrocks"
