@@ -4,9 +4,6 @@ Welcome to HPC at NJIT.
 
 NJIT provides High Performance Computing resources to support scientific computing for faculty and students. These resources include CPU nodes, GPU nodes, parallel storage, high speed, low latency Infiniband networking and a fully optimized scientific software stack.
 
-## Incoming cluster
-
-* [Wulver](wulver.md)
 
 !!! njit inline "Contact Us"
 
@@ -14,7 +11,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 !!! njit inline "Clusters"
 
-    See the list of clusters in [Clusters](clusters).
+    See the list of clusters offered by NJIT in [Clusters](clusters).
 
 !!! njit inline "Cluster Access"
 
