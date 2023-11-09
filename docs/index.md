@@ -11,7 +11,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 !!! njit inline "Clusters"
 
-    See the list of availble clusters and their specifications, how to access them in [Clusters](clusters).
+    See the list of availble clusters, their specifications, and how to access them in [Clusters](clusters).
 
 !!! njit inline "Software Modules"
 
