@@ -348,7 +348,7 @@ User can use the following job script to run the script.
         module purge > /dev/null 2>&1
         module load wulver # Load slurm, easybuild
         module load Anaconda3
-        source $HOME/conda.sh
+        source $HOME/conda3.sh
         conda activate torch-cuda
         srun python touch_tensor.py
         ```
@@ -368,7 +368,7 @@ User can use the following job script to run the script.
         # Purge any module loaded by default
         module purge > /dev/null 2>&1
         module load Anaconda3
-        source $HOME/conda.sh
+        source $HOME/conda3.sh
         conda activate torch-cuda
         srun python touch_tensor.py
         ```
