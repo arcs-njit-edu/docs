@@ -62,6 +62,22 @@ To create an environment use the `conda create` command. Once the environment is
     # <<< conda initialize <<<
     ```
 Before activating the environment You need to use `source ~/conda3.sh` to activate the path.
+To create an environment use `conda create --name ENV python=3.9` where `ENV` is the name of the environment. You can choose any environment name of your choice.
+
+### Activate and Deactivate Conda Environment
+Once you create an environment, you need to activate the environment to install python packages
+Use `conda activate ENV` to activate Conda environment (`ENV` is the name of the environment). Following the activation of the conda environment, the name of the environment appears at the left of the hostname in the terminal. 
+
+```bash
+login1-41 ~ >: conda activate ENV
+(ENV) login-41 ~ >:
+```
+
+Once you finish the installation of python packages, deactivate the conda environment using `conda deactivate ENV`. 
+
+!!! warning
+
+    Please note that you may need to create multiple Conda environments, as some packages may not work in a single environment. For example, if you want to install PyTorch and TensorFlow, it's advisibale to create seaprate environment as sometimes both packages in a single environment can cause error. To create another environment make sure to deactivate    previous environmrnt by using `conda deactivate` command. 
 
 ### Examples
 Here, we provide instructions on how to use `conda` to install application 
@@ -189,7 +205,7 @@ Simple tensorflow test program to make sure the virtual env can access a gpu. Pr
         module purge > /dev/null 2>&1
         module load wulver # Load slurm, easybuild
         module load Anaconda3
-        source $HOME/conda.sh
+        source $HOME/conda3.sh
         conda activate tf
         srun python tf.gpu.test.py
         ```
@@ -209,7 +225,7 @@ Simple tensorflow test program to make sure the virtual env can access a gpu. Pr
         # Purge any module loaded by default
         module purge > /dev/null 2>&1
         module load Anaconda3
-        source $HOME/conda.sh
+        source $HOME/conda3.sh
         conda activate tf
         srun python tf.gpu.test.py
         ```
@@ -245,6 +261,8 @@ No modules loaded
 2020-07-29 17:14:19.819082: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/device:GPU:0 with 15064 MB memory) -> physical GPU (device: 0, name: Tesla P100-PCIE-16GB, pci bus id: 0000:02:00.0, compute capability: 6.0)
 Default GPU Device: /device:GPU:0
 ```
+Next, deactivate the environment using `conda deactivate tf` command.
+
 #### Install PyTorch with GPU
 To install PyTorch with GPU, load the `Anaconda3` module as described above and then use the following
 
