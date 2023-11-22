@@ -28,6 +28,11 @@ It is primarily designed for biochemical molecules like proteins, lipids and nuc
     print(soft.to_markdown(index=False))
     ```
 
+## Application Information, Documentation
+The documentation of OpenFOAM is available at [GROMACS Documentation](https://manual.gromacs.org/current/index.html), where you can find the tutorials in topologies, input file format, setting parameters etc. 
+
+## Using GROMACS
+
 ## Related Applications
 
 * [LAMMPS](lammps.md)
