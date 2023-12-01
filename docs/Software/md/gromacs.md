@@ -65,7 +65,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         cd $OUTPUT_DIR
 
         gmx mdrun -v -deffnm em -ntmpi 8 -ntomp 2 -nb gpu
-
+        ```
     === "Lochness"
         
         ```slurm
@@ -105,7 +105,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         #
         ##############################################
         gmx mdrun -v -deffnm em -nt 16 -nb gpu
-
+        ```
 ??? example "Sample Batch Script to Run GROMACS on CPU gmx_cpu.submit.sh"
 
     === "Wulver"
@@ -136,7 +136,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         cd $OUTPUT_DIR
 
         gmx mdrun -v -deffnm em -ntmpi 8 -ntomp 2 -nb gpu
-
+        ```
     === "Lochness"
         
         ```slurm
@@ -176,7 +176,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         #
         ##############################################
         gmx mdrun -v -deffnm em -nt 16 -nb gpu
-
+        ```
 The tutorial in the above-mentioned job script can be found in 
 
 === "Wulver" 
