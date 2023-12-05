@@ -6,7 +6,7 @@ As part of the HPC cluster migration from Lochness to Wulver, there will be chan
 
 ### `/research` Directory
 
-The `/research` directory from Lochness will be available on Wulver as `/research`. This ensures that users can seamlessly access their research-related files and data in the familiar directory structure. Any content, including subdirectories and files, within `/research` on Lochness will be migrated to the corresponding location on Wulver.
+The `/research` directory from Lochness will be mounted on Wulver as `/research`. This ensures that users can seamlessly access their research-related files and data in the familiar directory structure. All content, including subdirectories and files, within `/research` on Lochness will be avaialble on the same location on Wulver.
 
 ### Home Directories
 
