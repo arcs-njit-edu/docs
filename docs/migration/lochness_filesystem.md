@@ -1,15 +1,16 @@
-```markdown
-# Lochness to Wulver Migration: File Directory Changes
+---
+title: Lochness to Wulver Migration: File Directory Changes
+---
 
-## Overview
+=== Overview
 
 As part of the HPC cluster migration from Lochness to Wulver, there will be changes in the file directory structure to ensure a smooth transition. This documentation provides details on how the `/research` and home directories will be handled on the new Wulver cluster.
 
-## `/research` Directory
+=== `/research` Directory
 
 The `/research` directory from Lochness will be available on Wulver as `/research`. This ensures that users can seamlessly access their research-related files and data in the familiar directory structure. Any content, including subdirectories and files, within `/research` on Lochness will be migrated to the corresponding location on Wulver.
 
-## Home Directories
+=== Home Directories
 
 ### Lochness Home Directory
 
@@ -28,16 +29,3 @@ Users are advised to review and transfer any necessary files from `/oldhome` on 
 - **File Access:** Users will have continued access to their research files under `/research` on Wulver and their home directories under `/oldhome` on Lochness until the specified locking date.
 
 Please make the necessary adjustments to your workflows and ensure a smooth transition by reviewing and moving your files as needed. If you have any questions or concerns, feel free to reach out to our support team.
-
-Thank you for your cooperation.
-
-Best regards,
-
-[Your Name]  
-[Your Title]  
-[Your Contact Information]  
-[Your Department]  
-[Your Institution]
-```
-
-Feel free to copy and paste this content into your Git site, and don't forget to commit and push the changes to update the site.
