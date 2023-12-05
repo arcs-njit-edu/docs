@@ -40,4 +40,4 @@ Best regards,
 [Your Institution]
 ```
 
-This markdown document provides information about the changes in file directory structure during the HPC cluster migration, specifically addressing the availability of the `/research` directory on Wulver, the relocation of home directories to `/oldhome`, and the locking of the `/oldhome` directory after migration.
+Feel free to copy and paste this content into your Git site, and don't forget to commit and push the changes to update the site.
