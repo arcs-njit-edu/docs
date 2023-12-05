@@ -1,4 +1,3 @@
-```markdown
 # Lochness Node Owners Information
 
 ## Overview
