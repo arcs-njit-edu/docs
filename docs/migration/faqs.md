@@ -148,7 +148,7 @@ Assistance will be provided to help you adapt your code and scripts to the new e
 ### Question 12: How can I request additional resources or discuss specific requirements for my research projects on Wulver?
 <details>
 <summary> <b>Answer</b>: </summary>
- To request additional resources or discuss specific requirements for your research projects on Wulver, please reach out to us at hpc@njit.edu. Our team is ready to assist you with any inquiries related to resource allocation, project needs, or any other aspects that can enhance your experience on the Wulver cluster. Your requests will be promptly addressed, and we are committed to providing the support necessary for the success of your research endeavors.
+ To request additional resources or discuss specific requirements for your research projects on Wulver, please reach out to us at [hpc@njit.edu](mailto:hpc@njit.edu). Our team is ready to assist you with any inquiries related to resource allocation, project needs, or any other aspects that can enhance your experience on the Wulver cluster. Your requests will be promptly addressed, and we are committed to providing the support necessary for the success of your research endeavors.
 </details>
 
 
