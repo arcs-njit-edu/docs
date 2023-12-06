@@ -1,4 +1,4 @@
-## The following are question we have received over the last several weeks regarding the migration from Lochness to Wulver [hpc.njit./edu](https://hpc.njit.edu)
+## The following are question we have received over the last several weeks regarding the migration from Lochness to Wulver.
 
 ### Question 1: What is the timeline for the migration from Lochness to Wulver?
 <details>
