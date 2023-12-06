@@ -23,7 +23,7 @@ We anticipate the migration process to be complete by the end of February 2024. 
 ### Question 3: What specific steps should I take to prepare for the migration?
 <details>
 <summary> <b>Answer</b>: </summary>
-To prepare for the migration, there are a few crucial steps:
+To prepare for the migration, there are a few crucial steps
   
 	-Provide a List of Current Students and Postdocs: 
 		-Please share with us an updated list of current students and postdocs who are actively using the HPC resources on Lochness. This information will ensure that user accounts are accurately migrated to Wulver, and access is maintained for the relevant individuals.
