@@ -2,7 +2,7 @@
 
 ### Question 1: What is the timeline for the migration from Lochness to Wulver?
 <details>
-<summary>### Answer: </summary>
+### <summary> Answer: </summary>
  
 We anticipate the migration process to be complete by the end of February 2024. The migration will commence on January 16, 2024, and our team is dedicated to ensuring a smooth transition for all users. We will keep you informed about any updates or changes to the timeline as the migration progresses. Your cooperation and understanding during this period are greatly appreciated. If you have any specific concerns about the timeline, please feel free to reach out to our support team for further clarification.
 </details>
@@ -27,8 +27,10 @@ To prepare for the migration, there are a few crucial steps:
   
 	-Provide a List of Current Students and Postdocs: 
 		-Please share with us an updated list of current students and postdocs who are actively using the HPC resources on Lochness. This information will ensure that user accounts are accurately migrated to Wulver, and access is maintained for the relevant individuals.
+
 	-List of Required Software: 
 		-Compile a list of software applications that are essential for your research. This includes both commonly used software and any specialized tools unique to your work. Knowing your software requirements enables us to ensure that the necessary applications are available and properly configured on Wulver.
+
 	-Planning for Former Students: 
 		-If you have former students who may still have data or files on Lochness, it's essential to plan for their data migration or archival. We recommend reaching out to former students to coordinate any necessary data transfers or backups to avoid potential data loss.
   
