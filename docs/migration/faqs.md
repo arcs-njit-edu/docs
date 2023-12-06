@@ -1,6 +1,6 @@
 ## The following are question we have received over the last several weeks regarding the migration from Lochness to Wulver.
 
-### Question 1: What is the timeline for the migration from Lochness to Wulver?
+###  What is the timeline for the migration from Lochness to Wulver?
 <details>
 <summary> <b>Answer</b>: </summary>
  
@@ -10,7 +10,7 @@ We anticipate the migration process to be complete by the end of February 2024. 
 
 
 
-### Question 2: How will the migration impact my existing workflows and computations?
+### How will the migration impact my existing workflows and computations?
 <details>
 <summary> <b>Answer</b>: </summary>
  The research facilitation team is committed to assisting you during the migration process. Our team will work closely with you to ensure that your existing workflows and computations are seamlessly transferred to Wulver. We understand the importance of minimizing disruptions to your research activities, and our experts will provide guidance and support to address any compatibility issues that may arise. You can expect personalized assistance to make the transition as smooth as possible. If you have specific concerns about your workflows, please don't hesitate to reach out to our team for tailored support.
@@ -20,7 +20,7 @@ We anticipate the migration process to be complete by the end of February 2024. 
 
 
 
-### Question 3: What specific steps should I take to prepare for the migration?
+### What specific steps should I take to prepare for the migration?
 <details>
 <summary> <b>Answer</b>: </summary>
 To prepare for the migration, there are a few crucial steps:
@@ -41,7 +41,7 @@ To prepare for the migration, there are a few crucial steps:
 
 
 
-### Question 4: Will there be any downtime during the migration, and how will it affect my research activities?
+### Will there be any downtime during the migration, and how will it affect my research activities?
 <details>
 <summary> <b>Answer</b>: </summary>
  Once the migration has started for your group, Lochness will be inaccessible. If access to Lochness is critical for specific tasks during this period, we strongly encourage you to reach out to us. We understand that some users may have time-sensitive activities or dependencies on Lochness, and we are committed to working with you to find solutions that meet your needs. Please contact our support team to discuss your specific requirements, and we will do our best to accommodate your situation during the migration process.
@@ -49,7 +49,7 @@ To prepare for the migration, there are a few crucial steps:
 </details>
 <p>
 
-### Question 5: Is there a plan for backing up and restoring data during the migration process?
+### Is there a plan for backing up and restoring data during the migration process?
 <details>
 <summary> <b>Answer</b>: </summary>
  Yes, there is a plan in place for data continuity. The data on Lochness resides on a shared filesystem, and these same filesystems will be mounted and available on Wulver post-migration. This approach ensures that your data remains accessible and seamlessly transfers to the new cluster.
@@ -61,7 +61,7 @@ To prepare for the migration, there are a few crucial steps:
 
 
 
-### Question 6: What changes will occur in the file directory structure, especially regarding the `/research` and home directories?
+### What changes will occur in the file directory structure, especially regarding the `/research` and home directories?
 <details>
 <summary> <b>Answer</b>: </summary>
 With the migration to Wulver, there will be changes in the file directory structure:
@@ -79,7 +79,7 @@ These changes are designed to optimize the file organization on Wulver while mai
 
 
 
-### Question 7: How will the migration impact access to specialized software or applications that I currently use on Lochness?
+### How will the migration impact access to specialized software or applications that I currently use on Lochness?
 <details>
 <summary> <b>Answer</b>: </summary>
  The research facilitation team is dedicated to ensuring a smooth transition for users in terms of software and applications:
@@ -96,7 +96,7 @@ Our goal is to minimize any disruptions to your research activities and provide 
 
 
 
-### Question 8: Can I continue using Lochness for specific tasks during the migration, or will it be completely inaccessible?
+### Can I continue using Lochness for specific tasks during the migration, or will it be completely inaccessible?
 <details>
 <summary> <b>Answer</b>: </summary>
  Once the migration has started for your group, Lochness will be inaccessible. If access to Lochness is critical for specific tasks during this period, we strongly encourage you to reach out to us. We understand that some users may have time-sensitive activities or dependencies on Lochness, and we are committed to working with you to find solutions that meet your needs. Please contact our support team to discuss your specific requirements, and we will do our best to accommodate your situation during the migration process.
@@ -106,7 +106,7 @@ Our goal is to minimize any disruptions to your research activities and provide 
 
 
 
-### Question 9: What happens to my existing job submissions and queued jobs during the migration process?
+### What happens to my existing job submissions and queued jobs during the migration process?
 <details>
 <summary> <b>Answer</b>: </summary>
  For the most part, the migration will start after all running jobs have been completed. We understand the importance of job completion for ongoing research activities. Accommodations will be made for long-running jobs that cannot be checkpointed.
@@ -117,7 +117,7 @@ Our goal is to minimize any disruptions to your research activities and provide 
 
 
 
-### Question 10: Are there any adjustments needed for code or scripts to ensure compatibility with Wulver?
+### Are there any adjustments needed for code or scripts to ensure compatibility with Wulver?
 <details>
 <summary> <b>Answer</b>: </summary>
 Yes, adjustments will be required for code or submission scripts to ensure compatibility with Wulver:
@@ -134,7 +134,7 @@ Assistance will be provided to help you adapt your code and scripts to the new e
 
 
 
-### Question 11: Will there be training sessions or documentation available to help faculty and researchers transition smoothly to Wulver?
+### Will there be training sessions or documentation available to help faculty and researchers transition smoothly to Wulver?
 <details>
 <summary> <b>Answer</b>: </summary>
  While there are no official training sessions scheduled at this point, comprehensive documentation is available at https://hpc.njit.edu to assist faculty and researchers during the transition to Wulver.
@@ -145,7 +145,7 @@ Assistance will be provided to help you adapt your code and scripts to the new e
 
 
 
-### Question 12: How can I request additional resources or discuss specific requirements for my research projects on Wulver?
+### How can I request additional resources or discuss specific requirements for my research projects on Wulver?
 <details>
 <summary> <b>Answer</b>: </summary>
  To request additional resources or discuss specific requirements for your research projects on Wulver, please reach out to us at hpc@njit.edu. Our team is ready to assist you with any inquiries related to resource allocation, project needs, or any other aspects that can enhance your experience on the Wulver cluster. Your requests will be promptly addressed, and we are committed to providing the support necessary for the success of your research endeavors.
@@ -155,7 +155,7 @@ Assistance will be provided to help you adapt your code and scripts to the new e
 
 
 
-### Question 13: What support services will be available during and after the migration to address any issues or concerns?
+### What support services will be available during and after the migration to address any issues or concerns?
 <details>
   
 <summary> <b>Answer</b>: </summary>
@@ -177,7 +177,7 @@ Assistance will be provided to help you adapt your code and scripts to the new e
 
 
 
-### Question 14: Can I test my applications or simulations on Wulver before the migration to ensure compatibility?
+### Can I test my applications or simulations on Wulver before the migration to ensure compatibility?
 <details>
   
 <summary> <b>Answer</b>: </summary>
@@ -190,7 +190,7 @@ Assistance will be provided to help you adapt your code and scripts to the new e
 
 
 
-### Question 15: How long will the `/oldhome` directory on Lochness be accessible after the migration, and what actions should I take regarding data stored there?
+### How long will the `/oldhome` directory on Lochness be accessible after the migration, and what actions should I take regarding data stored there?
 <details>
   
 <summary> <b>Answer</b>: </summary>
