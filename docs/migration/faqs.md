@@ -137,7 +137,7 @@ Assistance will be provided to help you adapt your code and scripts to the new e
 ### Question 11: Will there be training sessions or documentation available to help faculty and researchers transition smoothly to Wulver?
 <details>
 <summary> <b>Answer</b>: </summary>
- While there are no official training sessions scheduled at this point, comprehensive documentation is available at [hpc.njit.edu](https://hpc.njit.edu) to assist faculty and researchers during the transition to Wulver.
+ While there are no official training sessions scheduled at this point, comprehensive documentation is available at <a href="https://hpc.njit.edu" hpc.njit.edu </a> to assist faculty and researchers during the transition to Wulver.
   In addition to documentation, the research facilitation team is committed to providing personal assistance to faculty and researchers. If you have specific questions, require hands-on support, or need guidance on using Wulver effectively for your research, please do not hesitate to reach out to the research facilitation team. They are here to ensure that you receive the assistance you need for a successful transition.
 </details>
 
