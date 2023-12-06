@@ -120,7 +120,7 @@ Our goal is to minimize any disruptions to your research activities and provide 
 ### Question 10: Are there any adjustments needed for code or scripts to ensure compatibility with Wulver?
 <details>
 <summary> <b>Answer</b>: </summary>
- Yes, adjustments will be required for code or submission scripts to ensure compatibility with Wulver:
+Yes, adjustments will be required for code or submission scripts to ensure compatibility with Wulver:
   
  - Submit Script Changes: 
     - Submit scripts will need to be modified to accommodate changes in partitions, hardware configurations, policies, and filesystems on Wulver. The research facilitation team will provide guidance and support in updating your submit scripts for seamless job submissions.
