@@ -64,12 +64,11 @@ To prepare for the migration, there are a few crucial steps:
 ### Question 6: What changes will occur in the file directory structure, especially regarding the `/research` and home directories?
 <details>
 <summary> <b>Answer</b>: </summary>
- With the migration to Wulver, there will be changes in the file directory structure:
-  
-    Filesystems on Wulver: Wulver will have three filesystems available for use: `/home`, `/project`, and `/scratch`.
-    Availability of `/research` Directory: The `/research` directory from Lochness will be mounted on Wulver and will be available for use. This ensures continuity for research-related files and data.
-    Lochness `/home` Directory on Wulver: The Lochness `/home` directory will be mounted on the Wulver login node only as `/oldhome`. This allows users to access their personal home directories from Lochness during the migration period.
-  
+With the migration to Wulver, there will be changes in the file directory structure:
+
+Filesystems on Wulver: Wulver will have three filesystems available for use: `/home`, `/project`, and `/scratch`.
+Availability of `/research` Directory: The `/research` directory from Lochness will be mounted on Wulver and will be available for use. This ensures continuity for research-related files and data.
+Lochness `/home` Directory on Wulver: The Lochness `/home` directory will be mounted on the Wulver login node only as `/oldhome`. This allows users to access their personal home directories from Lochness during the migration period.
   These changes are designed to optimize the file organization on Wulver while maintaining accessibility to critical research data. The research facilitation team will work closely with users to ensure a smooth transition of data and assist in adapting to the new file directory structure. If you have specific questions or require assistance with data migration, please don't hesitate to contact our support team.
 </details>
 
