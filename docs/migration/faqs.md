@@ -122,10 +122,12 @@ Our goal is to minimize any disruptions to your research activities and provide 
 <summary> <b>Answer</b>: </summary>
  Yes, adjustments will be required for code or submission scripts to ensure compatibility with Wulver:
   
-    Submit Script Changes: Submit scripts will need to be modified to accommodate changes in partitions, hardware configurations, policies, and filesystems on Wulver. The research facilitation team will provide guidance and support in updating your submit scripts for seamless job submissions.
-    Code Recompilation: Due to differences in hardware, code may need to be recompiled to ensure optimal performance on Wulver. The research facilitation team is ready to assist you in this process, offering support to recompile code and address any related issues.
+ - Submit Script Changes: 
+    - Submit scripts will need to be modified to accommodate changes in partitions, hardware configurations, policies, and filesystems on Wulver. The research facilitation team will provide guidance and support in updating your submit scripts for seamless job submissions.
+ - Code Recompilation: 
+    - Due to differences in hardware, code may need to be recompiled to ensure optimal performance on Wulver. The research facilitation team is ready to assist you in this process, offering support to recompile code and address any related issues.
   
-  Assistance will be provided to help you adapt your code and scripts to the new environment on Wulver. If you have specific concerns or require support in making these adjustments, please reach out to our research facilitation team, and they will work with you to ensure a smooth transition.
+Assistance will be provided to help you adapt your code and scripts to the new environment on Wulver. If you have specific concerns or require support in making these adjustments, please reach out to our research facilitation team, and they will work with you to ensure a smooth transition.
 </details>
 
 
