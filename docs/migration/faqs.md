@@ -84,12 +84,12 @@ These changes are designed to optimize the file organization on Wulver while mai
 <summary> <b>Answer</b>: </summary>
  The research facilitation team is dedicated to ensuring a smooth transition for users in terms of software and applications:
   
-    Installation Support: The research facilitation team will handle the installation of necessary software on Wulver, ensuring that essential tools and applications are available for your research.
-    Code Compilation Assistance: If your research involves custom code that needs compilation, the research facilitation team will provide assistance to ensure a successful compilation on Wul
-
-ver. This support extends to helping users adapt their code to the new environment.
+- Installation Support: 
+    - The research facilitation team will handle the installation of necessary software on Wulver, ensuring that essential tools and applications are available for your research.
+- Code Compilation Assistance: 
+    - If your research involves custom code that needs compilation, the research facilitation team will provide assistance to ensure a successful compilation on Wul ver. This support extends to helping users adapt their code to the new environment.
   
-  Our goal is to minimize any disruptions to your research activities and provide the necessary support for a seamless transition. If you have specific software requirements or need assistance with code compilation, please reach out to the research facilitation team, and they will be happy to assist you.
+Our goal is to minimize any disruptions to your research activities and provide the necessary support for a seamless transition. If you have specific software requirements or need assistance with code compilation, please reach out to the research facilitation team, and they will be happy to assist you.
 </details>
 
 
