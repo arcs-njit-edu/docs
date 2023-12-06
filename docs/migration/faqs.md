@@ -26,13 +26,13 @@ We anticipate the migration process to be complete by the end of February 2024. 
 To prepare for the migration, there are a few crucial steps:
 
  - Provide a List of Current Students and Postdocs: 
-  - Please share with us an updated list of current students and postdocs who are actively using the HPC resources on Lochness. This information will ensure that user accounts are accurately migrated to Wulver, and access is maintained for the relevant individuals.
+    - Please share with us an updated list of current students and postdocs who are actively using the HPC resources on Lochness. This information will ensure that user accounts are accurately migrated to Wulver, and access is maintained for the relevant individuals.
 
  - List of Required Software: 
-  - Compile a list of software applications that are essential for your research. This includes both commonly used software and any specialized tools unique to your work. Knowing your software requirements enables us to ensure that the necessary applications are available and properly configured on Wulver.
+    - Compile a list of software applications that are essential for your research. This includes both commonly used software and any specialized tools unique to your work. Knowing your software requirements enables us to ensure that the necessary applications are available and properly configured on Wulver.
 
  - Planning for Former Students: 
-  - If you have former students who may still have data or files on Lochness, it's essential to plan for their data migration or archival. We recommend reaching out to former students to coordinate any necessary data transfers or backups to avoid potential data loss.
+    - If you have former students who may still have data or files on Lochness, it's essential to plan for their data migration or archival. We recommend reaching out to former students to coordinate any necessary data transfers or backups to avoid potential data loss.
   
   These steps will contribute to a successful migration, allowing us to tailor the process to your specific needs. If you have any questions or need assistance with these preparations, please contact our support team.
 </details>
