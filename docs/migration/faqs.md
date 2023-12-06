@@ -137,7 +137,7 @@ Assistance will be provided to help you adapt your code and scripts to the new e
 ### Question 11: Will there be training sessions or documentation available to help faculty and researchers transition smoothly to Wulver?
 <details>
 <summary> <b>Answer</b>: </summary>
- While there are no official training sessions scheduled at this point, comprehensive documentation is available at hpc.njit.edu to assist faculty and researchers during the transition to Wulver.
+ While there are no official training sessions scheduled at this point, comprehensive documentation is available at https://hpc.njit.edu to assist faculty and researchers during the transition to Wulver.
   In addition to documentation, the research facilitation team is committed to providing personal assistance to faculty and researchers. If you have specific questions, require hands-on support, or need guidance on using Wulver effectively for your research, please do not hesitate to reach out to the research facilitation team. They are here to ensure that you receive the assistance you need for a successful transition.
 </details>
 
@@ -148,7 +148,7 @@ Assistance will be provided to help you adapt your code and scripts to the new e
 ### Question 12: How can I request additional resources or discuss specific requirements for my research projects on Wulver?
 <details>
 <summary> <b>Answer</b>: </summary>
- To request additional resources or discuss specific requirements for your research projects on Wulver, please reach out to us at [hpc@njit.edu](mailto:hpc@njit.edu). Our team is ready to assist you with any inquiries related to resource allocation, project needs, or any other aspects that can enhance your experience on the Wulver cluster. Your requests will be promptly addressed, and we are committed to providing the support necessary for the success of your research endeavors.
+ To request additional resources or discuss specific requirements for your research projects on Wulver, please reach out to us at hpc@njit.edu. Our team is ready to assist you with any inquiries related to resource allocation, project needs, or any other aspects that can enhance your experience on the Wulver cluster. Your requests will be promptly addressed, and we are committed to providing the support necessary for the success of your research endeavors.
 </details>
 
 
