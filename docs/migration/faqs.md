@@ -1,26 +1,19 @@
 ## The following are question we have received over the last several weeks regarding the migration from Lochness to Wulver.
 
 ###  What is the timeline for the migration from Lochness to Wulver?
-<details>
-<summary> <b>Answer</b>: </summary>
- 
-We anticipate the migration process to be complete by the end of February 2024. The migration will commence on January 16, 2024, and our team is dedicated to ensuring a smooth transition for all users. We will keep you informed about any updates or changes to the timeline as the migration progresses. Your cooperation and understanding during this period are greatly appreciated. If you have any specific concerns about the timeline, please feel free to reach out to our support team for further clarification.
-</details>
+!!! note
 
-
-
+    We anticipate the migration process to be complete by the end of February 2024. The migration will commence on January 16, 2024, and our team is dedicated to ensuring a smooth transition for all users. We will keep you informed about any updates or changes to the timeline as the migration progresses. Your cooperation and understanding during this period are greatly appreciated. If you have any specific concerns about the timeline, please feel free to reach out to our support team for further clarification.
 
 ### How will the migration impact my existing workflows and computations?
-<details>
-<summary> <b>Answer</b>: </summary>
- The research facilitation team is committed to assisting you during the migration process. Our team will work closely with you to ensure that your existing workflows and computations are seamlessly transferred to Wulver. We understand the importance of minimizing disruptions to your research activities, and our experts will provide guidance and support to address any compatibility issues that may arise. You can expect personalized assistance to make the transition as smooth as possible. If you have specific concerns about your workflows, please don't hesitate to reach out to our team for tailored support.
 
-</details>
+!!! note
 
-
+     The research facilitation team is committed to assisting you during the migration process. Our team will work closely with you to ensure that your existing workflows and computations are seamlessly transferred to Wulver. We understand the importance of minimizing disruptions to your research activities, and our experts will provide guidance and support to address any compatibility issues that may arise. You can expect personalized assistance to make the transition as smooth as possible. If you have specific concerns about your workflows, please don't hesitate to reach out to our team for tailored support.
 
 
 ### What specific steps should I take to prepare for the migration?
+
 <details>
 <summary> <b>Answer</b>: </summary>
 To prepare for the migration, there are a few crucial steps:
