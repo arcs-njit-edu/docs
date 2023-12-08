@@ -41,27 +41,7 @@ module load Anaconda3
 ```
 
 ### Create Environment with `conda`
-To create an environment use the `conda create` command. Once the environment is created you need to create a file on `$HOME` directory and add the following 
- 
-??? Example "conda3.sh"
-    
-    ```bash
-    # >>> conda initialize >>>
-    # !! Contents within this block are managed by 'conda init' !!
-    __conda_setup="$('conda' 'shell.bash' 'hook' 2> /dev/null)"
-    if [ $? -eq 0 ]; then
-        eval "$__conda_setup"
-    else
-        if [ -f "$EBROOTANACONDA3/etc/profile.d/conda.sh" ]; then
-            . "$EBROOTANACONDA3/etc/profile.d/conda.sh"
-        else
-            export PATH="$EBROOTANACONDA3/bin:$PATH"
-        fi
-    fi
-    unset __conda_setup
-    # <<< conda initialize <<<
-    ```
-Before activating the environment You need to use `source ~/conda3.sh` to activate the path.
+To create an environment use the `conda create` command. Once the environment is created, you need to use `source conda.sh` to activate the path.
 To create an environment use `conda create --name ENV python=3.9` where `ENV` is the name of the environment. You can choose any environment name of your choice.
 
 ### Activate and Deactivate Conda Environment
@@ -77,7 +57,7 @@ Once you finish the installation of python packages, deactivate the conda enviro
 
 !!! warning
 
-    Please note that you may need to create multiple Conda environments, as some packages may not work in a single environment. For example, if you want to install PyTorch and TensorFlow, it's advisibale to create seaprate environment as sometimes both packages in a single environment can cause error. To create another environment make sure to deactivate    previous environmrnt by using `conda deactivate` command. 
+    Please note that you may need to create multiple Conda environments, as some packages may not work in a single environment. For example, if you want to install PyTorch and TensorFlow, it's advisibale to create seaprate environments as sometimes both packages in a single environment can cause error. To create another environment make sure to deactivate    previous environmrnt by using `conda deactivate` command. 
 
 ### Examples
 Here, we provide instructions on how to use `conda` to install application 
@@ -116,11 +96,10 @@ Proceed ([y]/n)?y
 #     $ conda deactivate
 ```
 
-and save this script`conda3.sh` in `$HOME` directory.
 
 Activate the new 'tf' environment
 ```bash
-login1-41 ~ >: source $HOME/conda3.sh
+login1-41 ~ >: source conda.sh
 login1-41 ~ >: conda activate tf
 (tf) login-41 ~ >:
 ```
@@ -205,7 +184,7 @@ Simple tensorflow test program to make sure the virtual env can access a gpu. Pr
         module purge > /dev/null 2>&1
         module load wulver # Load slurm, easybuild
         module load Anaconda3
-        source $HOME/conda3.sh
+        source conda.sh
         conda activate tf
         srun python tf.gpu.test.py
         ```
@@ -268,6 +247,7 @@ To install PyTorch with GPU, load the `Anaconda3` module as described above and 
 
 ```
 conda create --name torch-cuda python=3.7
+source conda.sh
 conda activate torch-cuda
 conda install -c "nvidia/label/cuda-11.7.0" cuda-toolkit
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
@@ -348,7 +328,7 @@ User can use the following job script to run the script.
         module purge > /dev/null 2>&1
         module load wulver # Load slurm, easybuild
         module load Anaconda3
-        source $HOME/conda3.sh
+        source conda.sh
         conda activate torch-cuda
         srun python touch_tensor.py
         ```
@@ -381,7 +361,7 @@ module load Mamba Anaconda3
 
 # create new environment
 mamba create --name env_name python numpy pandas 
-
+source conda.sh
 # install new pacakge into existing environment
 conda activate env_name
 mamba install scipy
