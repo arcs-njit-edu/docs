@@ -52,7 +52,15 @@ The most common commands are:
 ## Using SLURM on Wulver
 In Wulver, SLURM submission will have new requirements, intended for more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group account.
 
-1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter
+1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user ucid`.
+Replace `ucid` with your NJIT UCID and you can find PI's UCID under `Def Acct` column. For example, if your UCID is `ab1234`, then use the following 
+```bash
+   [ab1234@login01 ~]$ sacctmgr show user ab1234
+      User   Def Acct    Admin
+---------- ----------  ---------
+    ab1234     xy1234      None
+```
+Your PI's UCID is `xy1234`.
 2. Wulver has three partitions, differing in GPUs or RAM available:
 
 ```python exec="on"
