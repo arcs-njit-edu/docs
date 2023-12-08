@@ -131,3 +131,8 @@
      The `/oldhome` directory on Lochness will be accessible for 6 months after the migration is complete. During this period, users are advised to review and move their data to other locations on Wulver or archive it as needed. This timeframe provides a reasonable window for users to organize and transfer their data while ensuring a smooth transition.
     
       If you have specific questions about data migration or need assistance during this post-migration period, please reach out to our support team. We are here to help you with any further steps or considerations related to your data on Lochness.
+
+### Will AFS be available on Wulver?
+??? answer
+
+    The AFS will not be available on Wulver. However we will setup a self-serve procedure for researchers to move AFS files to `/research`. We can do this as part of the full migration process. Please reach out to us at [hpc@njit.edu](mailto:hpc@njit.edu) for any questions.
