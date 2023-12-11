@@ -59,8 +59,34 @@ Once you finish the installation of python packages, deactivate the conda enviro
 
     Please note that you may need to create multiple Conda environments, as some packages may not work in a single environment. For example, if you want to install PyTorch and TensorFlow, it's advisibale to create seaprate environments as sometimes both packages in a single environment can cause error. To create another environment make sure to deactivate    previous environmrnt by using `conda deactivate` command. 
 
+## Install Python Packages Via Conda
+Once Conda environment is activated, you can install packages via `conda install package_name` command. For example, if you want to install `matplotlib`, you need to use
+
+```bash
+(ENV) login-41 ~ >: conda install matplotlib
+```
+Make sure to activate conda environment prior to installing Python packages. 
+
+### Conda Channel
+Conda Channel refers to a repository or collection of software packages that are available for installation using Conda. Conda Channels are used to organize and distribute packages, and they play a crucial role in the Conda ecosystem. Channels can be specified using the `--channel` or `-c` option with the conda install command i.e. 
+`conda install -c channel_name package_name`. In the above example, if you want to specify the channel name to install `matlotlib`, you need to use
+
+```bash
+(ENV) login-41 ~ >: conda install -c conda-forge matplotlib
+```
+This will install `matpltlib` from `conda-forge` channel which is a community-maintained collection of Conda packages where wide range of packages contributed by the community are available. 
+Users can prioritize channels by listing them in a specific order, so that Conda searches channels in the order they are listed, installing the first version of a package that it finds. To list the channels, create a file `.condarc` in the `$HOME` directory and add the following
+
+```conda
+auto_activate_base: false
+channels:
+  - conda-forge
+  - defaults
+```
+The advantage of using `.condarc` is that you don't have to mention the channel name every time you install a package. However, please note that you still need to use the channel name if you want to install Python packages that require a specific channel other than the defaults channels (`conda-forge` and `defaults`).
+
 ### Examples
-Here, we provide instructions on how to use `conda` to install application 
+Here, we provide some examples on how to use `conda` to install application 
 
 #### Install TensorFlow with GPU 
 The following example will create a new conda environment based on python 3.9 and install tensorflow in the environment.
@@ -250,8 +276,12 @@ conda create --name torch-cuda python=3.7
 source conda.sh
 conda activate torch-cuda
 conda install -c "nvidia/label/cuda-11.7.0" cuda-toolkit
-conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
+conda install -c pytorch -c nvidia pytorch torchvision torchaudio pytorch-cuda=11.7
 ```
+!!! note
+    
+    In the example above, we mentioned the channel name as we intend to install PyTorch and PyTorch-CUDA from specific channel. For default channel please see [Channels](conda.md#conda-channel).
+
 A simple PyTorch test program is given below to check whether PyTorch has been installed properly. Program is called
 
 ??? program "torch_tensor.py"
