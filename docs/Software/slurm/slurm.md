@@ -50,7 +50,7 @@ The most common commands are:
  
 
 ## Using SLURM on Wulver
-In Wulver, SLURM submission will have new requirements, intended for more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group account.
+In Wulver, SLURM submission will have new requirements, intended for more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group (Principal Investigator) account.
 
 1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user ucid`.
 Replace `ucid` with your NJIT UCID and you can find PI's UCID under `Def Acct` column. For example, if your UCID is `ab1234`, then use the following 
@@ -80,6 +80,18 @@ df = pd.read_csv('docs/assets/tables/slurm_qos.csv')
 df.replace(np.nan, 'NA', inplace=True)
 print(df.to_markdown(index=False))
 ```
+4. Check Quota
+Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via --qos=standard on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to --qos=low to prevent exhausting all allocated SUs. Users can check their quota using `quota_info UCID` command, replace `UCID` with your NJIT UCID. For example, if your UCID is `ab1234` then use
+```bash
+[ab1234@login01 ~]$ quota_info ab1234
+Group quotas for xy1234
+   SLURM Service Units (CPU Hours): 277557 (300000 Quota)
+   Storage Usage - Project: 864 GB (42.2 of quota)
+   Storage Usage - Scratch: 342 GB (16.7 of quota)
+Personal quotas for xy1234
+   Storage Usage - Home: 0GB (0% of quota)
+```
+Here, `xy1234` is the UCID of PI, and `SLURM Service Units (CPU Hours): 277557 (300000 Quota)` means that PI group members already used 277557 CPU hours out 300,000 SUs. This command also shows the storage usage of `$HOME` and `/project` directory. For more details, see [Wulver Filesystem](get_started_on_wulver#wulver-filesystems).
 
 ### Example of slurm script
 
