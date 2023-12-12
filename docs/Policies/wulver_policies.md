@@ -13,7 +13,7 @@ Faculty PIs are allocated 300,000 Service Units (SU) per year on request at no c
 
 ## User Storage Allowance
 
-Users will be provided with 50GB home directories. Home directories are backed up. PIs are additionally provided 2TB project directories. These project directories are not backed up. Very fast NVME scratch is available to users. This scratch space is for temporary files generated during a run and will be deleted after the job is complete. Additional project storage can be purchased if needed. This additional project space is not backed up, however, if backup is desired arrangements can be made at additional cost. Costs will be provided. It is important for users to understand the Wulver is a compute device and not a long term storage device. Users need to manage data so that backed up data fits in home directory space.  Transient, or rapidly changing data should be stored in the project directory. Long term storage with backups or archival storage for research data will be stored in a yet to be determined campus wide storage resource.
+Users will be provided with 50GB home directories. Home directories are backed up. PIs are additionally provided 2TB project directories. These project directories are not backed up. Very fast NVME scratch is available to users. This scratch space is for temporary files generated during a run and will be deleted after 30 days. Additional project storage can be purchased if needed. This additional project space is not backed up, however, if backup is desired, arrangements can be made at additional cost. Costs will be provided. It is important for users to understand the Wulver is a compute device and not a long-term storage device. Users need to manage data so that backed up data fits in home directory space. Transient, or rapidly changing data should be stored in the project directory. Long-term storage with backups or archival storage for research data will be stored in a yet to be determined campus wide storage resource.
 
 ## Shared Condo Partnership
 
@@ -26,17 +26,14 @@ If the shared condo module does not satisfy the needs of the PI, a private pool 
 ## Job Priorities
 
 * Standard Priority
-    * Charged against the SU allocation.
-    * Wall time maximum - 72 hours.
-    * Jobs are not preemptable.
+    * Charged against the SU allocation
+    * Wall time maximum - 72 hours
+
 * Low Priority
     * Not charged against SU allocation
     * Wall time maximum - 72 hours
 
-Jobs are preemptable by higher priority jobs
-
 * High Priority
     * Not charged against SU allocation
-    * Wall time maximum is determined by PI; 3 days are suggested.  ARCS reserves right to reboot nodes once a month for maintenance (perhaps first Monday of the month)
-    * Jobs are not preemptable
+    * Wall time maximum - 72 hours
     * Only available to contributors
