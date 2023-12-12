@@ -6,7 +6,7 @@ These policies are considered draft. We will work with faculty and senior admini
 
 ## Faculty Computing Allowance
 
-Faculty PIs are allocated 300,000 Service Units (SU) per year on request at no cost. An SU is equal to 1 core hour on a standard node. More details on calculating SUs for GPUs, high memory nodes, etc… will be provided at a later date. All users working as part of the PIs project will use this allocation. Multiple PIs working on the same project may pool SUs. The SUs can be renewed annually by providing a brief report describing how the SUs were used and list of publications, presentations, and awards generated from research conducted. Additional SUs may be purchased at a cost of $0.01/SU. The minimum purchase is 50,000 SU ($500).
+Faculty PIs are allocated 300,000 Service Units (SU) per year on request at no cost. An SU is equal to 1 core hour on a standard node. More details on calculating SUs for GPUs, see [Wulver SLURM](slurm.md)  . All users working as part of the PIs project will use this allocation. Multiple PIs working on the same project may pool SUs. The SUs can be renewed annually by providing a brief report describing how the SUs were used and list of publications, presentations, and awards generated from research conducted. Additional SUs may be purchased at a cost of $0.01/SU. The minimum purchase is 50,000 SU ($500).
 
 ## User Storage Allowance
 
