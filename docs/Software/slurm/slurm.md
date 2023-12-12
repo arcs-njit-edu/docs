@@ -88,7 +88,7 @@ Group quotas for xy1234
    SLURM Service Units (CPU Hours): 277557 (300000 Quota)
    Storage Usage - Project: 864 GB (42.2 of quota)
    Storage Usage - Scratch: 342 GB (16.7 of quota)
-Personal quotas for xy1234
+Personal quotas for ab1234
    Storage Usage - Home: 0GB (0% of quota)
 ```
 Here, `xy1234` is the UCID of PI, and `SLURM Service Units (CPU Hours): 277557 (300000 Quota)` means that PI group members already used 277557 CPU hours out 300,000 SUs. This command also shows the storage usage of `$HOME` and `/project` directory. For more details, see [Wulver Filesystem](get_started_on_wulver#wulver-filesystems).
