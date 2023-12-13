@@ -1,4 +1,5 @@
 ﻿QoS,Purpose,Rules,"Wall time limit, hours",Valid Users
 `--qos=standard`,"Normal jobs, similar to Lochness “public” access",SU charges based on node type (see partitions table above).,72,Everyone
 `--qos=low`,"Free access, no SU charge","when job is submitted, users may wait for longer period of time in queue if resources are needed by high or standard QoS enqueued jobs.  ",72,Everyone
-`--qos=high`,Only available to owners/investors,"Highest Priority Jobs, No SU Charges.",72,owner/investor PI Groups
+`--qos=high`,"Only available to owners/investors","Highest Priority Jobs, No SU Charges.",72,owner/investor PI Groups
+`--qos=debug`,"Intended for debugging and testing jobs","No SU Charges.",8,Everyone
