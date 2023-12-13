@@ -19,6 +19,7 @@ nav:
       - 'Lochness user policies': 'Policies/lochness_policies.md'
       - 'Wulver usage and Condo policies': 'Policies/wulver_policies.md'
     - 'Facilities': 'facilities/facilities.md'
+    - 'HPC Resources for Courses': 'facilities/hpc-course.md'
     - ...
 
 theme: 

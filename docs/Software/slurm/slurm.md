@@ -81,7 +81,7 @@ df.replace(np.nan, 'NA', inplace=True)
 print(df.to_markdown(index=False))
 ```
 4. Check Quota
-Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via --qos=standard on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to --qos=low to prevent exhausting all allocated SUs. Users can check their quota using `quota_info UCID` command, replace `UCID` with your NJIT UCID. For example, if your UCID is `ab1234` then use
+Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using `quota_info UCID` command, replace `UCID` with your NJIT UCID. For example, if your UCID is `ab1234` then use
 ```bash
 [ab1234@login01 ~]$ quota_info ab1234
 Group quotas for xy1234
