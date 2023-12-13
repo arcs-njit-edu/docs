@@ -158,7 +158,7 @@ To use ParaView with GPU, you need to use the following job script
 		#SBATCH --gres=gpu:1
 		#SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
 		#SBATCH --qos=standard
-		q#SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+		#SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
 		#SBATCH --time=71:59:59  # D-HH:MM:SS
 		################################################
 		#
