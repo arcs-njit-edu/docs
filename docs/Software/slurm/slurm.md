@@ -94,7 +94,7 @@ Personal quotas for ab1234
 Here, `xy1234` is the UCID of PI, and `SLURM Service Units (CPU Hours): 277557 (300000 Quota)` indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs. This command also shows the storage usage of `$HOME` and `/project` directory. For more details, see [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
 
 ### Example of slurm script
-
+#### Submitting Jobs on CPU Nodes
 ??? example "Sample Job Script to use: submit.sh"
 
     ```slurm
@@ -122,6 +122,7 @@ Here, `xy1234` is the UCID of PI, and `SLURM Service Units (CPU Hours): 277557 (
 ```
 Here, the `ST` stands for the status of the job. You may see the status of the job `ST` as `PD` which means the job is pending and has not been assigned yet. The status change depends upon the number of users using the partition and resources requested in the job. Once the job starts, you will see the output file with an extension of `.out`. If the job causes any errors, you can check the details of the error in the file with `.err` extension.
 
+#### Submitting Jobs on GPU Nodes
 In case of submitting the jobs on GPU, you can use the following SLURM script 
 
 ??? example "Sample Job Script to use: gpu_submit.sh"
@@ -142,17 +143,44 @@ In case of submitting the jobs on GPU, you can use the following SLURM script
     ```
 This will request 2 GPUS per node on the `GPU` partition.
 
+#### Submitting Jobs on `debug`
+The "debug" QoS in Slurm is intended for debugging and testing jobs. It usually provides a shorter queue wait time and quicker job turnaround. Jobs submitted with the "debug" QoS have access to a limited set of resources (Only 4 CPUS on Wulver), making it suitable for rapid testing and debugging of applications without tying up cluster resources for extended periods. 
+
+??? example "Sample Job Script to use: debug_submit.sh"
+
+    ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=debug
+        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+        #SBATCH --error=%x.%j.err
+        #SBATCH --partition=debug
+        #SBATCH --qos=debug
+        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+        #SBATCH --nodes=1
+        #SBATCH --ntasks-per-node=4
+        #SBATCH --time=7:59:00  # D-HH:MM:SS, Maximum allowable Wall Time 8 hours
+        #SBATCH --mem-per-cpu=4000M
+    ```
+
 ### Interactive session on a compute node
 
  Interactive sessions are useful for tasks that require direct interaction with the compute node's resources and software environment. To start an interactive session on the compute node, use the following after logging into Wulver
- ```bash
-    srun -p general -n 1 --ntasks-per-node=8 --qos=standard --account=PI_ucid --mem-per-cpu=2G --time=59:00 --pty bash
- ```
-To start an interactive session on GPU, use the following command
+=== "CPU Nodes"
 
- ```bash
-    srun -p gpu -n 1 --ntasks-per-node=8 --qos=standard --account=PI_ucid --mem-per-cpu=2G --gres=gpu:2 --time=59:00 --pty bash
- ```
+     ```bash
+        srun -p general -n 1 --ntasks-per-node=8 --qos=standard --account=PI_ucid --mem-per-cpu=2G --time=59:00 --pty bash
+     ```
+=== "GPU Nodes"
+
+     ```bash
+        srun -p gpu -n 1 --ntasks-per-node=8 --qos=standard --account=PI_ucid --mem-per-cpu=2G --gres=gpu:2 --time=59:00 --pty bash
+     ```
+=== "Debug Nodes"
+
+     ```bash
+        srun -p debug -n 1 --ntasks-per-node=4 --qos=debug --account=PI_ucid --mem-per-cpu=2G --gres=gpu:2 --time=59:00 --pty bash
+     ```
+
 Replace `PI_ucid` with PI's NJIT UCID. 
 
 !!! note 
