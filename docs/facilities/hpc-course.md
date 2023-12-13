@@ -19,7 +19,7 @@ Specify the software required for the course. Check the list of software install
 A minimum of 30 days' notice is required for requesting specific software installations or substantial resource allocations.
 
 ## Utilizing HPC in a Course
-What Can You Use HPC for in a Class?
+HPC resources are good for the courses if they satisfy the following requirements. 
 
 ### Simulations and Modeling:
 Perform complex simulations and modeling exercises that require significant computational power.

@@ -19,7 +19,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 !!! njit inline "Lochness to Wulver Migration"
         
-    For details in migrating the Lochness users to Wulver, please visit [Migration](migration/faqs.md).
+    For details in migrating the Lochness users to Wulver, please visit [Migration](migration).
 
 !!! njit inline "Cluster Maintenance Updates"
         
