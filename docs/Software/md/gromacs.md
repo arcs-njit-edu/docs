@@ -4,7 +4,7 @@ title: GROMACS
 
 [GROMACS](https://www.gromacs.org) is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles.
 
-It is primarily designed for biochemical molecules like proteins, lipids and nucleic acids that have a lot of complicated bonded interactions, but since GROMACS is extremely fast at calculating the nonbonded interactions (that usually dominate simulations) many groups are also using it for research on non-biological systems, e.g. polymers.
+It is primarily designed for biochemical molecules like proteins, lipids, and nucleic acids that have a lot of complicated bonded interactions, but since GROMACS is extremely fast at calculating the nonbonded interactions (that usually dominate simulations) many groups are also using it for research on non-biological systems, e.g. polymers.
 
 ## Availability
 
@@ -56,7 +56,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
 
         module purge
         module load wulver
-        module load foss/2021b GROMACS/2023.1-CUDA-12.0.0
+        module load foss/2022b GROMACS/2023.1-CUDA-12.0.0
 
         INPUT_DIR=${PWD}/INPUT
         OUTPUT_DIR=${PWD}/OUTPUT
@@ -81,7 +81,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         
         ################################################
         #
-        # Purge and load modules needed for run
+        # Purge and load modules needed to run
         #
         ################################################
         module purge
@@ -152,7 +152,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
         
         ################################################
         #
-        # Purge and load modules needed for run
+        # Purge and load modules needed to run
         #
         ################################################
         module purge
@@ -181,11 +181,11 @@ The tutorial in the above-mentioned job script can be found in
 
 === "Wulver" 
 
-	`/apps/testjobs/gromacs`
+    `/apps/testjobs/gromacs`
 
 === "Lochness"
-	
-	`/opt/site/examples/gromacs`
+    
+    `/opt/site/examples/gromacs`
 
 ## Related Applications
 
@@ -196,6 +196,5 @@ The tutorial in the above-mentioned job script can be found in
 !!! info "Please help us improve this page"
 
     Users are invited to contribute helpful information and corrections through our [Github repository](https://github.com/arcs-njit-edu/Docs/blob/main/CONTRIBUTING.md).
-
 
 

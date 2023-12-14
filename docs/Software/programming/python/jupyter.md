@@ -1,5 +1,5 @@
 # Jupyter Notebooks
-The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, visualizations. In our cluster, we have JupyterLab which is the next-generation user interface for Project Jupyter offering all the familiar building blocks of the classic Jupyter Notebook (notebook, terminal, text editor, file browser, rich outputs, etc.) in a flexible and powerful user interface. 
+The Jupyter Notebook is a web-based interactive computing platform. The notebook combines live code, equations, narrative text, and visualizations. In our cluster, we have JupyterLab which is the next-generation user interface for Project Jupyter offering all the familiar building blocks of the classic Jupyter Notebook (notebook, terminal, text editor, file browser, rich outputs, etc.) in a flexible and powerful user interface. 
 
 ## Availability
 
@@ -60,21 +60,21 @@ The Jupyter Notebook is a web-based interactive computing platform. The notebook
         
         http://localhost:${port}/?token=XXXXXXXX
         
-        you should be able to connect to jupyter notebook running remotely on a lochness compute node with above url
+        you should be able to connect to Jupyter Notebook running remotely on a Lochness compute node with the above url
         
         EOF
         
         jupyter notebook --no-browser --port $port --notebook-dir=$(pwd)
                      
         ```
-Once you submit this job script, you will see an output file indicating port number which you need to use to connect to the HPC cluster in a new terminal window. Please follow further instructions from the output file.
+Once you submit this job script, you will see an output file indicating the port number that you need to use to connect to the HPC cluster in a new terminal window. Please follow further instructions from the output file.
 
 !!! warning 
     
-    Please not that JupyterLab or Jupyter Notebook is not availble as module on Wulver, as users can build those packages via Conda. Please see [Conda Documentation](conda.md) for details. Jupyter Notebook can also be accessed on Wulver via [Open OnDemand](https://openondemand.org/). We will provide the instructions soon.
+    Please note that JupyterLab or Jupyter Notebook is not available as a module on Wulver, as users can build those packages via Conda. Please see [Conda Documentation](conda.md) for details. Jupyter Notebook can also be accessed on Wulver via [Open OnDemand](https://openondemand.org/). We will provide the instructions soon.
 
 ## Jupyter Notebook on Wulver
-As mentioned above, users need to install Jupyter Notebook on Conda Environment. Once the [Conda Environment](conda.md#activate-and-deactivate-conda-environment) is activated users can install Jupyter Notebook via `conda isntall -c conda-forge jupyter notebook` command. Here we provide a sample SLURM script on how to start Jupyter Notebook session on Wulver.
+As mentioned above, users need to install Jupyter Notebook on the Conda Environment. Once the [Conda Environment](conda.md#activate-and-deactivate-conda-environment) is activated users can install Jupyter Notebook via `conda isntall -c conda-forge jupyter notebook` command. Here we provide a sample SLURM script on how to start Jupyter Notebook session on Wulver.
 
 ??? example "Sample Batch Script to run Jupyter Notebook"
 
@@ -97,7 +97,7 @@ As mentioned above, users need to install Jupyter Notebook on Conda Environment.
         module load wulver
         module load Anaconda3
         source conda.sh 
-        conda activate ENV # Replace name of the environment with the environment you are using. For example, if your environment is torch-cuda then use cond activate torch-cuda
+        conda activate ENV # Replace the name of the environment with the environment you are using. For example, if your environment is torch-cuda then use cond to activate torch-cuda
         
         port=$(shuf -i 6000-9999 -n 1)
         /usr/bin/ssh -N -f -R $port:localhost:$port login01.tartan.njit.edu
@@ -123,14 +123,14 @@ As mentioned above, users need to install Jupyter Notebook on Conda Environment.
         
         http://localhost:${port}/?token=XXXXXXXX
         
-        you should be able to connect to jupyter notebook running remotely on a lochness compute node with above url
+        you should be able to connect to Jupyter Notebook running remotely on a Wulver compute node with the above url
         
         EOF
         
         jupyter notebook --no-browser --port $port --notebook-dir=$(pwd)
                      
         ```
-Once you submit this job script, you will see an output file indicating port number which you need to use to connect to Wulver in a new terminal window. Please follow further instructions from the output file.
+Once you submit this job script, you will see an output file indicating the port number that you need to use to connect to Wulver in a new terminal window. Please follow further instructions from the output file.
 
 
 ## User Contributed Information
@@ -138,4 +138,3 @@ Once you submit this job script, you will see an output file indicating port num
 !!! info "Please help us improve this page"
 
     Users are invited to contribute helpful information and corrections through our [Github repository](https://github.com/arcs-njit-edu/Docs/blob/main/CONTRIBUTING.md).
-

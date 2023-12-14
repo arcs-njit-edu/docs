@@ -16,7 +16,7 @@ df = pd.DataFrame(data)
 print(df.to_markdown(index=False))
 ```
 
-Please note that the module `wulver` is already loaded when user logs in to the cluster. If you use `module purge` command, make sure to use `module load wulver` in the slurm script to load SLURM.
+Please note that the module `wulver` is already loaded when a user logs in to the cluster. If you use `module purge` command, make sure to use `module load wulver` in the slurm script to load SLURM.
 
 ## Application Information, Documentation
 The documentation of SLURM is available at [SLURM manual](https://slurm.schedmd.com/documentation.html). 
@@ -28,29 +28,29 @@ SLURM has numerous tools for monitoring jobs. Below are a few to get started. Mo
 The most common commands are: 
 
 - List all current jobs: `squeue`
-- Job deletion:	`scancel [job_id]`
-- Run a job: `srun` (although some arguments are needed)
+- Job deletion: `scancel [job_id]`
+- Run a job: `sbatch [submit script]`
+- Run a command: `srun <slurm options> <command name>`
 
-
-### SLURM User Commands	
+### SLURM User Commands 
 
 | Task   |      Command      | 
 |----------|:-------------:|
-|Interactive login:|	`srun --pty bash` |
-|Job submission:|	`sbatch [script_file]`|
-|Job deletion:|	`scancel [job_id]`|
-|Job status by job:|	`squeue [job_id]`|
-|Job status by user:|	`squeue -u [user_name]`|
+|Interactive login:|    `srun --pty bash` |
+|Job submission:|   `sbatch [script_file]`|
+|Job deletion:| `scancel [job_id]`|
+|Job status by job:|    `squeue [job_id]`|
+|Job status by user:|   `squeue -u [user_name]`|
 |||
-|Job hold:|	`scontrol hold [job_id]`|
-|Job release:|	`scontrol release [job_id]`|
-|List enqueued jobs:|	`squeue`|
-|List nodes:|	`sinfo -N OR scontrol show nodes`|
-|Cluster status:|	`sinfo`|
+|Job hold:| `scontrol hold [job_id]`|
+|Job release:|  `scontrol release [job_id]`|
+|List enqueued jobs:|   `squeue`|
+|List nodes:|   `sinfo -N OR scontrol show nodes`|
+|Cluster status:|   `sinfo`|
  
 
 ## Using SLURM on Wulver
-In Wulver, SLURM submission will have new requirements, intended for more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group (Principal Investigator) account.
+In Wulver, SLURM submission will have new requirements, intended for a more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group (Principal Investigator) account.
 
 1. To specify the job use `--account=PI_ucid`, for example, `--account=doctorx`.  You can specify `--account` as either a `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user ucid`.
 Replace `ucid` with your NJIT UCID and you can find PI's UCID under `Def Acct` column. For example, if your UCID is `ab1234`, then use the following 
@@ -81,7 +81,7 @@ df.replace(np.nan, 'NA', inplace=True)
 print(df.to_markdown(index=False))
 ```
 4. Check Quota
-Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using `quota_info UCID` command, replace `UCID` with your NJIT UCID. For example, if your UCID is `ab1234` then use
+Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using the `quota_info UCID` command, and replace `UCID` with your NJIT UCID. For example, if your UCID is `ab1234` then use
 ```bash
 [ab1234@login01 ~]$ quota_info ab1234
 Group quotas for xy1234
@@ -91,7 +91,7 @@ Group quotas for xy1234
 Personal quotas for ab1234
    Storage Usage - Home: 0GB (0% of quota)
 ```
-Here, `xy1234` is the UCID of PI, and `SLURM Service Units (CPU Hours): 277557 (300000 Quota)` indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs. This command also shows the storage usage of `$HOME` and `/project` directory. For more details, see [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
+Here, `xy1234` is the UCID of PI, and `SLURM Service Units (CPU Hours): 277557 (300000 Quota)` indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs. This command also shows the storage usage of `$HOME` and `/project` directories. For more details, see [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
 
 ### Example of slurm script
 #### Submitting Jobs on CPU Nodes
@@ -120,7 +120,7 @@ Here, `xy1234` is the UCID of PI, and `SLURM Service Units (CPU Hours): 277557 (
   JOBID PARTITION     NAME     USER  ST    TIME    NODES  NODELIST(REASON)
    635   general     job_nme   ucid   R   00:02:19    1      n0088
 ```
-Here, the `ST` stands for the status of the job. You may see the status of the job `ST` as `PD` which means the job is pending and has not been assigned yet. The status change depends upon the number of users using the partition and resources requested in the job. Once the job starts, you will see the output file with an extension of `.out`. If the job causes any errors, you can check the details of the error in the file with `.err` extension.
+Here, the `ST` stands for the status of the job. You may see the status of the job `ST` as `PD` which means the job is pending and has not been assigned yet. The status change depends upon the number of users using the partition and resources requested in the job. Once the job starts, you will see the output file with an extension of `.out`. If the job causes any errors, you can check the details of the error in the file with the `.err` extension.
 
 #### Submitting Jobs on GPU Nodes
 In case of submitting the jobs on GPU, you can use the following SLURM script 
@@ -185,9 +185,8 @@ Replace `PI_ucid` with PI's NJIT UCID.
 
 !!! note 
        
-    Please note that if you are using GPUs, check that whether your script is parallelized. If your script is not parallelized and only depends on GPU, then you don't need to request more cores per node. In that case use `--ntasks-per-node=1`, as this will request 1 CPU per GPU. It's important to keep in mind that using multi cores on GPU nodes may result in unnecessary CPU hour charges. Additionally, implementing this practice can make service unit accounting significantly easier.
+    Please note that if you are using GPUs, check that whether your script is parallelized. If your script is not parallelized and only depends on GPU, then you don't need to request more cores per node. In that case use `--ntasks-per-node=1`, as this will request 1 CPU per GPU. It's important to keep in mind that using multiple cores on GPU nodes may result in unnecessary CPU hour charges. Additionally, implementing this practice can make service unit accounting significantly easier.
 
 #### Additional Resources
 
 - SLURM Tutorial List: https://slurm.schedmd.com/tutorials.html
-
