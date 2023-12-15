@@ -45,7 +45,7 @@ The HPC Facilitator is available to provide an introduction to High-Performance 
 * Filesystems on HPC cluster
 * Conclusion
 
-By incorporating HPC resources into your course, you provide students with the opportunity to engage in hands-on, real-world applications of computational concepts. The HPC environment enhances the learning experience and prepares students for challenges in data-driven and computationally intensive fields. For specific requests or to schedule an HPC introduction session, please contact the HPC Facilitator.
+By incorporating HPC resources into your course, you provide students with the opportunity to engage in hands-on, real-world applications of computational concepts. The HPC environment enhances the learning experience and prepares students for challenges in data-driven and computationally intensive fields. For specific requests or to schedule an HPC introduction session, please contact the [HPC Facilitator](contact.md).
 
 
 
