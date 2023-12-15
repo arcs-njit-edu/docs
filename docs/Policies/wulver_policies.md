@@ -21,7 +21,7 @@ Faculty who routinely need more resources than the initial allocation may buy no
 
 ## Private Pool
 
-If the shared condo module does not satisfy the needs of the PI, a private pool may be set up. In addition to the nodes, the PI will be charged for all infrastructure costs, including but not limited to electricity, HVAC, system administration, etc…. It is strongly recommended to first try the shared condo model. If the shared condo model does not work, the nodes can be converted to a private pool.
+If the shared condo module does not satisfy the needs of the PI, a private pool may be set up. In addition to the nodes, the PI will be charged for all infrastructure costs, including but not limited to electricity, HVAC, system administration, etc. It is strongly recommended to first try the shared condo model. If the shared condo model does not work, the nodes can be converted to a private pool.
 
 ## Job Priorities
 
