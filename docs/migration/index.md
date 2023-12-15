@@ -14,6 +14,7 @@ We are excited to share important news about the upcoming migration of users fro
 
 Principal Investigators: Expect communication from our team before the migration date, providing essential details and discussing the migration plan tailored to your group's needs. We will need a list of your current students and software in use by your group.
 
+
 ## Important Note Regarding Documentation:
 
 To facilitate a smooth transition, please refer to [FAQs](faqs.md), and other resources specific to the migration process.
