@@ -1,4 +1,4 @@
-Requests for assistance with HPC resources has been integrated into the campus-wide ServiceNow system. To have a service ticket created automatically and assigned to the HPC staff, email [hpc@njit.edu](mailto:hpc@njit.edu). Before requesting assistance, we encourage you to take a look at the relevant documentation on this site. 
+Requests for assistance with HPC resources have been integrated into the campus-wide ServiceNow system. To have a service ticket created automatically and assigned to the HPC staff, email [hpc@njit.edu](mailto:hpc@njit.edu). Before requesting assistance, we encourage you to take a look at the relevant documentation on this site. 
 
 For prompt response, please consider the following when submitting a ticket. 
 
@@ -24,9 +24,9 @@ For prompt response, please consider the following when submitting a ticket.
            - If software is behind a paywall or account, please download the software, copy it over to lochness and provide location from where we can copy it for installation.
 
 - Account requests
-     - Requests for account must come from faculty advisors by sending an email to [hpc@njit.edu](mailto:hpc@njit.edu) including the UCIDs for the accounts to be created.
+     - Requests for an account must come from faculty advisors by sending an email to [hpc@njit.edu](mailto:hpc@njit.edu) including the UCIDs for the accounts to be created.
      - Students making requests should add their faculty advisor to the request. Requests will only be approved after confirmation by faculty advisor.
-     - To use HPC in courses, the course instructor should submit a request and including UCID's for the accounts to be created.
+     - To use HPC in courses, the course instructor should submit a request and include UCID's for the accounts to be created.
      - Guest Accounts: Faculty can use [Service Now](https://njit.service-now.com/sp?id=sc_cat_item&sys_id=3b5796001b9b59507241400abc4bcb80&sysparm_category=405f99b41b5b1d507241400abc4bcb6b) to request Guest Access on *HPC resources only* for their external collaborators for a period of 1 year (can be renewed annually). 
   
 - Storage Requests
