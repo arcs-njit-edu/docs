@@ -78,11 +78,11 @@ To use specific package, you need to use `module load` command which modified th
 
     * The `module load` command will load dependencies automatically as needed, however you may still need to load prerequisite modules to load specific software package(s). For that you need to use `module spider` command as described above.
     * For running jobs via batch script, you need to add module load command(s) to your submission script.
-For example, to load `Python` version `3.9.6` as shown  in the above example, you need to load `GCCcore/.11.2.0` module first before loading the Python module is available to load. To use `Python 3.9.6`, use the following command
+For example, to load `Python` version `3.9.6` as shown in the above example, you need to load `GCCcore/.11.2.0` module first before loading the Python module is available to load. To use `Python 3.9.6`, use the following command
 ```console
 module load GCCcore/11.2.0 Python
 ```
-You can verify whether Python is loaded using,
+You can verify whether Python is loaded using
 
 ```console
 module li
@@ -107,11 +107,11 @@ You can unload all modules at once with
 module purge
 ```
 ### Module Save Collections
-Since some package(s) require to load prerequisite modules to load, every time it might be inconvenient to users to load those modules everytime. Therefore, you can save those modules in particular environment after loading those modules. For example
+Since some package(s) require loading prerequisite modules to load, every time it might be inconvenient to users to load those modules every time. Therefore, you can save those modules in a particular environment after loading those modules. For example
 ```console
 module save environment_name
 ```
-This will save the collection of  modules in `environment_name`. 
+This will save the collection of modules in `environment_name`. 
 
 ### Module List Collections
 To get a list of your collections, run:

@@ -193,4 +193,4 @@ Replace `PI_ucid` with PI's NJIT UCID.
 
 #### Additional Resources
 
-- [SLURM Tutorial List](https://slurm.schedmd.com/tutorials.html):
+- [SLURM Tutorial List](https://slurm.schedmd.com/tutorials.html)

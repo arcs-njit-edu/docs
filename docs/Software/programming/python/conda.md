@@ -49,6 +49,9 @@ Once you create an environment, you need to activate the environment to install 
 Use `conda activate ENV` to activate the Conda environment (`ENV` is the name of the environment). Following the activation of the conda environment, the name of the environment appears at the left of the hostname in the terminal. 
 
 ```bash
+login1-41 ~ >: module load Anaconda3
+login1-41 ~ >: source conda.sh
+login1-41 ~ >: conda create --name ENV python=3.9
 login1-41 ~ >: conda activate ENV
 (ENV) login-41 ~ >:
 ```
@@ -399,3 +402,48 @@ source conda.sh
 conda activate env_name
 mamba install scipy
 ```
+### Export and Import conda environment
+If you want to clone your environment to a different cluster, you can export the conda environment to a yml file which contains all the package information with versions. To export a conda environment to a new directory or a different machine, follow these steps:
+
+* **Export the Environment**
+Make sure to activate the environment which you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment). Once your environment is set up, you can export it to a YAML file:
+```console
+conda env export > my_environment.yml
+```
+
+```yaml
+name: my_env
+channels:
+- defaults
+dependencies:
+- _libgcc_mutex=0.1=main
+- _openmp_mutex=5.1=1_gnu
+- blas=1.0=mkl
+... ...
+#the last line is the path of the env
+prefix: /home/h/hz3/.conda/envs/my_env.
+```
+You can choose the YAML file name based on the environment. Next, edit the `my_environment.yml` file to make sure it has the correct environment name and other settings. The last line of the file specifies the path of the environment.
+5. Transfer the YAML File
+Transfer the `my_environment.yml` file to the new machine or directory where you want
+to replicate the environment.
+vim my_environment.yml
+name: my_env
+channels:
+- defaults
+dependencies:
+-
+### Conda User Commands 
+
+| Task                           |                    Command                    | 
+|--------------------------------|:---------------------------------------------:|
+| Activate environment:          |      `conda activate [environment_name]`      |
+| Deactivate environment:        |     `conda deactivate [environment_name]`     |
+| Show the list of environments: |               `conda env list`                |
+| Delete environment:            |       `conda remove [environment_name]`       |
+| Job status by user:            |            `squeue -u [user_name]`            |
+| Job hold:                      |           `scontrol hold [job_id]`            |
+| Job release:                   |          `scontrol release [job_id]`          |
+| List enqueued jobs:            |                   `squeue`                    |
+| List nodes:                    |       `sinfo -N OR scontrol show nodes`       |
+| Cluster status:                |                    `sinfo`                    |
