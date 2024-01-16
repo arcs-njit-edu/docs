@@ -29,7 +29,7 @@ It is primarily designed for biochemical molecules like proteins, lipids, and nu
     ```
 
 ## Application Information, Documentation
-The documentation of OpenFOAM is available at [GROMACS Documentation](https://manual.gromacs.org/current/index.html), where you can find the tutorials in topologies, input file format, setting parameters etc. 
+The documentation of GROMACS is available at [GROMACS Manual](https://manual.gromacs.org/current/index.html), where you can find the tutorials in topologies, input file format, setting parameters, etc. 
 
 ## Using GROMACS
 GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Processing Units), the calculations can be significantly accelerated, allowing for faster simulations. You can use GROMACS with GPU acceleration, but you need to use GPU nodes on our cluster. 
