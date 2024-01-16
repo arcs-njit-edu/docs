@@ -18,8 +18,8 @@ For prompt response, please consider the following when submitting a ticket.
 
 - Software requests
      - Submit a request for [HPC Software Installation](https://njit.service-now.com/sp?id=sc_cat_item&sys_id=0746c1f31b6691d04c82cddf034bcbe2&sysparm_category=405f99b41b5b1d507241400abc4bcb6b) by visiting the [Service Catalog](https://njit.service-now.com/sp?id=sc_category) 
-     - **Note**: Users should consider installing software in their home directory especially Python and R packages. See [Building your own](conda.md) for instructions on using conda or mamba. If you encounter issues, consider asking for help above rather than requesting a software install.
-     - You will need to enter the following information
+     - **Note**: Users should consider installing software in their home directory, especially Python and R packages. See [Building your own](conda.md) for instructions on using conda or mamba. If you encounter issues, consider asking for the help above rather than requesting a software installation.
+     - You will need to enter the following information.
            - Name of software and URL to download.
            - If software is behind a paywall or account, please download the software, copy it over to lochness and provide location from where we can copy it for installation.
 
@@ -33,5 +33,5 @@ For prompt response, please consider the following when submitting a ticket.
      - Requests for storage must come from faculty advisors by sending an email to [hpc@njit.edu](mailto:hpc@njit.edu). The request should include the amount of storage needed.
 
 - Consultations
-     - We also provide one-on-one consultations for HPC related issues. Schedule an appointment directly from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc). Please note that, when requesting assistance provide the information described above (where applicable), so we can most effectively assist you. Before requesting one-on-one consultations, please send you query to [hpc@njit.edu](mailto:hpc@njit.edu), so that an incident number will be created which is required to schedule an appointment. 
+     - We also provide one-on-one consultations for HPC related issues. Schedule an appointment directly from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc). Please note that, when requesting assistance, provide the information described above (where applicable), so we can most effectively assist you. Before requesting one-on-one consultations, please send you query to [hpc@njit.edu](mailto:hpc@njit.edu), so that an incident number will be created which is required to schedule an appointment. 
 

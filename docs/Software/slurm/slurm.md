@@ -183,10 +183,14 @@ The "debug" QoS in Slurm is intended for debugging and testing jobs. It usually 
 
 Replace `PI_ucid` with PI's NJIT UCID. 
 
+!!! warning
+
+    Login nodes are not designed for running computationally intensive jobs. You can use the head node to edit and manage your files, or to run small-scale interactive jobs. The CPU usage is limited per user on the head node. Therefore, for serious comuting either submit the job using `sbatch` command or start an interactive session on the compute node.
+
 !!! note 
        
     Please note that if you are using GPUs, check that whether your script is parallelized. If your script is not parallelized and only depends on GPU, then you don't need to request more cores per node. In that case use `--ntasks-per-node=1`, as this will request 1 CPU per GPU. It's important to keep in mind that using multiple cores on GPU nodes may result in unnecessary CPU hour charges. Additionally, implementing this practice can make service unit accounting significantly easier.
 
 #### Additional Resources
 
-- SLURM Tutorial List: https://slurm.schedmd.com/tutorials.html
+- [SLURM Tutorial List](https://slurm.schedmd.com/tutorials.html):
