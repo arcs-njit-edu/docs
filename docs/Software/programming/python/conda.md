@@ -403,13 +403,11 @@ conda activate env_name
 mamba install scipy
 ```
 ### Export and Import conda environment
-If you want to clone your environment to a different cluster, you can export the conda environment to a yml file which contains all the package information with versions. To export a conda environment to a new directory or a different machine, follow these steps:
-
-* **Export the Environment**
-Make sure to activate the environment which you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment). Once your environment is set up, you can export it to a YAML file:
+If you want to clone your environment to a different cluster, you can export the conda environment to a yml file which contains all the package information with versions. To export a conda environment to a new directory or a different machine, you need to activate the environment first which you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment). Once your environment is activated, you can export it to a YAML file:
 ```console
 conda env export > my_environment.yml
 ```
+The YAML should look like this
 
 ```yaml
 name: my_env
@@ -419,20 +417,16 @@ dependencies:
 - _libgcc_mutex=0.1=main
 - _openmp_mutex=5.1=1_gnu
 - blas=1.0=mkl
-... ...
+
+<ouput snipped>
+
 #the last line is the path of the env
-prefix: /home/h/hz3/.conda/envs/my_env.
+prefix: /home/a/abc3/.conda/envs/my_env.
 ```
-You can choose the YAML file name based on the environment. Next, edit the `my_environment.yml` file to make sure it has the correct environment name and other settings. The last line of the file specifies the path of the environment.
-5. Transfer the YAML File
-Transfer the `my_environment.yml` file to the new machine or directory where you want
-to replicate the environment.
-vim my_environment.yml
-name: my_env
-channels:
-- defaults
-dependencies:
--
+Next, edit the `my_environment.yml` file to make sure it has the correct environment name and other settings. The last line of the file specifies the path of the environment.
+
+Once the YAML file ready, you can transfer the `my_environment.yml` file to the new machine or directory where you want to replicate the environment. See [cluster access](cluster_access.md) for details on transferring the files to clusters.
+
 ### Conda User Commands 
 
 | Task                           |                    Command                    | 
