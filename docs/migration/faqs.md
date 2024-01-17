@@ -88,7 +88,7 @@
         - Submit scripts will need to be modified to accommodate changes in partitions, hardware configurations, policies, and filesystems on Wulver. The research facilitation team will provide guidance and support in updating your submit scripts for seamless job submissions. Check the sample submit scipts for Wulver in [SLURM](slurm.md).
        - Code Recompilation: 
           - Due to differences in hardware, code may need to be recompiled to ensure optimal performance on Wulver. The research facilitation team is ready to assist you in this process, offering support to recompile code and address any related issues.
-          - If you code is compiled based on FOSS Toolchain (GCC and OpenMPI), you need to compile the code the samw way you did in Lochness. Just make sure all the dependency libraries are installed on Wulver. Please visit [Software](software.md) to check the list of applications installed on Wulver.
+          - If you code is compiled based on [FOSS Toolchain](compilers.md#mpi-libraries) (GCC and OpenMPI), you need to compile the code the samw way you did in Lochness. Just make sure all the dependency libraries are installed on Wulver. Please visit [Software](software.md) to check the list of applications installed on Wulver.
           - If your code is based on the Intel toolchain, then you need add the follwoing while using `.config` to configure your code. 
             `./configure `
 

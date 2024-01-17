@@ -469,12 +469,12 @@ conda env create -f my_environment.yml -p /project/hpcadmins/hz3/conda_env/my_en
 This will create the environment in the specified directory instead of the default conda environment directory. Please note that in that case, you need to provide the full path of environment to activate it.
 
 ```bash
-conda activate /project/hpcadmins/hz3/conda_env/my_env
+conda activate /project/hpcadmins/abc3/conda_env/my_env
 (/project/hpcadmins/hz3/conda_env/my_env) hz3@login01:~$ conda env list
 # conda environments:
 #
 base /apps/easybuild/software/Anaconda3/2023.09-0
-* /project/hpcadmins/hz3/conda_env/my_env
+* /project/hpcadmins/abc3/conda_env/my_env
 ```
 By following these steps, you can successfully export a conda environment from one machine and import it to another, ensuring a consistent working environment across different machines or directories.
 
