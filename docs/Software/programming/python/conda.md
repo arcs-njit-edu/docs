@@ -403,7 +403,7 @@ conda activate env_name
 mamba install scipy
 ```
 ### Export and Import conda environment
-If you want to clone your environment to a different cluster, you can export the conda environment to a yml file which contains all the package information with versions. To export a conda environment to a new directory or a different machine, you need to activate the environment first which you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment). Once your environment is activated, you can export it to a YAML file:
+If you want to clone your environment to a different cluster, you can export the conda environment to a yml file which contains all the package information with versions. To export a conda environment to a new directory or a different machine, you need to activate the environment first which you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment) on how to activate the environment. Once your environment is activated, you can export it to a YAML file:
 ```console
 conda env export > my_environment.yml
 ```
@@ -425,7 +425,7 @@ prefix: /home/a/abc3/.conda/envs/my_env.
 ```
 Next, edit the `my_environment.yml` file to make sure it has the correct environment name and other settings. The last line of the file specifies the path of the environment.
 
-Once the YAML file ready, you can transfer the `my_environment.yml` file to the new machine or directory where you want to replicate the environment. See [cluster access](cluster_access.md) for details on transferring the files to clusters.
+Once the YAML file ready, you can transfer the `my_environment.yml` file to the new machine or directory where you want to replicate the environment. See [cluster access](conda.md#cluster_access.md#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa) for details on transferring the files to clusters.
 
 ### Conda User Commands 
 

@@ -34,19 +34,18 @@ The most common commands are:
 
 ### SLURM User Commands 
 
-| Task   |      Command      | 
-|----------|:-------------:|
-|Interactive login:|    `srun --pty bash` |
-|Job submission:|   `sbatch [script_file]`|
-|Job deletion:| `scancel [job_id]`|
-|Job status by job:|    `squeue [job_id]`|
-|Job status by user:|   `squeue -u [user_name]`|
-|||
-|Job hold:| `scontrol hold [job_id]`|
-|Job release:|  `scontrol release [job_id]`|
-|List enqueued jobs:|   `squeue`|
-|List nodes:|   `sinfo -N OR scontrol show nodes`|
-|Cluster status:|   `sinfo`|
+| Task                |              Command              | 
+|---------------------|:---------------------------------:|
+| Interactive login:  |         `srun --pty bash`         |
+| Job submission:     |      `sbatch [script_file]`       |
+| Job deletion:       |        `scancel [job_id]`         |
+| Job status by job:  |         `squeue [job_id]`         |
+| Job status by user: |      `squeue -u [user_name]`      |
+| Job hold:           |     `scontrol hold [job_id]`      |
+| Job release:        |    `scontrol release [job_id]`    |
+| List enqueued jobs: |             `squeue`              |
+| List nodes:         | `sinfo -N OR scontrol show nodes` |
+| Cluster status:     |              `sinfo`              |
  
 
 ## Using SLURM on Wulver
