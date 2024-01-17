@@ -51,7 +51,7 @@
     
     - Availability of `/research` Directory: The `/research` directory from Lochness will be mounted on Wulver and will be available for use. This ensures continuity for research-related files and data.
     
-      - Lochness `/home` Directory on Wulver: The Lochness `/home` directory will be mounted on the Wulver login node as `/oldhome`. Users will be able to ready files in this directory and move files from this directory but will not be able to write files into this deirectory. This allows users to access their personal home directories from Lochness during the migration period.
+      - Lochness `/home` Directory on Wulver: The Lochness `/home` directory will be mounted on the Wulver login node as `/oldhome`. Users will be able to read files in this directory and move files from this directory but will not be able to write files into this deirectory. This allows users to access their personal home directories from Lochness during the migration period. The Lochness files under `/oldhome` will be available until 1-Jan-2025. Users should move needed files into `/project/PI_UCID` directory (replace PI_UCID with the UCID of PI). 
     
     These changes are designed to optimize the file organization on Wulver while maintaining accessibility to critical research data. The research facilitation team will work closely with users to ensure a smooth transition of data and assist in adapting to the new file directory structure. If you have specific questions or require assistance with data migration, please don't hesitate to contact our support team.
 
@@ -88,13 +88,17 @@
         - Submit scripts will need to be modified to accommodate changes in partitions, hardware configurations, policies, and filesystems on Wulver. The research facilitation team will provide guidance and support in updating your submit scripts for seamless job submissions. Check the sample submit scipts for Wulver in [SLURM](slurm.md).
        - Code Recompilation: 
           - Due to differences in hardware, code may need to be recompiled to ensure optimal performance on Wulver. The research facilitation team is ready to assist you in this process, offering support to recompile code and address any related issues.
+          - If you code is compiled based on FOSS Toolchain (GCC and OpenMPI), you need to compile the code the samw way you did in Lochness. Just make sure all the dependency libraries are installed on Wulver. Please visit [Software](software.md) to check the list of applications installed on Wulver.
+          - If your code is based on the Intel toolchain, then you need add the follwoing while using `.config` to configure your code. 
+            `./configure `
+
       
     Assistance will be provided to help you adapt your code and scripts to the new environment on Wulver. If you have specific concerns or require support in making these adjustments, please reach out to our [research facilitation team](contact.md), and they will work with you to ensure a smooth transition.
 
 ### Will there be training sessions or documentation available to help faculty and researchers transition smoothly to Wulver?
 ??? answer
 
-     While there are no official training sessions scheduled at this point, comprehensive documentation is available at [NJIT HPC Documentation] (https://hpc.njit.edu) to assist faculty and researchers during the transition to Wulver.
+     While there are no official training sessions scheduled at this point, comprehensive documentation is available at [NJIT HPC Documentation](https://hpc.njit.edu) to assist faculty and researchers during the transition to Wulver.
       In addition to documentation, the research facilitation team is committed to providing personal assistance to faculty and researchers. If you have specific questions, require hands-on support, or need guidance on using Wulver effectively for your research, please do not hesitate to reach out to the [research facilitation team](contact.md). They are here to ensure that you receive the assistance you need for a successful transition.
 
 ### How can I request additional resources or discuss specific requirements for my research projects on Wulver?
