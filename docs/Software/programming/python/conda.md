@@ -405,6 +405,10 @@ mamba install scipy
 ## Export and Import Conda Environment
 Exporting and importing Conda environments allows users to capture and reproduce the exact set of dependencies for a project. With Conda, a popular package and environment management system, users can export an environment, including all installed packages, into a YAML file. This file can then be shared or version-controlled. Importing the environment from the YAML file on another system ensures consistent dependencies, making it easier to recreate the development or execution environment. 
 
+!!! tips
+
+    When installing Python packages via Conda, ensure that you perform the installation on the compute node rather than the login node. The CPU and memory resources on login nodes are limited, and installing Python packages on the login node can be time-consuming. To avoid this, initiate an [tnteractive session with compute node](slurm.md#interactive-session-on-a-compute-node)
+
 ### Export Conda Environment 
 To export a conda environment to a new directory or a different machine, you need to activate the environment first which you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment) on how to activate the environment. Once your environment is activated, you can export it to a YAML file:
 ```console
@@ -428,7 +432,7 @@ prefix: /home/a/abc3/.conda/envs/my_env.
 ```
 Next, edit the `my_environment.yml` file to make sure it has the correct environment name and other settings. The last line of the file specifies the path of the environment.
 
-Once the YAML file ready, you can transfer the `my_environment.yml` file to the new machine or directory where you want to replicate the environment. See [cluster access](conda.md#cluster_access.md#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa) for details on transferring the files to clusters.
+Once the YAML file ready, you can transfer the `my_environment.yml` file to the new machine or directory where you want to replicate the environment. See [cluster file transfer](cluster_access.md#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa) for details on transferring the files to clusters.
 
 ### Import Environment on New Machine
 On the new machine, first load Anaconda and initialize conda as before. Then, create the
