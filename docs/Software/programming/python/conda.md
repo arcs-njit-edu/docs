@@ -407,7 +407,7 @@ Exporting and importing Conda environments allows users to capture and reproduce
 
 !!! tips
 
-    When installing Python packages via Conda, ensure that you perform the installation on the compute node rather than the login node. The CPU and memory resources on login nodes are limited, and installing Python packages on the login node can be time-consuming. To avoid this, initiate an [tnteractive session with compute node](slurm.md#interactive-session-on-a-compute-node)
+    When installing Python packages via Conda, ensure that you perform the installation on the compute node rather than the login node. The CPU and memory resources on login nodes are limited, and installing Python packages on the login node can be time-consuming. To avoid this, initiate an [tnteractive session with compute node](slurm.md#interactive-session-on-a-compute-node).
 
 ### Export Conda Environment 
 To export a conda environment to a new directory or a different machine, you need to activate the environment first which you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment) on how to activate the environment. Once your environment is activated, you can export it to a YAML file:
@@ -478,17 +478,18 @@ base /apps/easybuild/software/Anaconda3/2023.09-0
 ```
 By following these steps, you can successfully export a conda environment from one machine and import it to another, ensuring a consistent working environment across different machines or directories.
 
+!!! warning
+    
+    It is advisable to use the /project directory to store the Conda environment rather than using the $HOME directory. On Wulver, the storage space on $HOME is limited (50G) and cannot be increased. See [Wulver Filesystems](get_started_on_Wulver.md#wulver-filesystems) for details. 
+
 ## Conda User Commands 
 
-| Task                           |                    Command                    | 
-|--------------------------------|:---------------------------------------------:|
-| Activate environment:          |      `conda activate [environment_name]`      |
-| Deactivate environment:        |     `conda deactivate [environment_name]`     |
-| Show the list of environments: |               `conda env list`                |
-| Delete environment:            |       `conda remove [environment_name]`       |
-| Job status by user:            |            `squeue -u [user_name]`            |
-| Job hold:                      |           `scontrol hold [job_id]`            |
-| Job release:                   |          `scontrol release [job_id]`          |
-| List enqueued jobs:            |                   `squeue`                    |
-| List nodes:                    |       `sinfo -N OR scontrol show nodes`       |
-| Cluster status:                |                    `sinfo`                    |
+| Task                                       |                        Command                         | 
+|--------------------------------------------|:------------------------------------------------------:|
+| Activate environment:                      |          `conda activate [environment_name]`           |
+| Deactivate environment:                    |         `conda deactivate [environment_name]`          |
+| Show the list of environments:             |                    `conda env list`                    |
+| Delete environment:                        |           `conda remove [environment_name]`            |
+| Export environment:                        |      `conda env export > [environment_name].yml`       |
+| Import environment from YAML:              |      `conda env create -f [environment_name].yml`      |
+| Import environment to different location:  | `conda env create -f [environment_name].yml -p [PATH]` | 
