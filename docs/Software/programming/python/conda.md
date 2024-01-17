@@ -480,7 +480,7 @@ By following these steps, you can successfully export a conda environment from o
 
 !!! warning
     
-    It is advisable to use the /project directory to store the Conda environment rather than using the $HOME directory. On Wulver, the storage space on $HOME is limited (50G) and cannot be increased. See [Wulver Filesystems](get_started_on_Wulver.md#wulver-filesystems) for details. 
+    It is advisable to use the `/project` directory to store the Conda environment rather than using the `$HOME` directory. On Wulver, the storage space on `$HOME` is limited (50G) and cannot be increased. See [Wulver Filesystems](get_started_on_Wulver.md#wulver-filesystems) for details. 
 
 ## Conda User Commands 
 
