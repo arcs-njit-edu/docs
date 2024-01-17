@@ -88,10 +88,12 @@
         - Submit scripts will need to be modified to accommodate changes in partitions, hardware configurations, policies, and filesystems on Wulver. The research facilitation team will provide guidance and support in updating your submit scripts for seamless job submissions. Check the sample submit scipts for Wulver in [SLURM](slurm.md).
        - Code Recompilation: 
           - Due to differences in hardware, code may need to be recompiled to ensure optimal performance on Wulver. The research facilitation team is ready to assist you in this process, offering support to recompile code and address any related issues.
-          - If you code is compiled based on [FOSS Toolchain](compilers.md#mpi-libraries) (GCC and OpenMPI), you need to compile the code the samw way you did in Lochness. Just make sure all the dependency libraries are installed on Wulver. Please visit [Software](software.md) to check the list of applications installed on Wulver.
-          - If your code is based on the Intel toolchain, then you need add the follwoing while using `.config` to configure your code. 
-            `./configure `
-
+          - If you code is compiled based on [FOSS Toolchain](compilers.md#free-open-source-software-(foss)) (GCC and OpenMPI), you need to compile the code the samw way you did in Lochness. Just make sure all the dependency libraries are installed on Wulver. Please visit [Software](../Software/index.md) to check the list of applications installed on Wulver.
+          - If your code is based on the [Intel toolchain](compilers.md#intel), you need to add the follwoing while configuring your code. 
+            ```console
+            ./configure CFLAGS="-march=core-avx2"
+            ```
+          - When installing codes, ensure that you perform the installation on the compute node rather than the login node. Since the hardware architecture is different on the login node, it's best practice to compile your code on the compute node. You need to initiate an [tnteractive session with compute node](slurm.md#interactive-session-on-a-compute-node) before compiling your code.
       
     Assistance will be provided to help you adapt your code and scripts to the new environment on Wulver. If you have specific concerns or require support in making these adjustments, please reach out to our [research facilitation team](contact.md), and they will work with you to ensure a smooth transition.
 
@@ -140,3 +142,5 @@
 ??? answer
 
     The AFS will not be available on Wulver. However we will setup a self-serve procedure for researchers to move AFS files to `/research`. We can do this as part of the full migration process. Please reach out to us at [hpc@njit.edu](mailto:hpc@njit.edu) for any questions.
+
+### I have several COnda environments on Lochness, do I need to conduct fresh installation or I can copy the 

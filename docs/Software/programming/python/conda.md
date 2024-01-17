@@ -464,13 +464,13 @@ You can check your current environments using `conda env list`.
 ### Importing to a Different Location
 If you want to import the conda environment to a different location, use the `--prefix` or `-p` option
 ```console
-conda env create -f my_environment.yml -p /project/hpcadmins/hz3/conda_env/my_env
+conda env create -f my_environment.yml -p /project/hpcadmins/abc3/conda_env/my_env
 ```
 This will create the environment in the specified directory instead of the default conda environment directory. Please note that in that case, you need to provide the full path of environment to activate it.
 
 ```bash
 conda activate /project/hpcadmins/abc3/conda_env/my_env
-(/project/hpcadmins/hz3/conda_env/my_env) hz3@login01:~$ conda env list
+(/project/hpcadmins/abc3/conda_env/my_env) abc3@login01:~$ conda env list
 # conda environments:
 #
 base /apps/easybuild/software/Anaconda3/2023.09-0
