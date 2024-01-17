@@ -389,7 +389,7 @@ User can use the following job script to run the script.
 
     When working with Python, it is generally advised to avoid mixing package management tools such as pip and conda within the same environment. Pip and Conda manage dependencies differently, and their conflict can lead to compatibility issues and unexpected behavior. Mixing the two can result in an environment where packages installed with one tool may not interact seamlessly with those installed using the other. 
 
-### Mamba: The Conda Alternative
+## Mamba: The Conda Alternative
 Mamba is a fast, robust, and cross-platform package manager and particularly useful for building complicated environments, where `conda` is unable to 'solve' the required set of packages within a reasonable amount of time.
 Users can install packages with `mamba` in the same way as with `conda`.
 ```bash
@@ -402,8 +402,11 @@ source conda.sh
 conda activate env_name
 mamba install scipy
 ```
-### Export and Import conda environment
-If you want to clone your environment to a different cluster, you can export the conda environment to a yml file which contains all the package information with versions. To export a conda environment to a new directory or a different machine, you need to activate the environment first which you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment) on how to activate the environment. Once your environment is activated, you can export it to a YAML file:
+## Export and Import Conda Environment
+Exporting and importing Conda environments allows users to capture and reproduce the exact set of dependencies for a project. With Conda, a popular package and environment management system, users can export an environment, including all installed packages, into a YAML file. This file can then be shared or version-controlled. Importing the environment from the YAML file on another system ensures consistent dependencies, making it easier to recreate the development or execution environment. 
+
+### Export Conda Environment 
+To export a conda environment to a new directory or a different machine, you need to activate the environment first which you intend to export. Please see [Conda environment](#activate-and-deactivate-conda-environment) on how to activate the environment. Once your environment is activated, you can export it to a YAML file:
 ```console
 conda env export > my_environment.yml
 ```
@@ -427,7 +430,51 @@ Next, edit the `my_environment.yml` file to make sure it has the correct environ
 
 Once the YAML file ready, you can transfer the `my_environment.yml` file to the new machine or directory where you want to replicate the environment. See [cluster access](conda.md#cluster_access.md#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa) for details on transferring the files to clusters.
 
-### Conda User Commands 
+### Import Environment on New Machine
+On the new machine, first load Anaconda and initialize conda as before. Then, create the
+environment from the YAML file:
+
+```bash
+conda env create -f my_environment.yml
+Collecting package metadata (repodata.json): done
+Solving environment: done
+
+<ouput snipped>
+
+Downloading and Extracting Packages
+Preparing transaction: done
+Verifying transaction: done
+Executing transaction: done
+#
+# To activate this environment, use
+#
+# $ conda activate my_env
+#
+# To deactivate an active environment, use
+#
+# $ conda deactivate
+```
+After running this command, Conda will set up the environment as it was on the original machine, including downloading and installing packages. To activate the New Environment use `conda activate my_env` where `my_env` is the environment name.
+You can check your current environments using `conda env list`.
+
+### Importing to a Different Location
+If you want to import the conda environment to a different location, use the `--prefix` or `-p` option
+```console
+conda env create -f my_environment.yml -p /project/hpcadmins/hz3/conda_env/my_env
+```
+This will create the environment in the specified directory instead of the default conda environment directory. Please note that in that case, you need to provide the full path of environment to activate it.
+
+```bash
+conda activate /project/hpcadmins/hz3/conda_env/my_env
+(/project/hpcadmins/hz3/conda_env/my_env) hz3@login01:~$ conda env list
+# conda environments:
+#
+base /apps/easybuild/software/Anaconda3/2023.09-0
+* /project/hpcadmins/hz3/conda_env/my_env
+```
+By following these steps, you can successfully export a conda environment from one machine and import it to another, ensuring a consistent working environment across different machines or directories.
+
+## Conda User Commands 
 
 | Task                           |                    Command                    | 
 |--------------------------------|:---------------------------------------------:|
