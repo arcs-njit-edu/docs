@@ -143,4 +143,7 @@
 
     The AFS will not be available on Wulver. However we will setup a self-serve procedure for researchers to move AFS files to `/research`. We can do this as part of the full migration process. Please reach out to us at [hpc@njit.edu](mailto:hpc@njit.edu) for any questions.
 
-### I have several COnda environments on Lochness, do I need to conduct fresh installation or I can copy the 
+### I have several Conda environments on Lochness. Should I perform a fresh installation or copy the environment to Wulver?
+??? answer
+
+    We recommend a fresh installation since the hardware architecture is different on Wulver. However, you can export the existing Conda environment to a YAML file, transfer it to Wulver, and then install the environment using this YAML file. See [Conda Export Environment](conda.md#export-and-import-conda-environment) for details.
