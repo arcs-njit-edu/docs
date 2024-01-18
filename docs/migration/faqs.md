@@ -1,4 +1,4 @@
-## The following are question we have received over the last several weeks regarding the migration from Lochness to Wulver.
+## The following are questions we have received over the last several weeks regarding the migration from Lochness to Wulver.
 
 ###  What is the timeline for the migration from Lochness to Wulver?
 ??? answer
