@@ -11,18 +11,26 @@ Apptainer was created to run complex applications on HPC clusters in a simple, p
 Many container platforms are available, but Apptainer is focused on:
 
 * Verifiable reproducibility and security, using cryptographic signatures, an immutable container image format, and in-memory decryption.
-* Integration over isolation by default. Easily make use of GPUs, high speed networks, parallel filesystems on a cluster or server by default.
-* Mobility of compute. The single file SIF container format is easy to transport and share.
-* A simple, effective security model. You are the same user inside a container as outside, and cannot gain additional privilege on the host system by default. Read more about Security in Apptainer.
+* Integration over isolation by default. Easily make use of GPUs, high-speed networks, parallel filesystems on a cluster or server by default.
+* Mobility of computing. The single file SIF container format is easy to transport and share.
+* A simple, effective security model. You are the same user inside a container as an outside, and cannot gain additional privilege on the host system by default. Read more about Security in Apptainer.
 
+## Availability
+apptainer is installed on [Wulver](wulver.md) as module
 
+| Software           |      Module Load Command       | 
+|--------------------|:------------------------------:|
+| Apptainer          | `module load bright apptainer` |
 
-## Use Cases
+## Application Information, Documentation
+The documentation of Apptainer is available at [Apptainer User Guide](https://apptainer.org/docs/user/latest/)
+### Use Cases
 * BYOE: Bring Your Own Environment!
 * Reproducible science
 * Commercially supported code requiring a particular environment
 * Static environments (software appliances)
 * Legacy code on old operating systems
-* Complicated software stacks that are very host specific
+* Complicated software stacks that are very host-specific
 * Complicated work-flows that require custom installation and/or data
+
 
