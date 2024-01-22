@@ -4,11 +4,11 @@ on:
     branches:
       - main
       - alex_patch 
-      - ARCS_patch
+      - ARCS-patch
     workflow_dispatch:
       - main
       - alex_patch
-      - ARCS_patch
+      - ARCS-patch
 permissions:
   contents: write
 jobs:
