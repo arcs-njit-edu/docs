@@ -36,7 +36,6 @@ The most common commands are:
 
 | Task                |              Command              | 
 |---------------------|:---------------------------------:|
-| Interactive login:  |         `srun --pty bash`         |
 | Job submission:     |      `sbatch [script_file]`       |
 | Job deletion:       |        `scancel [job_id]`         |
 | Job status by job:  |         `squeue [job_id]`         |
@@ -82,7 +81,7 @@ print(df.to_markdown(index=False))
 4. Check Quota
 Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using the `quota_info UCID` command, and replace `UCID` with your NJIT UCID. For example, if your UCID is `ab1234` then use
 ```bash
-[ab1234@login01 ~]$ quota_info ab1234
+[ab1234@login01 ~]$ /apps/utils/custom/quota_info.sh ab1234
 Group quotas for xy1234
    SLURM Service Units (CPU Hours): 277557 (300000 Quota)
    Storage Usage - Project: 864 GB (42.2 of quota)
