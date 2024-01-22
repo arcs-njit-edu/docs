@@ -11,7 +11,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 !!! njit inline "Clusters"
 
-    See the list of availble clusters, their specifications, and how to access them in [Clusters](clusters).
+    See the list of availble clusters, their specifications, and how to access them in [Clusters](clusters/index.md).
 
 !!! njit inline "Software Modules"
 
@@ -19,7 +19,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 !!! njit inline "Lochness to Wulver Migration"
         
-    For details in migrating the Lochness users to Wulver, please visit [Migration](migration).
+    For details in migrating the Lochness users to Wulver, please visit [Migration](migration/index.md).
 
 !!! njit inline "Cluster Maintenance Updates"
         

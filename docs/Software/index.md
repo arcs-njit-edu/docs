@@ -107,11 +107,11 @@ You can unload all modules at once with
 module purge
 ```
 ### Module Save Collections
-Since some package(s) require to load prerequisite modules to load, every time it might be inconvenient to users to load those modules everytime. Therefore, you can save those modules in particular environment after loading those modules. For example
+Since some package(s) require loading prerequisite modules to load, every time it might be inconvenient to users to load those modules every time. Therefore, you can save those modules in a particular environment after loading those modules. For example
 ```console
 module save environment_name
 ```
-This will save the collection of  modules in `environment_name`. 
+This will save the collection of modules in `environment_name`. 
 
 ### Module List Collections
 To get a list of your collections, run:

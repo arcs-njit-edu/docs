@@ -157,4 +157,4 @@ intel
     ```
 
 The `intel-compilers` and `impi` versions in `intel` toolchains are tabulated in [intel versions](compilers.md#gnu-and-intel-compilers) and [impi versions](compilers.md#mpi-libraries).
-To see the versions of `GCCcore` and `mkl` libraries of `intel` toolchain, please load the intel toolchain module with yearletter version, e.g. `module load intel/2021b` and then use `module li`.
+To see the versions of `GCCcore` and `mkl` libraries of `intel` toolchain, please load the intel toolchain module with a yearletter version, e.g. `module load intel/2021b` and then use `module li`.

@@ -36,14 +36,6 @@ Solve optimization problems that benefit from parallel processing and distribute
 * **Scientific Research Projects**:
 Enable students to work on scientific research projects that demand high-performance computing resources.
 
-!!! important
-
-    Although HPC resources can be beneficial for specific courses, it is important to note that their usage is discouraged in the following scenarios:
-
-    * **Homework Assignments**: Due to potential cluster congestion, it may take at least three days for a job to commence (wall time limit: 3 days). Consequently, it is recommended to initiate homework assignments at least four days prior to the due date.
-    * **Windows-based Programs**: The utilization of HPC resources for running programs designed for the Windows operating system is discouraged.
-    * **Database Operations**: Running databases on HPC resources is not recommended.
-
 ## HPC Introduction
 The HPC Facilitator is available to provide an introduction to High-Performance Computing. This introduction can be conducted in person or online based on the preferences and requirements of the course. The session covers:
 
