@@ -19,7 +19,7 @@ print(df.to_markdown(index=False))
 
 ## Wulver Filesystems
 
-See [Wulver Filesystems][Wulver_filesystems.md] for details.
+See [Wulver Filesystems](Wulver_filesystems.md) for details.
 
 ## Software Availability
 The software can be loaded via `module load` command. You see the following modules are loaded once you log in to the Wulver (Use the `module li`) command to see the modules. 
