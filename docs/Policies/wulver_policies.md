@@ -2,7 +2,7 @@
 
 Proposed Wulver Usage and Condo Policies
 
-These policies are considered draft. We will work with faculty and senior administration to fine tune these policies. There are still many details to be worked out. We welcome comments.
+These policies are considered draft. We will work with faculty and senior administration to fine-tune these policies. There are still many details to be worked out. We welcome comments.
 
 ## Faculty Computing Allowance
 
