@@ -11,7 +11,7 @@ The Wulver environment is quite a bit like Lochness, but there are some key diff
 ```python exec="on"
 import pandas as pd
 
-df = pd.read_csv('docs/assets/tables/Wulver_filesystems.csv', na_values=["NA"])
+df = pd.read_csv('docs/assets/tables/Wulver_filesystems.csv', keep_default_na=False, na_filter=False)
 print(df.to_markdown(index=False))
 ```
 
