@@ -45,3 +45,31 @@ NJIT provides High Performance Computing resources to support scientific computi
 !!! important "Wulver Scheduled Maintenance"
         
     Wulver will be out of service for maintenance once a month for updates, repairs, and upgrades.  The schedule is 9 a.m. to 9 p.m. the second Tuesday of every month.  During the maintenance period, all jobs and logins will be terminated. Please follow the maintaince updates at [Cluster Maintenance Updates and News](news/index.md)
+
+<div class="grid cards" markdown>
+
+-   :material-share-circle: &nbsp; __[Built-in social plugin][social]__
+
+    ---
+
+    The meta plugin can be used to [change the layout] for social cards or
+    [change specific layout options] like [background] or [color]
+    for a subset of pages.
+
+    ``` yaml title=".meta.yml"
+    social:
+      cards_layout: default/variant
+    ```
+
+-   :material-newspaper-variant-outline: &nbsp; __[Built-in blog plugin][blog]__
+
+    ---
+
+    The meta plugin allows to automatically associate blog posts with specific
+    [authors] and [categories], ensuring that blog posts are always correctly
+    annotated.
+
+    ``` yaml title=".meta.yml"
+    authors:
+      - squidfunk
+    ```
