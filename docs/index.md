@@ -13,12 +13,13 @@ NJIT provides High Performance Computing resources to support scientific computi
 
     See the list of availble clusters, their specifications, and how to access them in [Clusters](clusters/index.md).
 
+
+
+
+
 !!! njit inline "Software Modules"
 
     See [Software Modules](Software/index.md) for list of software packages installed on our cluster.
-
-
-
 
 !!! njit inline "Lochness to Wulver Migration"
         
@@ -31,7 +32,6 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 
 
-===
 
 
 
