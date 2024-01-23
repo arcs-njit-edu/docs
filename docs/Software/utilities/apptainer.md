@@ -23,7 +23,7 @@ apptainer is installed on [Wulver](wulver.md) as module
 | Apptainer          | `module load bright apptainer` |
 
 ## Application Information, Documentation
-The documentation of Apptainer is available at [Apptainer User Guide](https://apptainer.org/docs/user/latest/)
+The documentation of Apptainer is available at [Apptainer User Guide](https://apptainer.org/docs/user/latest/).
 ### Use Cases
 * BYOE: Bring Your Own Environment!
 * Reproducible science
