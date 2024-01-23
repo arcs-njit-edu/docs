@@ -17,6 +17,9 @@ NJIT provides High Performance Computing resources to support scientific computi
 
     See [Software Modules](Software/index.md) for list of software packages installed on our cluster.
 
+
+
+
 !!! njit inline "Lochness to Wulver Migration"
         
     For details in migrating the Lochness users to Wulver, please visit [Migration](migration/index.md).
@@ -25,10 +28,7 @@ NJIT provides High Performance Computing resources to support scientific computi
         
     To see the latest maintenance updates on NJIT cluster, please visit [Cluster Maintenance](news/index.md).
 
-
-
-
-
+---
 
 ## HPC latest News!
 
