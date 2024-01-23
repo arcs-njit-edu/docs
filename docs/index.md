@@ -28,10 +28,11 @@ NJIT provides High Performance Computing resources to support scientific computi
         
     To see the latest maintenance updates on NJIT cluster, please visit [Cluster Maintenance](news/index.md).
 
+
+
+
 ---
 
-
-===
 
 
 ## HPC latest News!
