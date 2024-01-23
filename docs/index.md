@@ -38,5 +38,5 @@ NJIT provides High Performance Computing resources to support scientific computi
 
     !!! important "Wulver Scheduled Maintenance"
         
-        Wulver will be out of service for maintenance once a month for updates, repairs, and upgrades.  The schedule is 9 a.m. to 9 p.m. the second Tuesday of every month.  During the maintenance period, all jobs and logins will be terminated. Please follow the maintaince updates at [Cluster Maintenance Updates and News](news/index.md).
+        Wulver will be out of service for maintenance once a month for updates, repairs, and upgrades.  The schedule is 9 a.m. to 9 p.m. the second Tuesday of every month.  During the maintenance period, the logins will be disabled and the jobs that do not end before the maintenance window begins will be held until the maintenance is complete and the cluster is returned to production. Please follow the maintaince updates at [Cluster Maintenance Updates and News](news/index.md).
 </div>
