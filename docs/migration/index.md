@@ -4,7 +4,7 @@ We are excited to share important news about the upcoming migration of users fro
 ## Migration Details:
 
 * Start Date: January 16, 2024
-* Priority:  Migration will be carried out in PI groups, with PIs who own nodes in Lochness being migrated first.
+* Priority: Migration will be carried out in PI groups, with PIs who own nodes in Lochness being migrated first.
 * Communication: PIs will receive prior communication from our team to discuss specific details tailored to their groups.
 * Lochness Complete Shutdown: At the conclusion of the migration, Lochness will undergo a complete shutdown to facilitate its merger with Wulver. You will be advised of any necessary preparations needed on your end for a seamless transition.
 * Restrictions on Lochness: As of the migration start date, no new user accounts or software installations will be permitted on Lochness. We appreciate your cooperation in adhering to these restrictions to ensure a smooth migration process.
