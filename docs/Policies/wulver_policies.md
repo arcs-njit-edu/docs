@@ -37,5 +37,5 @@ If the shared condo module does not satisfy the needs of the PI, a private pool 
 
 * High Priority
     * Not charged against SU allocation
-    * Wall time: 72 hours (default), PI can request longer walltimes up to 30 days. ARCS HPC reserves the right to reboot nodes once a month for maintenance — the second Tuesday of each month. See [Cluster Maintenance Updates and News](news/index.md) for details
+    * Wall time: 72 hours (default), PI can request longer walltimes up to 30 days. ARCS HPC reserves the right to reboot nodes once a month for maintenance — the second Tuesday of each month. See [Cluster Maintenance Updates and News](../news/index.md) for details
     * Only available to contributors
