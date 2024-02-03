@@ -88,12 +88,12 @@
         - Submit scripts will need to be modified to accommodate changes in partitions, hardware configurations, policies, and filesystems on Wulver. The research facilitation team will provide guidance and support in updating your submit scripts for seamless job submissions. Check the sample submit scipts for Wulver in [SLURM](slurm.md).
        - Code Recompilation: 
           - Due to differences in hardware, code may need to be recompiled to ensure optimal performance on Wulver. The research facilitation team is ready to assist you in this process, offering support to recompile code and address any related issues.
-          - If you code is compiled based on [FOSS Toolchain](compilers.md#free-open-source-software-(foss)) (GCC and OpenMPI), you need to compile the code the samw way you did in Lochness. Just make sure all the dependency libraries are installed on Wulver. Please visit [Software](../Software/index.md) to check the list of applications installed on Wulver.
-          - If your code is based on the [Intel toolchain](compilers.md#intel), you need to add the follwoing while configuring your code. 
+          - If you code is compiled based on [FOSS Toolchain](compilers.md#free-open-source-software-(foss)) (GCC and OpenMPI), you need to compile the code the same way you did in Lochness. Just make sure all the dependency libraries are installed on Wulver. Please visit [Software](../Software/index.md) to check the list of applications installed on Wulver.
+          - If your code is based on the [Intel toolchain](compilers.md#intel), you need to add the following while configuring your code. 
             ```console
             ./configure CFLAGS="-march=core-avx2"
             ```
-          - When installing codes, ensure that you perform the installation on the compute node rather than the login node. Since the hardware architecture is different on the login node, it's best practice to compile your code on the compute node. You need to initiate an [tnteractive session with compute node](slurm.md#interactive-session-on-a-compute-node) before compiling your code.
+          - When installing codes, ensure that you perform the installation on the compute node rather than the login node. Since the hardware architecture is different on the login node, it's best practice to compile your code on the compute node. You need to initiate an [interactive session with compute node](slurm.md#interactive-session-on-a-compute-node) before compiling your code.
       
     Assistance will be provided to help you adapt your code and scripts to the new environment on Wulver. If you have specific concerns or require support in making these adjustments, please reach out to our [research facilitation team](contact.md), and they will work with you to ensure a smooth transition.
 
@@ -101,7 +101,7 @@
 ??? answer
 
      While there are no official training sessions scheduled at this point, comprehensive documentation is available at [NJIT HPC Documentation](https://hpc.njit.edu) to assist faculty and researchers during the transition to Wulver.
-      In addition to documentation, the research facilitation team is committed to providing personal assistance to faculty and researchers. If you have specific questions, require hands-on support, or need guidance on using Wulver effectively for your research, please do not hesitate to reach out to the [research facilitation team](contact.md). They are here to ensure that you receive the assistance you need for a successful transition.
+      In addition to documentation, the research facilitation team is committed to providing personal assistance to faculty and researchers. If you have specific questions, require hands-on support, or need guidance on using Wulver effectively for your research, please do not hesitate to reach out to the [research facilitation team](contact.md). We are here to ensure that you receive the assistance you need for a successful transition.
 
 ### How can I request additional resources or discuss specific requirements for my research projects on Wulver?
 ??? answer
