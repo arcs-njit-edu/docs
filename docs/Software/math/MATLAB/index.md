@@ -91,6 +91,8 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         ```slurm
         #!/bin/bash
         #SBATCH -J test_matlab
+        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+		#SBATCH --error=%x.%j.err # prints the error message
         #SBATCH --partition=general
         #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=32
