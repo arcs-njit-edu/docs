@@ -40,7 +40,7 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
 		#SBATCH --error=%x.%j.err # prints the error message
         #SBATCH --partition=general
-        #SBATCH -nodes=1
+        #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=1
         #SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
 		#SBATCH --qos=standard
@@ -62,7 +62,7 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         #!/bin/bash
         #SBATCH -J test_matlab
         #SBATCH --partition=public
-        #SBATCH -nodes=1
+        #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=1
         #SBATCH - t 30:00
         
@@ -92,7 +92,7 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         #!/bin/bash
         #SBATCH -J test_matlab
         #SBATCH --partition=general
-        #SBATCH -nodes=1
+        #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=32
         #SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
 		#SBATCH --qos=standard
@@ -114,9 +114,9 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         #!/bin/bash
         #SBATCH -J test_matlab
         #SBATCH --partition=public
-        #SBATCH -nodes=1
+        #SBATCH --nodes=1
         #SBATCH --ntasks-per-node=32
-        #SBATCH - t 30:00
+        #SBATCH --time=30:00
         
         # Load matlab module
         module purge
