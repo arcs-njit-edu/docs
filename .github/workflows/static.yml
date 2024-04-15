@@ -5,10 +5,12 @@ on:
       - main
       - ARCS-March
       - abhi_patch
+      - julia_patch      
     workflow_dispatch:
       - main
       - ARCS-March
       - abhi_patch
+      - julia_patch
 permissions:
   contents: write
 jobs:
