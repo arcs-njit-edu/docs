@@ -20,7 +20,7 @@ title: Gaussian
     Due to licensing restrictions, Gaussian is not automatically accessible to all HPC users. Students are required to contact [hpc@njit.edu](mailto:hpc@njit.edu) to request access to Gaussian.
 
 ## Application Information, Documentation
-The documentation of Gaussian is available at [Gaussian Documentation](https://gaussian.com/man/). For any issues Gaussian simulation, users can contact at [Gaussian Support]( https://gaussian.com/techsupport/). 
+The documentation of Gaussian is available at [Gaussian Documentation](https://gaussian.com/man/). For any issues Gaussian simulation, users can contact at [Gaussian Support](https://gaussian.com/techsupport/). 
 
 ## Using Gaussian
 ??? example "Sample Batch Script to Run Gaussian : g16.submit.sh"
