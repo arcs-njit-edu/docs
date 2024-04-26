@@ -1,10 +1,10 @@
 # HPC Education and Training
 
-NJIt HPC provides practical training in high-performance computing for students and researchers at various levels of expertise. HPC training for research professionals aims to enhance their capabilities in utilizing high-performance computing, data-intensive computing, and data analytics within their respective research fields. 
+NJIT HPC provides practical training in high-performance computing for students and researchers at various levels of expertise. HPC training for research professionals aims to enhance their capabilities in utilizing high-performance computing, data-intensive computing, and data analytics within their respective research fields. 
 
 ## Training Programs
 
-By incorporating HPC resources into your course, you provide students with the opportunity to engage in hands-on, real-world applications of computational concepts. The HPC environment enhances the learning experience and prepares students for challenges in data-driven and computationally intensive fields. For specific requests or to schedule an HPC introduction session, please contact the [HPC Facilitator](contact.md).
+ The HPC environment enhances the learning experience and prepares students for challenges in data-driven and computationally intensive fields. For specific requests or to schedule an HPC introduction session, please contact the [HPC Facilitator](contact.md).
 
 
 <div class="grid cards" markdown>
@@ -20,9 +20,13 @@ By incorporating HPC resources into your course, you provide students with the o
     * Hardware and architecture of the Wulver cluster
     * Guidance on how to obtain an account and receive an allocation to utilize the shared resources. 
 
-    <iframe src=https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=6e8f6829-b93f-4834-9224-b14e015fa18f&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NJIT HPC Training Webinar" ></iframe>
-    [:octicons-arrow-right-24: Getting started](#)
+    <iframe src=https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=6e8f6829-b93f-4834-9224-b14e015fa18f&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all height="420" width="896" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NJIT HPC Training Webinar" ></iframe>
 
+    [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/NJIT_HPC_Seminar-Part-I.pdf)
+
+</div>
+
+<div class="grid cards" markdown>
 -   ### Getting Started on Wulver: Session II
 
     ---
@@ -33,9 +37,11 @@ By incorporating HPC resources into your course, you provide students with the o
     * Using [SLURM](slurm.md)
     * Job submissions
     
-    <iframe src=https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=da615cd0-2071-4f99-bc63-b155015e0544&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NJIT HPC Training Webinar" ></iframe>
-    [<span class="octicon--arrow-right-24"></span> Getting started](#)
+    <iframe src=https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=da615cd0-2071-4f99-bc63-b155015e0544&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all height="420" width="896" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NJIT HPC Training Webinar" ></iframe>
 
+    [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/NJIT_HPC_Seminar-Part-II.pdf)
+</div>
+<div class="grid cards" markdown>
 -   ### Introduction to Python and Conda
 
     ---
@@ -44,11 +50,12 @@ By incorporating HPC resources into your course, you provide students with the o
     #### Key Highlights:
   * Learn how to manage Python environments for HPC using Conda.
   * Become familiar with common tools and libraries for scientific computing in Python.
+    
+    <iframe src="https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=952312e4-d685-46c1-bbc2-b15c0150df0e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height=420" width="896" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NJIT HPC Training Webinar" ></iframe>
 
-    [:octicons-arrow-right-24: Customization](#)
+    [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/intro-to-Python-and-Conda.pdf)
+    [:octicons-arrow-right-24: Download Slides](../assets/slides/intro-to-Python-and-Conda.pdf)
 
 </div>
-
-
 
 
