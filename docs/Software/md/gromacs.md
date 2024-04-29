@@ -18,16 +18,6 @@ It is primarily designed for biochemical molecules like proteins, lipids, and nu
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "GROMACS"')
-    print(soft.to_markdown(index=False))
-    ```
-
 ## Application Information, Documentation
 The documentation of GROMACS is available at [GROMACS Manual](https://manual.gromacs.org/current/index.html), where you can find the tutorials in topologies, input file format, setting parameters, etc. 
 
@@ -66,46 +56,7 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
 
         srun gmx_mpi mdrun -deffnm run -cpi -v -ntomp 2 -pin on -tunepme -dlb yes -nb gpu -noappend
         ```
-    === "Lochness"
-        
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=gpu-esculentin
-        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --partition=datasci
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=16
-        #SBATCH --gres=gpu:1 # Number of GPUs per node
-        #SBATCH --time=24:59:00  # D-HH:MM:SS
-        #SBATCH --mail-type=ALL
-        
-        ################################################
-        #
-        # Purge and load modules needed to run
-        #
-        ################################################
-        module purge
-        module load foss/2021b CUDA/11.4.1
-        module load GROMACS/2021.5-CUDA-11.4.1
-
-        ###############################################
-        #
-        # cd into case directory if required
-        #
-        ################################################
-        INPUT_DIR=${PWD}/input_files_v2020
-        OUTPUT_DIR=${PWD}/output
-        
-        cp -r $INPUT_DIR/* $OUTPUT_DIR/
-        cd $OUTPUT_DIR
-
-        ###############################################
-        #
-        # Run simulation
-        #
-        ##############################################
-        gmx mdrun -v -deffnm em -nt 16 -nb gpu
-        ```
+    
 ??? example "Sample Batch Script to Run GROMACS on CPU gmx_cpu.submit.sh"
 
     === "Wulver"
@@ -136,55 +87,13 @@ GROMACS can be used on CPU or GPU. When using GROMACS with GPUs (Graphics Proces
 
         srun gmx_mpi mdrun -v -deffnm em -cpi -v -ntomp 1 -pin on -tunepme -dlb yes -noappend
         ```
-    === "Lochness"
-        
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=gpu-esculentin
-        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --partition=datasci
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=16
-        #SBATCH --gres=gpu:1 # Number of GPUs per node
-        #SBATCH --time=24:59:00  # D-HH:MM:SS
-        #SBATCH --mail-type=ALL
-        
-        ################################################
-        #
-        # Purge and load modules needed to run
-        #
-        ################################################
-        module purge
-        module load foss/2021b 
-        module load GROMACS/2021.5
-
-        ###############################################
-        #
-        # cd into case directory if required
-        #
-        ################################################
-        INPUT_DIR=${PWD}/input_files_v2020
-        OUTPUT_DIR=${PWD}/output
-        
-        cp -r $INPUT_DIR/* $OUTPUT_DIR/
-        cd $OUTPUT_DIR
-
-        ###############################################
-        #
-        # Run simulation
-        #
-        ##############################################
-        srun gmx_mpi mdrun -v -deffnm em -cpi -v -ntomp 2 -pin on -tunepme -dlb yes -nb gpu -noappend
-        ```
+    
 The tutorial in the above-mentioned job script can be found in 
 
 === "Wulver" 
 
     `/apps/testjobs/gromacs`
 
-=== "Lochness"
-    
-    `/opt/site/examples/gromacs`
 
 ## Related Applications
 

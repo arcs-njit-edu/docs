@@ -18,16 +18,6 @@ parallel particle simulator at the atomic, meso, or continuum scale.
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "LAMMPS"')
-    print(soft.to_markdown(index=False))
-    ```
-
 !!! note
 
     To know the deatils about dependent toolchain please go to [Toolchains](compilers.md#toolchains)
@@ -71,30 +61,7 @@ The official LAMMPS is available at [LAMMPS Online Manual](https://lammps.sandia
         module load wulver # Load slurm, easybuild
         module load foss/2021b LAMMPS
     
-        srun -n $SLURM_NTASKS lmp -in test.in
-        ```
-
-    === "Lochness"
-
-        ```slurm
-        #!/bin/bash
-        #SBATCH -J test_lammps
-        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --partition=public
-        #SBATCH --nodes=2
-        #SBATCH --ntasks-per-node=32
-        #SBATCH --mem-per-cpu=10G # Adjust as necessary
-        #SBATCH --time=00:01:00  # D-HH:MM:SS
-        
-        ###############################################
-        #
-        # Purge and load modules needed for run
-        #
-        ################################################
-        module purge
-        module load foss/2021b LAMMPS
-    
-        srun -n $SLURM_NTASKS lmp -in test.in
+        srun lmp -in test.in
         ```
 
 Then submit the job script using the sbatch command, e.g., assuming the job script name is `test_lammps.slurm`:
