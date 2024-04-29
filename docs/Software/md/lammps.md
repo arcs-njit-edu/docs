@@ -47,7 +47,7 @@ The official LAMMPS is available at [LAMMPS Online Manual](https://lammps.sandia
         #SBATCH --partition=general 
 		#SBATCH --nodes=1
         #SBATCH --ntasks-per-node=128
-		#SBATCH --mem-per-cpu=4000M # Maximum allowable mempry per CPU 4G
+		#SBATCH --mem-per-cpu=4000M # Maximum allowable memory per CPU 4G
 		#SBATCH --qos=standard
         #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
 		#SBATCH --time=71:59:59  # D-HH:MM:SS
