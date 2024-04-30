@@ -1,14 +1,14 @@
 # HPC Education and Training
 
-NJIT HPC provides practical training in high-performance computing for students and researchers at various levels of expertise. HPC training for research professionals aims to enhance their capabilities in utilizing high-performance computing, data-intensive computing, and data analytics within their respective research fields. 
+NJIT HPC provides practical training in high performance computing for students and researchers at various levels of expertise. HPC training for research professionals aims to enhance their capabilities in utilizing high-performance computing, data-intensive computing, and data analytics within their respective research fields. 
 
 ## Training Programs
 
  Since [Wulver](wulver.md) is quite different from the older cluster [Lochness](lochness.md), the HPC training programs are designed to guide both new and existing users on how to use the new cluster. The following trainings provide the basic information on  
 
- * Introduction to HPC, 
- * Performance Optimization, 
- * Job Submission and Management, 
+ * Introduction to HPC 
+ * Performance Optimization
+ * Job Submission and Management
  * Managing Conda Environment 
 
 If you still have any questions on HPC usage, please contact the [HPC Facilitator](contact.md).
