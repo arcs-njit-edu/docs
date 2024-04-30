@@ -19,16 +19,6 @@ The software is widely used in academia, research, and industry, and is known fo
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "OpenFOAM"')
-    print(soft.to_markdown(index=False))
-    ```
-
 ## Application Information, Documentation
 The documentation of OpenFOAM is available at [OpenFOAM Documentation](https://www.openfoam.com/documentation/overview), where you can find the tutorials in OpenFOAM meshing (blockMesh), postprocessing, setting boundary conditions etc. 
 
@@ -83,53 +73,12 @@ OpenFOAM can be used for both serial and parallel jobs. To run OpenFOAM in paral
         reconstructPar
         ```
 
-    === "Lochness"
-
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=openfoam_parallel
-        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --partition=public
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=16
-        #SBATCH --mem-per-cpu=10G # Adjust as necessary
-        #SBATCH --time=00:01:00  # D-HH:MM:SS
-        ################################################
-        #
-        # Purge and load modules needed for run
-        #
-        ################################################
-        module purge
-        module load foss/2021b OpenFOAM
-        ################################################
-        #
-        # Source OpenFOAM bashrc
-        # The modulefile doesn't do this
-        #
-        ################################################
-        source $FOAM_BASH
-        ################################################
-        #
-        # cd into cavity directory and run blockMesh and
-        # icoFoam. Note: this is running on one node and
-        # using all 32 cores on the node
-        #
-        ################################################
-        cd cavity
-        blockMesh
-        decomposePar -force
-        srun icoFoam -parallel
-        reconstructPar
-        ```
 !!! note
         
     === "Wulver"
         
         You can copy the tutorial `cavity` mentioned in the above job script from the `/apps/easybuild/examples/openFoam/parallel` directory.  
 
-    === "Lochness"
-        
-        You can copy the tutorial `cavity` mentioned in the above job script from the `/opt/site/examples/openFoam/parallel` directory.
 
 To run OpenFOAM in serial, the following job script can be used.
 
@@ -179,44 +128,6 @@ To run OpenFOAM in serial, the following job script can be used.
         icoFoam
         ```
 
-    === "Lochness"
-        
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=openfoam_serial
-        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --partition=public
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=1
-        #SBATCH --mem-per-cpu=10G # Adjust as necessary
-        #SBATCH --time=00:01:00  # D-HH:MM:SS
-        ################################################
-        #
-        # Purge and load modules needed for run
-        #
-        ################################################
-        module purge
-        module load foss/2021b OpenFOAM
-        ################################################
-        #
-        # Source OpenFOAM bashrc
-        # The modulefile doesn't do this
-        #
-        ################################################
-        source $FOAM_BASH
-        ################################################
-        #
-        # copy into cavity directory from /opt/site/examples/openFoam/parallel and run blockMesh and
-        # icoFoam. Note: this is running on one node and
-        # using all 32 cores on the node
-        #
-        ################################################
-        cp -r /opt/site/examples/openFoam/parallel/cavity /path/to/destination
-        # /path/to/destination is destination path where user wants to copy the cavity directory
-        cd cavity
-        blockMesh
-        icoFoam
-        ```
 Submit the job script using the sbatch command: `sbatch openfoam_parallel.submit.sh` or `sbatch openfoam_serial.submit.sh`.
 
 ## Building OpenFOAM from source
@@ -224,8 +135,11 @@ Sometimes, users need to create a new solver or modify the existing solver by ad
 
 ```bash
 
-  # This is to build a completly self contained OpenFOAM using MPICH mpi. Everything from GCC on up will be built.
-        
+  # This is to build a completely self contained OpenFOAM using MPICH mpi. Everything from GCC on up will be built.
+  
+  # start an interactive session with compute node. Replace "PI_UCID" with the UCID of PI. Modify the other parameters if required.
+  srun --partition=general --nodes=1 --ntasks-per-node=16 --mem-per-cpu=2G --account=PI_UCID --qos=standard --time=2:00:00 --pty bash  
+     
   # purge all loaded modules
   module purge
   # Download the latest version of OpenFOAM, visit https://develop.openfoam.com/Development/openfoam/-/blob/master/doc/Build.md for details

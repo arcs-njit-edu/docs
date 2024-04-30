@@ -14,18 +14,47 @@ title: ORCA
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
+## Application Information, Documentation
+The documentation of Gaussian is available at [ORCA Documentation](https://www.orcasoftware.de/tutorials_orca/). For any issues Gaussian simulation, users can contact at [ORCA Forum](https://orcaforum.kofo.mpg.de/app.php/portal). 
 
-    ```python exec="on"
-    import pandas as pd
+## Using Gaussian
+??? example "Sample Batch Script to Run ORCA : orca.submit.sh"
     
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "ORCA"')
-    print(soft.to_markdown(index=False))
-    ```
+    === "Wulver"
+
+        ```slurm
+        #!/bin/bash -l
+        #SBATCH --job-name=job_orca
+        #SBATCH --output=%x.%j.out
+        #SBATCH --error=%x.%j.err
+        #SBATCH --partition=general
+        #SBATCH --qos=standard
+        #SBATCH --nodes=1
+        #SBATCH --account=PI_UCID # Replace PI_UCID with the UCID of PI
+        #SBATCH --ntasks-per-node=8
+        #SBATCH --time=59:00  # D-HH:
+        
+        #module load command
+
+        module purge > /dev/null 2>&1
+        module load wulver
+        module load foss/2022b ORCA
+        
+        #Run the program
+
+        srun orca test.inp > geom.out
+        ```
+
+The sample input file `test.inp` can be found in `/apps/testjobs/ORCA`
+
+!!! important
+    
+    Please don't run anything on `/apps/testjobs/ORCA` as users have only read-only permission. You need to copy the submit script and input file from `/apps/testjobs/ORCA` to `$HOME` or `/project`.
 
 ## Related Applications
 
+* [Gaussian](gaussian.md)
+* [CP2K](cp2k.md)
 
 ## User Contributed Information
 

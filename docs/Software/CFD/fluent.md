@@ -15,16 +15,6 @@ title: FLUENT
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "fluent" | Software == "ANSYS"')
-    print(soft.to_markdown(index=False))
-    ```
-
 ## Application Information, Documentation
 To use Fluent on cluster, Users need to prepare the case using ANSYS on their local machine first. Please [download](https://njit.instructure.com/courses/8519/assignments/128626) ANSYS and follow the [instructions](https://ist.njit.edu/ansys-installation-instructions) to install ANSYS on your local machine.
 
@@ -99,38 +89,7 @@ For more details on journal commands, see the Fluent text user interface (TUI) c
         fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
         ```
 
-    === "Lochness"
-
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=fluent
-        #SBATCH --output=%x.%j.out # i%x.%j expands to slurm JobName.JobID
-        #SBATCH --error=%x.%j.err # prints the error message
-        #SBATCH --ntasks=8
-        # Use "sinfo" to see what partitions are available to you
-        #SBATCH --partition=public
-        
-        # Memory required; lower amount gets scheduling priority
-        #SBATCH --mem-per-cpu=5G
-        
-        # Time required in d-hh:mm:ss format; lower time gets scheduling priority
-        #SBATCH --time=5-24:59:00
-        
-        # Purge and load the correct modules
-        module purge > /dev/null 2>&1
-        module load ANSYS
-        
-        # Run the mpi program
-        
-        machines=hosts.$SLURM_JOB_ID
-        touch $machines
-        for node in `scontrol show hostnames`
-            do
-                echo "$node"  >> $machines
-            done
-        
-        fluent 3ddp -affinity=off -ssh -t$SLURM_NTASKS -pib -mpi=intel -cnf="$machines" -g -i journal.JOU
-        ```
+    
 Submit the job using `sbatch fluent.submit.sh` command.
 
 

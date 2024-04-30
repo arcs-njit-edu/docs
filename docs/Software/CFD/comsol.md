@@ -19,15 +19,6 @@ COMSOL is widely used in engineering and science fields, such as mechanical engi
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "COMSOL" | Software == "comsol"')
-    print(soft.to_markdown(index=False))
-    ```
 
 ## Application Information, Documentation
 

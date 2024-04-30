@@ -19,16 +19,6 @@ SIESTA is actively developed and maintained by a team of researchers at the Univ
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "Siesta"')
-    print(soft.to_markdown(index=False))
-    ```
-
 ## Related Applications
 
 * 

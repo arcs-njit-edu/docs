@@ -17,16 +17,6 @@ The software suite is known for its high level of accuracy and versatility, and 
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "ANSYS"')
-    print(soft.to_markdown(index=False))
-    ```
-
 ## Application Information, Documentation
 Please [download](https://njit.instructure.com/courses/8519/assignments/128626) ANSYS and follow the [instructions](https://ist.njit.edu/ansys-installation-instructions) to install ANSYS on your local machine.
 
