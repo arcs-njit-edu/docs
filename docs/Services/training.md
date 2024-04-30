@@ -4,7 +4,14 @@ NJIT HPC provides practical training in high-performance computing for students 
 
 ## Training Programs
 
- The HPC environment enhances the learning experience and prepares students for challenges in data-driven and computationally intensive fields. For specific requests or to schedule an HPC introduction session, please contact the [HPC Facilitator](contact.md).
+ Since [Wulver](wulver.md) is quite different from the older cluster [Lochness](lochness.md), the HPC training programs are designed to guide both new and existing users on how to use the new cluster. The following trainings provide the basic information on  
+
+ * Introduction to HPC, 
+ * Performance Optimization, 
+ * Job Submission and Management, 
+ * Managing Conda Environment 
+
+If you still have any questions on HPC usage, please contact the [HPC Facilitator](contact.md).
 
 
 <div class="grid cards" markdown>
@@ -54,7 +61,6 @@ NJIT HPC provides practical training in high-performance computing for students 
     <iframe src="https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=952312e4-d685-46c1-bbc2-b15c0150df0e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height=420" width="896" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NJIT HPC Training Webinar" ></iframe>
 
     [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/intro-to-Python-and-Conda.pdf)
-    [:octicons-arrow-right-24: Download Slides](../assets/slides/intro-to-Python-and-Conda.pdf)
 
 </div>
 
