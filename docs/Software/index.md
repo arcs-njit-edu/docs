@@ -1,13 +1,6 @@
 # Software Environment
-All software and numerical libraries available at the cluster can be found at `/opt/site/easybuild/software/` if you are using Lochness. In case of Wulver the applications are installed at `/apps/easybuild/software/`. We use [EasyBuild](https://docs.easybuild.io/en/latest) to install, build and manage different version of packages. 
-!!! note
+All software and numerical libraries available at the cluster can be found at `/apps/easybuild/software/`. We use [EasyBuild](https://docs.easybuild.io/en/latest) to install, build and manage different version of packages. 
 
-    If you are using Lochness, add the following in `.modules` file located in `$HOME` directory
-    ```
-    module use /opt/site/easybuild/modules/all/MPI
-    module use /opt/site/easybuild/modules/all/Core
-    module use /opt/site/easybuild/modules/all/Compiler
-    ```
 If you could not find software or libraries on HPC cluster, please submit a request for [HPC Software Installation](https://njit.service-now.com/sp?id=sc_cat_item&sys_id=0746c1f31b6691d04c82cddf034bcbe2&sysparm_category=405f99b41b5b1d507241400abc4bcb6b) by visiting the [Service Catalog](https://njit.service-now.com/sp?id=sc_category). The list of installed software or packages on HPC cluster can be found in [Software List](#software-list).
 
 ## Modules
@@ -20,23 +13,11 @@ The list of software and libraries installed on Lochness can be accessed by usin
 module av
 ```
 ### Search for Specific Package
-You can check specific packages and list of their versions using `module av`. For example, the list of different versions of Python installed on cluster can be checked by using
-```console
-module av Python
-```
-The above command gives the following output
-```console
-------------------------------------------------------------------------------------------------------------------- /opt/site/easybuild/modules/all/Compiler -------------------------------------------------------------------------------------------------------------------
-   GCCcore/10.2.0/Python/2.7.18             GCCcore/11.2.0/IPython/7.26.0                GCCcore/8.3.0/Meson/0.51.2-Python-3.7.4           GCCcore/9.3.0/Flask/1.1.2-Python-3.8.2                         GCCcore/9.3.0/archspec/0.1.0-Python-3.8.2
-   GCCcore/10.2.0/Python/3.8.6       (D)    GCCcore/11.2.0/Python/2.7.18-bare            GCCcore/8.3.0/Meson/0.59.1-Python-3.7.4    (D)    GCCcore/9.3.0/GObject-Introspection/1.64.0-Python-3.8.2        GCCcore/9.3.0/pkgconfig/1.5.1-Python-3.8.2
-   GCCcore/10.3.0/Python/2.7.18-bare        GCCcore/11.2.0/Python/3.9.6-bare             GCCcore/8.3.0/Python/2.7.16                       GCCcore/9.3.0/Meson/0.55.1-Python-3.8.2                        GCCcore/9.3.0/pybind11/2.4.3-Python-3.8.2
-   GCCcore/10.3.0/Python/3.9.5-bare         GCCcore/11.2.0/Python/3.9.6           (D)    GCCcore/8.3.0/Python/3.7.4                 (D)    GCCcore/9.3.0/Python/2.7.18
-   GCCcore/10.3.0/Python/3.9.5       (D)    GCCcore/11.2.0/protobuf-python/3.17.3        GCCcore/8.3.0/pkgconfig/1.5.1-Python-3.7.4        GCCcore/9.3.0/Python/3.8.2                              (D)
-```
-!!! note
+You can check specific packages and list of their versions using `module spider`. For example, the list of Python installed on cluster can be checked by using
 
-    The above display message is for Lochness only. In Wulver, most of the appications are built based on the toolchain. For more details see [Toolchain](compilers.md#toolchains). Therefore to see available software, you need to load the toolchain first. 
-
+```console
+module spider Python
+```
 
 To see how to load the modules (for example `Python/3.9.6`) the following command needs to used.
 ```console
@@ -78,6 +59,7 @@ To use specific package, you need to use `module load` command which modified th
 
     * The `module load` command will load dependencies automatically as needed, however you may still need to load prerequisite modules to load specific software package(s). For that you need to use `module spider` command as described above.
     * For running jobs via batch script, you need to add module load command(s) to your submission script.
+
 For example, to load `Python` version `3.9.6` as shown in the above example, you need to load `GCCcore/.11.2.0` module first before loading the Python module is available to load. To use `Python 3.9.6`, use the following command
 ```console
 module load GCCcore/11.2.0 Python
@@ -162,14 +144,6 @@ The following applications are installed on Wulver and Lochness.
     ```python exec="on"
     import pandas as pd
     df = pd.read_csv('docs/assets/tables/module_wulver.csv')
-    print(df.to_markdown(index=False))
-    ```
-
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
     print(df.to_markdown(index=False))
     ```
 
