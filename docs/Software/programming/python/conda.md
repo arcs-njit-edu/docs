@@ -208,7 +208,7 @@ Simple TensorFlow test program to make sure the virtual env can access a GPU. Pr
         srun python tf.gpu.test.py
         ```
 Result:
-```
+```bash
 Starting /home/g/guest24/.bash_profile ... standard AFS bash profile
 
 Home directory : /home/g/guest24 is not in AFS -- skipping quota check
@@ -245,7 +245,7 @@ Next, deactivate the environment using `conda deactivate tf` command.
 To install PyTorch with GPU, load the `Anaconda3` module as described above and then use the following
 
 ```
-conda create --name torch-cuda python=3.7
+conda create --name torch-cuda python=3.8
 source conda.sh
 conda activate torch-cuda
 conda install -c "nvidia/label/cuda-11.7.0" cuda-toolkit
@@ -353,6 +353,23 @@ source conda.sh
 conda activate env_name
 mamba install scipy
 ```
+### Example of Installing PyTorch via Mamba
+
+```bash
+module load Anaconda3
+conda create --name torch-cuda
+source conda.sh
+conda activate torch-cuda
+module load Mamba
+mamba install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+```
+
+This will install pytorch in the `torch-cuda` environment.
+
+!!! warning
+
+    Ensure to unload the Mamba module, as when you use `Anaconda3` and `Mamba` together, Mamba installs the PyTorch packages within the Conda environment. Consequently, the next time you activate this environment, there's no need to load the 'Mamba' module. Only employ 'Mamba' when installing the packages.
+
 ## Export and Import Conda Environment
 Exporting and importing Conda environments allows users to capture and reproduce the exact set of dependencies for a project. With Conda, a popular package and environment management system, users can export an environment, including all installed packages, into a YAML file. This file can then be shared or version-controlled. Importing the environment from the YAML file on another system ensures consistent dependencies, making it easier to recreate the development or execution environment. 
 
