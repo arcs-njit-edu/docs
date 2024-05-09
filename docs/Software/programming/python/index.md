@@ -14,17 +14,6 @@
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "Python"')
-    soft = soft[~soft.apply(lambda row: row.astype(str).str.contains('bare').any(), axis=1)]
-    print(soft.to_markdown(index=False))
-    ```
-
 ## Python libraries
 Apart from Python’s standard library, Python offers a wide range of additional libraries that need to be loaded as modules before users can use these. Here, we list these additional libraries. Please contact us to file a ticket with [Service Now](mailto:hpc@njit.edu) in case you do not find the libraries you want to use.
 
