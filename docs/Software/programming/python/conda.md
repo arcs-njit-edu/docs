@@ -17,20 +17,7 @@ Conda can be accessed on the cluster as `Anaconda3` or `Miniconda3` module.
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    # Header values to be added
-    soft = df.query('Software == "Anaconda3" | Software == "Miniconda3"')
-    print(soft.to_markdown(index=False))
-    ```
-
-Users can use conda after using any of the modules mentioned above
-
-module a `Anaconda3` module. Users can use `Anaconda3` to create virtual Python environments to manage Python modules.
+Users can use conda after using any of the modules mentioned above. Once `Anaconda3` module is loaded, users can create virtual Python environments to manage Python modules.
 
 ## Create and Activate a Conda Virtual Environment
 
@@ -217,26 +204,6 @@ Simple TensorFlow test program to make sure the virtual env can access a GPU. Pr
         conda activate tf
         srun python tf.gpu.test.py
         ```
-    
-    === "Lochness"
-    
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=tf_test
-        #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
-        #SBATCH --nodes=1
-        #SBATCH --tasks-per-node=1
-        #SBATCH --partition=datasci
-        #SBATCH --gres=gpu:1
-        #SBATCH --mem=4G
-        
-        # Purge any module loaded by default
-        module purge > /dev/null 2>&1
-        module load Anaconda3
-        source $HOME/conda3.sh
-        conda activate tf
-        srun python tf.gpu.test.py
-        ```
 Result:
 ```
 Starting /home/g/guest24/.bash_profile ... standard AFS bash profile
@@ -365,26 +332,7 @@ User can use the following job script to run the script.
         conda activate torch-cuda
         srun python touch_tensor.py
         ```
-    
-    === "Lochness"
-    
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=torch_test
-        #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
-        #SBATCH --nodes=1
-        #SBATCH --tasks-per-node=1
-        #SBATCH --partition=datasci
-        #SBATCH --gres=gpu:1
-        #SBATCH --mem=4G
-        
-        # Purge any module loaded by default
-        module purge > /dev/null 2>&1
-        module load Anaconda3
-        source $HOME/conda3.sh
-        conda activate torch-cuda
-        srun python touch_tensor.py
-        ```
+
 !!! warning
 
     When working with Python, it is generally advised to avoid mixing package management tools such as pip and conda within the same environment. Pip and Conda manage dependencies differently, and their conflict can lead to compatibility issues and unexpected behavior. Mixing the two can result in an environment where packages installed with one tool may not interact seamlessly with those installed using the other. 
