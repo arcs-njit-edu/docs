@@ -31,6 +31,9 @@ NJIT provides High Performance Computing resources to support scientific computi
     !!! njit inline "Cluster Maintenance Updates"
         
         To see the latest maintenance updates on NJIT cluster, please visit [Cluster Maintenance](news/index.md).
+    !!! njit inline "HPC Trainings and Webinars"
+        
+        Check the latest webinar sessions about HPC at [HPC Training](Services/training.md).
 </div>
 
 <div class="grid cards" markdown>

@@ -484,12 +484,12 @@ By following these steps, you can successfully export a conda environment from o
 
 ## Conda User Commands 
 
-| Task                                       |                        Command                         | 
-|--------------------------------------------|:------------------------------------------------------:|
-| Activate environment:                      |          `conda activate [environment_name]`           |
-| Deactivate environment:                    |         `conda deactivate [environment_name]`          |
-| Show the list of environments:             |                    `conda env list`                    |
-| Delete environment:                        |           `conda remove [environment_name]`            |
-| Export environment:                        |      `conda env export > [environment_name].yml`       |
-| Import environment from YAML:              |      `conda env create -f [environment_name].yml`      |
-| Import environment to different location:  | `conda env create -f [environment_name].yml -p [PATH]` | 
+| Task                                      |                        Command                         | 
+|-------------------------------------------|:------------------------------------------------------:|
+| Activate environment:                     |          `conda activate [environment_name]`           |
+| Deactivate environment:                   |         `conda deactivate [environment_name]`          |
+| Show the list of environments:            |                    `conda env list`                    |
+| Delete environment:                       |  `conda conda remove --name [environment_name] --all`  |
+| Export environment:                       |      `conda env export > [environment_name].yml`       |
+| Import environment from YAML:             |      `conda env create -f [environment_name].yml`      |
+| Import environment to different location: | `conda env create -f [environment_name].yml -p [PATH]` | 
