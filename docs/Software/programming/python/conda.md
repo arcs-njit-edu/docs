@@ -60,6 +60,10 @@ Make sure to activate the conda environment prior to installing Python packages.
 Conda Channel refers to a repository or collection of software packages that are available for installation using Conda. Conda Channels are used to organize and distribute packages, and they play a crucial role in the Conda ecosystem. Channels can be specified using the `--channel` or `-c` option with the conda install command i.e. 
 `conda install -c channel_name package_name`. In the above example, if you want to specify the channel name to install `matplotlib`, you need to use
 
+!!! note
+
+    Since memory and CPU usage are limited, it's better to start an [interactive session with the compute node](slurm.md#interactive-session-on-a-compute-node) whenever you are installing Python packages via Conda.
+
 ```bash
 (ENV) login-41 ~ >: conda install -c conda-forge matplotlib
 ```
