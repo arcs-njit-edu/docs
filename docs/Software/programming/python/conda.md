@@ -4,7 +4,6 @@ Since Python supports a wide range of additional libraries in machine learning o
 Conda as a package manager helps you find and install packages. If you need a package that requires a different version of Python, you do not need to switch to a different environment manager, because conda is also an environment manager. 
 
 ## Availability
-Conda can be accessed on the cluster as `Anaconda3` or `Miniconda3` module.
 
 === "Wulver"
 
