@@ -1,6 +1,6 @@
-# HPC
+# High Performance Computing (HPC)
 
-Welcome to HPC at NJIT.
+Welcome to HPC at [New Jersey Institute of Technology (NJIT)](https://www.njit.edu).
 
 NJIT provides High Performance Computing resources to support scientific computing for faculty and students. These resources include CPU nodes, GPU nodes, parallel storage, high speed, low latency Infiniband networking and a fully optimized scientific software stack.
 
