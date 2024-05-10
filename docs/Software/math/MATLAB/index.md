@@ -15,7 +15,7 @@ MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment a
     ```
 
 ## Application Information, Documentation
-The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathworks.com/support/learn-with-matlab-tutorials.html)
+The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathworks.com/support/learn-with-matlab-tutorials.html).
 
 ## Using MATLAB
 

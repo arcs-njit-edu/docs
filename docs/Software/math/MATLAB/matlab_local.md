@@ -6,7 +6,7 @@
 
 ## Installation steps of MATLAB on local machine
 * Go to [Mathworks Download](https://www.mathworks.com/downloads/) and register with your NJIT email address.
-* Select the **R2022a** version to download. 
+* Select the [MATLAB version](../#availability) installed on Wulver.
 * User needs to select the correct installer based on the OS (Mac or Windows). 
 * Run the installer.
 
