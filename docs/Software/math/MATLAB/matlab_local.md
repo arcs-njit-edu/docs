@@ -20,23 +20,13 @@
 * Continue by selecting **Next** and MATLAB will be installed on your computer.
 
 ## Setup Slurm profile to run MATLAB on Lochness
-Following this procedure a user will be able to submit jobs to lochness or stheno from Matlab running locally on the user's computer.
+Following this procedure a user will be able to submit jobs on Wulver from Matlab running locally on the user's computer.
 
 ### Installing the Add-On
 
-From the Matlab window, click on "Add-ons" and select "Get Add-Ons."
+Download the [Slurm-Add-on](../../../assets/parallel_slurm.mlpkginstall) and double-click on it to install. Make sure to keep the MATLAB window open while installing it.
 
-   ![matlab_addon1](img/ClickOnAddons.png){ width=70% height=70%}
-
-In the search box enter "slurm" and click on the magnifying glass icon. Select "Parallel Computing Toolbox plugin for MATLAB Parallel Server with Slurm". Alternatively, this Add-On can be downloaded directly from the [Mathworks](https://www.mathworks.com/matlabcentral/fileexchange/52807-parallel-computing-toolbox-plugin-for-matlab-parallel-server-with-slurm) site.
-   
-   ![matlab_slurm](img/SlurmAddOn.png){ width=70% height 70%}
-
-Click on "Install."
-
-![matlab_addons_install](img/ClickOnInstall.png){ width=70% height 70%}
-
-### Creating a Profile for Lochness or Stheno
+### Creating a Profile for Wulver
 
 The following steps will create a profile for lochness (or stheno). Click <kbd>Next</kbd> to begin.
 
@@ -46,7 +36,7 @@ In the "Operating System" screen `Unix` is already selected. Click <kbd>Next</kb
 
 ![matlab_profile2](img/GenericProfile2.png){ width=50% height 50%}
 
-This "Submission Mode" screen determines whether or not to use a `shared` or `nonshared` submission mode. Since Matlab installed on your personal computer or laptop does not use a shared job location storage, select "No" where indicated and click <kbd>Next</kbd> to continue.
+This "Submission Mode" screen determines whether to use a `shared` or `nonshared` submission mode. Since Matlab installed on your personal computer or laptop does not use a shared job location storage, select "No" where indicated and click <kbd>Next</kbd> to continue.
 
 ![matlab_profile3](img/GenericProfile3.png){ width=50% height 50%}
 
@@ -54,11 +44,11 @@ Click <kbd>Next</kbd> to continue.
 
 ![matlab_profile4](img/GenericProfile4.png){ width=50% height 50%}
 
-In the "Connection Details" screen, enter the cluster host, either "lochness.njit.edu" or "stheno.njit.edu." Enter your UCID for the username. Select "No" for the "Do you want to use an identity file to log in to the cluster" option and click next to continue.
+In the `Connection Details` screen, enter the cluster host as `wulver.njit.edu`. Enter your UCID for the `username`. Select `No` for the `Do you want to use an identity file to log in to the cluster` option and click <kbd>next</kbd> to continue.
 
 ![matlab_profile5](img/GenericProfile5.png){ width=50% height 50%}
 
-In the "Cluster Details" screen enter the full path to the directory on lochness to store the Matlab job files. In the case the directory is $HOME/MDCS. MDCS stands for Matlab Distributed Computing Server. It is not necessary to name this directory MDCS. This directory can be named anything you wish. To determine the value of $HOME, logon to lochness. For details on how to Logon to Lochness from local computer please see this [link](https://hackmd.io/@absrocks/BJRlQtBVi). Once connected to Lochness run the following:
+In the `Cluster Details` screen enter the full path to the directory on lochness to store the Matlab job files. In the case the directory is `$HOME/MDCS`. `MDCS` stands for Matlab Distributed Computing Server. It is not necessary to name this directory as `MDCS`. This directory can be named anything you wish. To determine the value of `$HOME`, connect to Wulver and run the following:
 
 ```
   login-1-45 ~ >: echo $HOME
@@ -69,7 +59,7 @@ Make sure to check the box <kbd>Use unique subfolders</kbd> . Click <kbd>Next</k
 
 ![matlab_profile6](img/GenericProfile6.png){ width=50% height 50%}
 
-In the "Workers" screen enter `512` for the number of workers and `/opt/site/easybuild/software/MATLAB/2022a` for `MATLAB installation folders for workers`. Click <kbd>Next</kbd> to continue.
+In the `Workers`, enter `512` for the number of workers. For  and `/opt/site/easybuild/software/MATLAB/2022a` for `MATLAB installation folders for workers`. Click <kbd>Next</kbd> to continue.
 
 ![matlab_profile7](img/GenericProfile7.png){ width=50% height 50%}
 
