@@ -112,15 +112,15 @@ In the "License" screen make sure to select "Network license manager" and click 
 
 In the `Profile Details` screen enter "Wulver". The "Cluster description" is optional and may be left blank. Click <kbd>Next</kbd> to continue.
 
-![](https://wiki.hpc.arcs.njit.edu/images/4/4d/GenericProfile9.png){ width=50% height 50%}
+![matlab_profile9](img/GenericProfile9.png){ width=50% height 50%}
 
-In the "Summary" screen make sure everything is correct and click "Create."
+In the `Summary` screen make sure everything is correct and click <kbd>Create</kbd>.
 
 ![matlab_profile10](img/GenericProfile10.png){ width=50% height 50%}
 
-In the "Profile Created Successfully" screen, check the "Set the new profile as default" box and click on "Finish."
+In the `Profile Created Successfully` screen, check the `Set the new profile as default` box and click on <kbd>Finish</kbd>.
 
-![](https://wiki.hpc.arcs.njit.edu/images/b/b8/GenericProfile11.png){ width=50% height 50%}
+![matlab_profile11](img/GenericProfile11.png){ width=50% height 50%}
 
 ## Submitting a Serial Job
 This section will demonstrate how to create a cluster object and submit a simple job to the cluster. The job will run the 'hostname' command on the node assigned to the job. The output will indicate clearly that the job ran on the cluster and not on the local computer.
@@ -134,8 +134,9 @@ The hostname.m file used in this demonstration can be downloaded [here](https://
 
 Certain arguments need to be passed to SLURM in order for the job to run properly. Here we will set values for partion, mem-per-cpu and time. In the Matlab window enter:
 ```
- >> c.AdditionalProperties.AdditionalSubmitArgs=['--partition=public --mem-per-cpu=10G --time=2-00:00:00'] 
+ >> c.AdditionalProperties.AdditionalSubmitArgs=['--partition=general --qos=standard --account=PI_UCID --mem-per-cpu=4G --time=2-00:00:00'] 
 ```
+Replace `PI_UCID` with the UCID of PI. Check the [SLURM Documentation](slurm.md) for other SLURM parameters.
 To make this persistent between Matlab sessions these arguments need to be saved to the profile. In the Matlab window enter:
 ```
  >> c.saveProfile 
@@ -146,10 +147,14 @@ We will now submit the hostname.m function to the cluster. In the Matlab window 
 ```
 >> j=c.batch(@hostname, 1, {}, 'AutoAddClientPath', false); 
 ```
-@: Submitting a function.\
-1: The number of output arguments from the evaluated function.\
-{}: Cell array of input arguments to the function. In this case empty.\
-'AutoAddClientPath', false: The client path is not available on the cluster.
+
+* `@`: Submitting a function.
+
+* `1`: The number of output arguments from the evaluated function.
+
+* `{}`: Cell array of input arguments to the function. In this case empty.
+
+* `'AutoAddClientPath', false`: The client path is not available on the cluster.
 
 
 When the job is submitted, you will be prompted for your password.
@@ -171,9 +176,9 @@ As can be seen, this job ran on node720
 ![](https://wiki.hpc.arcs.njit.edu/images/e/e5/BatchHostname.png){ align=left, width=70% height 70%}
 
 ### Submitting a Parallel Function
-The "Job Monitor" is a convenient way to monitor jobs submitted to the cluster. In the Matlab window select "Parallel" and then "Monitor Jobs."
+The `Job Monitor` is a convenient way to monitor jobs submitted to the cluster. In the Matlab window select `Parallel` and then `Monitor Jobs`.
 
-For more information see the Mathworks page: [Job Monitor](https://www.mathworks.com/help/parallel-computing/job-monitor.html)
+For more information see the Mathworks page: [Job Monitor](https://www.mathworks.com/help/parallel-computing/job-monitor.html).
 
 ![](https://wiki.hpc.arcs.njit.edu/images/c/c4/MonitorJobs.png){ width=70% height 70%}
 
@@ -193,12 +198,14 @@ To submit this job:
 ```
  >> j=c.batch(@parallel_example, 1, {}, 'AutoAddClientPath', false, 'Pool', 7)
 ```
-Since this is a parallel job a 'Pool' must be started. The actual number of tasks started will be one more than requested in the pool. I this case, the batch command calls for a pool of seven. Eight tasks will be started on the cluster.
+Since this is a parallel job a 'Pool' must be started. The actual number of tasks started will be one more than requested in the pool. In this case, the batch command calls for a pool of seven. Eight tasks will be started on the cluster.
 
-Also see that the state of the job in the "Job Monitor" is "running."
+Also see that the state of the job in the `Job Monitor` is `running`.
+
 ![](https://wiki.hpc.arcs.njit.edu/images/d/db/SubmitParallel.png){ width=70% height 70%}
 
 The job takes a few minutes to run and the state of the job changes to "finished."
+
 ![](https://wiki.hpc.arcs.njit.edu/images/0/0f/JobFinished.png){ width=70% height 70%}
 
 Once again to get the results enter:
@@ -206,7 +213,8 @@ Once again to get the results enter:
  >> fetchOutputs(j) 
 ```
 As can be seen the parfor loop was completed in 6.7591 seconds.
-![](https://wiki.hpc.arcs.njit.edu/images/7/7d/FetchOutputs.png){ width=70% height 70%}
+
+ ![matlab_fetch](img/FetchOutputs.png){ width=70% height 70%}
 
 ## Submitting a Script Requiring a GPU
 In this section we will submit a matlab script using a GPU. The results will be written to the job diary. The code for this example is as follows:
@@ -256,11 +264,11 @@ disp(time2);
 % Will be greater than 1 if GPU is faster
 speedup = time1/time2 
 ```
-We will need to change the partition to datasci and request a gpu. In the Matlab window enter:
+We will need to change the partition to `gpu` to request a gpu. In the Matlab window enter:
 ```
- >> c.AdditionalProperties.AdditionalSubmitArgs=['--partition=datasci --gres=gpu:1 --mem-per-cpu=10G --time=2-00:00:00'] 
+ >> c.AdditionalProperties.AdditionalSubmitArgs=['--partition=gpu --qos=standard --account=PI_UCID --gres=gpu:1 --mem-per-cpu=4G --time=2-00:00:00'] 
 ```
-![](https://i.imgur.com/md8jfxI.jpg)
+ ![matlab_profile12](img/md8jfxI.jpeg){ width=70% height 70%}
 
 Submit the job as before. Since a script is submitted as opposed to a function, only the name of the script is included in the batch command. Do not include the '@' symbol. In a script there are no inputs or ouptuts.
 ```
