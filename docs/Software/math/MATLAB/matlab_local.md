@@ -59,7 +59,50 @@ Make sure to check the box <kbd>Use unique subfolders</kbd> . Click <kbd>Next</k
 
 ![matlab_profile6](img/GenericProfile6.png){ width=50% height 50%}
 
-In the `Workers`, enter `512` for the number of workers. For  and `/opt/site/easybuild/software/MATLAB/2022a` for `MATLAB installation folders for workers`. Click <kbd>Next</kbd> to continue.
+In the `Workers`, enter `512` for the number of workers. For `MATLAB installation folders for workers`, use `module av MATLAB` command first.
+
+```bash
+  login-1-45 ~ >: module av MATLAB
+  ------------------------------------/apps/easybuild/modules/all/Core---------------------------------------------------------
+   MATLAB/2023a
+
+Use "module spider" to find all possible modules and extensions.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+```
+This will show you the list of MATLAB versions installed on Wulver. Next, use `module show MATLAB/2023a` to check MATLAB installation path.
+
+```bash
+   login-1-45 ~ >: module show MATLAB/2023a
+---------------------------------------------------------------------------------------------------------------------------------
+   /apps/easybuild/modules/all/Core/MATLAB/2023a.lua:
+---------------------------------------------------------------------------------------------------------------------------------
+help([[
+Description
+===========
+The MATLAB Parallel Server Toolbox.
+
+
+More information
+================
+ - Homepage: https://www.mathworks.com/help/matlab/matlab-engine-for-python.html
+]])
+whatis("Description: The MATLAB Parallel Server Toolbox.")
+whatis("Homepage: https://www.mathworks.com/help/matlab/matlab-engine-for-python.html")
+whatis("URL: https://www.mathworks.com/help/matlab/matlab-engine-for-python.html")
+conflict("MATLAB")
+prepend_path("CMAKE_PREFIX_PATH","/apps/easybuild/software/MATLAB/R2023a")
+prepend_path("PATH","/apps/easybuild/software/MATLAB/R2023a/bin")
+setenv("EBROOTMATLAB","/apps/easybuild/software/MATLAB/R2023a")
+setenv("EBVERSIONMATLAB","R2023a")
+setenv("EBDEVELMATLAB","/apps/easybuild/software/MATLAB/R2023a/easybuild/Core-MATLAB-2023a-easybuild-devel")
+prepend_path("PATH","/apps/easybuild/software/MATLAB/R2023a/toolbox/parallel/bin")
+prepend_path("PATH","/apps/easybuild/software/MATLAB/R2023a")
+prepend_path("LD_LIBRARY_PATH","/apps/easybuild/software/MATLAB/R2023a/runtime/glnxa64")
+prepend_path("LD_LIBRARY_PATH","/apps/easybuild/software/MATLAB/R2023a/bin/glnxa64")
+prepend_path("LD_LIBRARY_PATH","/apps/easybuild/software/MATLAB/R2023a/sys/os/glnxa64")
+setenv("_JAVA_OPTIONS","-Xmx2048m")
+```
+The MATLAB installation path is defined by the EBROOTMATLAB environment variable, which, in the above example, is set to `/apps/easybuild/software/MATLAB/R2023a`. Mention that path in `MATLAB installation folders for workers` and click <kbd>Next</kbd> to continue.
 
 ![matlab_profile7](img/GenericProfile7.png){ width=50% height 50%}
 
@@ -67,7 +110,7 @@ In the "License" screen make sure to select "Network license manager" and click 
 
 ![matlab_profile8](img/GenericProfile8.png){ width=50% height 50%}
 
-In the "Profile Details" screen enter either "Lochness" or "Stheno" depending on which cluster you are making a profile for. The "Cluster description" is optional and may be left blank. Click <kbd>Next</kbd> to continue.
+In the `Profile Details` screen enter "Wulver". The "Cluster description" is optional and may be left blank. Click <kbd>Next</kbd> to continue.
 
 ![](https://wiki.hpc.arcs.njit.edu/images/4/4d/GenericProfile9.png){ width=50% height 50%}
 
