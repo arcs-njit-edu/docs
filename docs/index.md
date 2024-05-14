@@ -34,7 +34,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
     !!! njit inline "HPC Trainings and Webinars"
         
-        Check the latest webinar sessions about HPC at [HPC Training](Services/training.md).
+        Make sure to stay up-to-date with the latest webinar sessions on HPC by visiting the [HPC Training](Services/training.md).
 </div>
 
 <div class="grid cards" markdown>
