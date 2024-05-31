@@ -1,0 +1,20 @@
+nav:
+    - NJIT HPC: index.md
+    - 'About Us':
+      - 'about/index.md'
+      - 'Contact Us': 'about/contact.md'
+    - Clusters:
+      - 'clusters/index.md'
+      - 'Wulver': 'clusters/wulver.md'
+      - 'Decommissioned':
+        - 'Stheno': 'clusters/decommissioned/stheno.md'
+        - 'Lochness': 'clusters/decommissioned/lochness.md'
+      - 'User access to clusters': 'clusters/cluster_access.md'
+      - 'Getting started on Wulver': 'clusters/get_started_on_Wulver.md'
+      - 'Wulver Filesystems': 'clusters/Wulver_filesystems.md'
+    - 'Policies':
+      - 'Lochness user policies': 'Policies/lochness_policies.md'
+      - 'Wulver usage and Condo policies': 'Policies/wulver_policies.md'
+    - 'Facilities': 'facilities/facilities.md'
+    - 'website_version.txt'
+    - ...
