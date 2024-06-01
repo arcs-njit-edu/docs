@@ -21,8 +21,8 @@ nav:
       - 'Lochness user policies': 'Policies/lochness_policies.md'
       - 'Wulver usage and Condo policies': 'Policies/wulver_policies.md'
     - 'Facilities': 'facilities/facilities.md'
-    - 'website_version.txt'
     - ...
+    - '' : 'website_version.txt'
 
 theme: 
   name: material
