@@ -1,4 +1,4 @@
-# Introduction
+# Facilities
 As New Jersey’s Science and Technology University, New Jersey Institute of Technology (NJIT) has developed a local cyberinfrastructure well positioned to allow NJIT faculty and students to collaborate at local, national, and global levels on many issues at the forefront of science and engineering research.
 
 ## Cyberinfrastructure
