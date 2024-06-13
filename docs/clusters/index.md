@@ -7,6 +7,6 @@
 
 # Old cluster
 
-* [Lochness](lochness.md)
+* [Lochness](decommissioned/lochness.md)
 
 ![Loch](../assets/images/Lochness-schematic.png){ width=80% height=80%}

@@ -177,7 +177,7 @@ The "debug" QoS in Slurm is intended for debugging and testing jobs. It usually 
 === "Debug Nodes"
 
      ```bash
-        srun -p debug -n 1 --ntasks-per-node=4 --qos=debug --account=PI_ucid --mem-per-cpu=2G --gres=gpu:2 --time=59:00 --pty bash
+        srun -p debug -n 1 --ntasks-per-node=4 --qos=debug --account=PI_ucid --mem-per-cpu=2G --time=59:00 --pty bash
      ```
 
 Replace `PI_ucid` with PI's NJIT UCID. 

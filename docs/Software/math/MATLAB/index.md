@@ -14,18 +14,8 @@ MATLAB (matrix laboratory) is a multi-paradigm numerical computing environment a
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "MATLAB" | Software == "matlab"')
-    print(soft.to_markdown(index=False))
-    ```
-
 ## Application Information, Documentation
-The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathworks.com/support/learn-with-matlab-tutorials.html)
+The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathworks.com/support/learn-with-matlab-tutorials.html).
 
 ## Using MATLAB
 
@@ -51,24 +41,6 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         module purge
         module load wulver # Load the slurm, easybuild 
         module load MATLAB
-    
-        matlab -nodisplay -nosplash -r test
-    
-        ```
-
-    === "Lochness"
-
-        ```slurm
-        #!/bin/bash
-        #SBATCH -J test_matlab
-        #SBATCH --partition=public
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=1
-        #SBATCH - t 30:00
-        
-        # Load matlab module
-        module purge
-        module load MATLAB/2022a
     
         matlab -nodisplay -nosplash -r test
     
@@ -105,24 +77,6 @@ The documentation of MATLAB is available at [MATLAB Tutorial](https://www.mathwo
         module purge
         module load wulver # Load the slurm, easybuild
         module load MATLAB
-    
-        # Run matlab
-        matlab -nodisplay -nosplash -r 'for_loop; quit'
-        ```
-
-    === "Lochness"
-
-        ```slurm
-        #!/bin/bash
-        #SBATCH -J test_matlab
-        #SBATCH --partition=public
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=32
-        #SBATCH --time=30:00
-        
-        # Load matlab module
-        module purge
-        module load MATLAB/2022a
     
         # Run matlab
         matlab -nodisplay -nosplash -r 'for_loop; quit'

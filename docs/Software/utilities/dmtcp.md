@@ -15,16 +15,6 @@ title: DMTCP
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "DMTCP"')
-    print(soft.to_markdown(index=False))
-    ```
-
 ## Related Applications
 
 * 

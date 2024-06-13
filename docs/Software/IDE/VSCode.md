@@ -61,43 +61,7 @@ Use the following slurm script and submit the job script using `sbatch vs-code.s
         ${CLI_PATH}/code tunnel --accept-server-license-terms
         ```
 
-    === "Lochness"
-        
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=vs-code
-        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --partition=datasci
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=8
-        #SBATCH --time=24:59:00  # D-HH:MM:SS
-        #SBATCH --mem-per-cpu=4G
-        
-        set -e
-        
-        module purge
-        
-        # add any required module loads here, e.g. a specific Python
-        
-        CLI_PATH="${HOME}/vscode_cli"
-        
-        # Install the VS Code CLI command if it doesn't exist
-        if [[ ! -e ${CLI_PATH}/code ]]; then
-            echo "Downloading and installing the VS Code CLI command"
-            mkdir -p "${HOME}/vscode_cli"
-            pushd "${HOME}/vscode_cli"
-            # Process from: https://code.visualstudio.com/docs/remote/tunnels#_using-the-code-cli
-            curl -Lk 'https://code.visualstudio.com/sha/download?build=stable&os=cli-alpine-x64' --output vscode_cli.tar.gz
-            # unpack the code binary file
-            tar -xf vscode_cli.tar.gz
-            # clean-up
-            rm vscode_cli.tar.gz
-            popd
-        fi
     
-        # run the code tunnel command and accept the licence
-        ${CLI_PATH}/code tunnel --accept-server-license-terms
-        ```
 Once you submit the job, you will see an output file with `.out` extension. Once you open the file, you will see the following
 ```
 *

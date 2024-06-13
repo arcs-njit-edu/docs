@@ -20,15 +20,6 @@ ASE is actively developed and maintained by a community of researchers and devel
     soft = df.query('Software == "ASE"')
     print(soft.to_markdown(index=False))
     ```
-
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    soft = df.query('Software == "ASE"')
-    print(soft.to_markdown(index=False))
     ```
 
 ## Related Applications

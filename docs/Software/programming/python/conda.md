@@ -4,7 +4,6 @@ Since Python supports a wide range of additional libraries in machine learning o
 Conda as a package manager helps you find and install packages. If you need a package that requires a different version of Python, you do not need to switch to a different environment manager, because conda is also an environment manager. 
 
 ## Availability
-Conda can be accessed on the cluster as `Anaconda3` or `Miniconda3` module.
 
 === "Wulver"
 
@@ -17,20 +16,7 @@ Conda can be accessed on the cluster as `Anaconda3` or `Miniconda3` module.
     print(soft.to_markdown(index=False))
     ```
 
-=== "Lochness"
-
-    ```python exec="on"
-    import pandas as pd
-    
-    df = pd.read_csv('docs/assets/tables/module_lochness.csv')
-    # Header values to be added
-    soft = df.query('Software == "Anaconda3" | Software == "Miniconda3"')
-    print(soft.to_markdown(index=False))
-    ```
-
-Users can use conda after using any of the modules mentioned above
-
-module a `Anaconda3` module. Users can use `Anaconda3` to create virtual Python environments to manage Python modules.
+Users can use conda after using any of the modules mentioned above. Once `Anaconda3` module is loaded, users can create virtual Python environments to manage Python modules.
 
 ## Create and Activate a Conda Virtual Environment
 
@@ -73,6 +59,10 @@ Make sure to activate the conda environment prior to installing Python packages.
 ### Conda Channel
 Conda Channel refers to a repository or collection of software packages that are available for installation using Conda. Conda Channels are used to organize and distribute packages, and they play a crucial role in the Conda ecosystem. Channels can be specified using the `--channel` or `-c` option with the conda install command i.e. 
 `conda install -c channel_name package_name`. In the above example, if you want to specify the channel name to install `matplotlib`, you need to use
+
+!!! note
+
+    Since memory and CPU usage are limited, it's better to start an [interactive session with the compute node](slurm.md#interactive-session-on-a-compute-node) whenever you are installing Python packages via Conda.
 
 ```bash
 (ENV) login-41 ~ >: conda install -c conda-forge matplotlib
@@ -217,28 +207,8 @@ Simple TensorFlow test program to make sure the virtual env can access a GPU. Pr
         conda activate tf
         srun python tf.gpu.test.py
         ```
-    
-    === "Lochness"
-    
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=tf_test
-        #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
-        #SBATCH --nodes=1
-        #SBATCH --tasks-per-node=1
-        #SBATCH --partition=datasci
-        #SBATCH --gres=gpu:1
-        #SBATCH --mem=4G
-        
-        # Purge any module loaded by default
-        module purge > /dev/null 2>&1
-        module load Anaconda3
-        source $HOME/conda3.sh
-        conda activate tf
-        srun python tf.gpu.test.py
-        ```
 Result:
-```
+```bash
 Starting /home/g/guest24/.bash_profile ... standard AFS bash profile
 
 Home directory : /home/g/guest24 is not in AFS -- skipping quota check
@@ -275,7 +245,7 @@ Next, deactivate the environment using `conda deactivate tf` command.
 To install PyTorch with GPU, load the `Anaconda3` module as described above and then use the following
 
 ```
-conda create --name torch-cuda python=3.7
+conda create --name torch-cuda python=3.8
 source conda.sh
 conda activate torch-cuda
 conda install -c "nvidia/label/cuda-11.7.0" cuda-toolkit
@@ -365,26 +335,7 @@ User can use the following job script to run the script.
         conda activate torch-cuda
         srun python touch_tensor.py
         ```
-    
-    === "Lochness"
-    
-        ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=torch_test
-        #SBATCH --output=%x.%j.out # %x.%j expands to JobName.JobID
-        #SBATCH --nodes=1
-        #SBATCH --tasks-per-node=1
-        #SBATCH --partition=datasci
-        #SBATCH --gres=gpu:1
-        #SBATCH --mem=4G
-        
-        # Purge any module loaded by default
-        module purge > /dev/null 2>&1
-        module load Anaconda3
-        source $HOME/conda3.sh
-        conda activate torch-cuda
-        srun python touch_tensor.py
-        ```
+
 !!! warning
 
     When working with Python, it is generally advised to avoid mixing package management tools such as pip and conda within the same environment. Pip and Conda manage dependencies differently, and their conflict can lead to compatibility issues and unexpected behavior. Mixing the two can result in an environment where packages installed with one tool may not interact seamlessly with those installed using the other. 
@@ -402,6 +353,23 @@ source conda.sh
 conda activate env_name
 mamba install scipy
 ```
+### Example of Installing PyTorch via Mamba
+
+```bash
+module load Anaconda3
+conda create --name torch-cuda
+source conda.sh
+conda activate torch-cuda
+module load Mamba
+mamba install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+```
+
+This will install pytorch in the `torch-cuda` environment.
+
+!!! warning
+
+    Ensure to unload the Mamba module, as when you use `Anaconda3` and `Mamba` together, Mamba installs the PyTorch packages within the Conda environment. Consequently, the next time you activate this environment, there's no need to load the 'Mamba' module. Only employ 'Mamba' when installing the packages.
+
 ## Export and Import Conda Environment
 Exporting and importing Conda environments allows users to capture and reproduce the exact set of dependencies for a project. With Conda, a popular package and environment management system, users can export an environment, including all installed packages, into a YAML file. This file can then be shared or version-controlled. Importing the environment from the YAML file on another system ensures consistent dependencies, making it easier to recreate the development or execution environment. 
 
@@ -484,12 +452,12 @@ By following these steps, you can successfully export a conda environment from o
 
 ## Conda User Commands 
 
-| Task                                       |                        Command                         | 
-|--------------------------------------------|:------------------------------------------------------:|
-| Activate environment:                      |          `conda activate [environment_name]`           |
-| Deactivate environment:                    |         `conda deactivate [environment_name]`          |
-| Show the list of environments:             |                    `conda env list`                    |
-| Delete environment:                        |           `conda remove [environment_name]`            |
-| Export environment:                        |      `conda env export > [environment_name].yml`       |
-| Import environment from YAML:              |      `conda env create -f [environment_name].yml`      |
-| Import environment to different location:  | `conda env create -f [environment_name].yml -p [PATH]` | 
+| Task                                      |                        Command                         | 
+|-------------------------------------------|:------------------------------------------------------:|
+| Activate environment:                     |          `conda activate [environment_name]`           |
+| Deactivate environment:                   |         `conda deactivate [environment_name]`          |
+| Show the list of environments:            |                    `conda env list`                    |
+| Delete environment:                       |  `conda conda remove --name [environment_name] --all`  |
+| Export environment:                       |      `conda env export > [environment_name].yml`       |
+| Import environment from YAML:             |      `conda env create -f [environment_name].yml`      |
+| Import environment to different location: | `conda env create -f [environment_name].yml -p [PATH]` | 

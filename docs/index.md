@@ -1,6 +1,6 @@
-# HPC
+# High Performance Computing (HPC)
 
-Welcome to HPC at NJIT.
+Welcome to HPC at [New Jersey Institute of Technology (NJIT)](https://www.njit.edu).
 
 NJIT provides High Performance Computing resources to support scientific computing for faculty and students. These resources include CPU nodes, GPU nodes, parallel storage, high speed, low latency Infiniband networking and a fully optimized scientific software stack.
 
@@ -31,6 +31,10 @@ NJIT provides High Performance Computing resources to support scientific computi
     !!! njit inline "Cluster Maintenance Updates"
         
         To see the latest maintenance updates on NJIT cluster, please visit [Cluster Maintenance](news/index.md).
+
+    !!! njit inline "HPC Trainings and Webinars"
+        
+        Make sure to stay up-to-date with the latest webinar sessions on HPC by visiting the [HPC Training](Services/training.md).
 </div>
 
 <div class="grid cards" markdown>
@@ -43,4 +47,11 @@ NJIT provides High Performance Computing resources to support scientific computi
         
         Wulver will be out of service for maintenance once a month for updates, repairs, and upgrades.  The schedule is 9 a.m. to 9 p.m. the second Tuesday of every month.  During the maintenance period, the logins will be disabled and the jobs that do not end before the maintenance window begins will be held until the maintenance is complete and the cluster is returned to production. For example, if you submit a job the day before maintenance, your job will enter a pending state (you will see job status `PD` when using `squeue -u $LOGNAME`). You can either adjust the walltime or wait until maintenance ends. Please stay informed about maintenance updates at [Cluster Maintenance Updates and News](news/index.md).
 
+-   ## Virtual Tour of NJIT Data Center
+
+    ---
+
+    Wulver is built through a partnership with [DataBank](https://www.databank.com/), which is live in DataBank’s Piscataway, N.J. data center (EWR2) and will support NJIT’s research efforts. This infrastructure will bolster NJIT’s research initiatives. You can access the 3D virtual tour of HPC data center below:
+
+    <iframe width='853' height='480' src='https://my.matterport.com/show/?m=KgYz67s8YoM' frameborder='0' allowfullscreen allow='xr-spatial-tracking'></iframe>
 </div>
