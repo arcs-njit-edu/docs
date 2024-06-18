@@ -75,7 +75,10 @@ Abhishek Mukherjee is a computational scientist and has experience in multidisci
 
 You can schedule appointments with Abhishek to consult on problems or questions you are encountering related to your work using the high-performance computing and big data resources at NJIT. Please, before making appointments with [Abhishek Mukherjee](#abhishek-mukherjee), send your query to [hpc@njit.edu](mailto:hpc@njit.edu), so that an incident number will be created which is required to schedule an appointment.
 
-Schedule an appointment directly on Abhishek's calendar from [![Calendar](../assets/images/googlecalendar-color.svg){ width="20"}](https://calendly.com/abhinjit/arcs-hpc)
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/abhinjit/arcs-hpc" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
 
 ## Hui(Julia) Zhao
 
