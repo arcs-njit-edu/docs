@@ -1,4 +1,4 @@
-# Research Computing Symposium
+# HPC Research Symposium
 
 This past year has been transformative for HPC Research at NJIT. The introduction of our new shared HPC cluster, Wulver, has expanded our computational capacity and made the research into vital areas more accessible to our faculty. The Advanced Research Computing Services group of Information Services and Technology  in collaboration with Dell invites you to a Symposium on July 16, 2024 to celebrate the launch of Wulver. 
 

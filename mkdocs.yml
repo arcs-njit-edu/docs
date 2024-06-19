@@ -22,9 +22,9 @@ nav:
       - 'Wulver usage and Condo policies': 'Policies/wulver_policies.md'
     - 'Facilities': 'facilities/facilities.md'
     - Status (on-campus or VPN):
-        - 'Current Load': 'https://web.njit.edu/~abp/load.html'
-        - 'Usage Summary': 'https://web.njit.edu/~abp/summary.html'
-        - 'Usage (this year so far)': 'https://web.njit.edu/~abp/cy2024.html'
+        - 'Current Load': 'https://hpc.njit.edu/Monitor/load.html'
+        - 'Usage Summary': 'https://hpc.njit.edu/Monitor/summary.html'
+        - 'Usage (this year so far)': 'https://hpc.njit.edu/Monitor/cy2024.html'
     - ...
     - '' : 'website_version.txt'
 
