@@ -7,3 +7,5 @@ Learn to use GPU-accelerated resources to analyze data. This is an intermediate 
 - Date: July 15, 2024
 - Location: GITC 3700
 - Time: 9 a.m. - 5 p.m.
+
+Click [here](https://forms.gle/NhtvEUiY2st3eQoT6) for the registration.
