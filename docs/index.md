@@ -39,7 +39,21 @@ NJIT provides High Performance Computing resources to support scientific computi
 
 <div class="grid cards" markdown>
 
+
+
 -   ## HPC latest News!
+
+    ---
+
+    !!! important "HPC Summer Events"
+        
+        ARCS HPC is hosting the  following events in summer. Please register for the follwoing events you plan to attend.
+
+        * NVIDIA Workshop
+        * NJIT HPC Research Symposium 
+        * SLURM Workload Manager Workshop
+
+        For dates and registration, visit [Summer Events](news/2024/06/18/hpc-summer-events).
 
     ---
 
