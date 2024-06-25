@@ -21,6 +21,10 @@ nav:
       - 'Lochness user policies': 'Policies/lochness_policies.md'
       - 'Wulver usage and Condo policies': 'Policies/wulver_policies.md'
     - 'Facilities': 'facilities/facilities.md'
+    - Status (on-campus or VPN):
+        - 'Current Load': 'https://hpc.njit.edu/Monitor/load.html'
+        - 'Usage Summary': 'https://hpc.njit.edu/Monitor/summary.html'
+        - 'Usage (this year so far)': 'https://hpc.njit.edu/Monitor/cy2024.html'
     - ...
     - '' : 'website_version.txt'
 
