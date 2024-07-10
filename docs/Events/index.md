@@ -1,3 +1,9 @@
+---
+hide:
+  - toc
+---
+
+
 # HPC Events
 
 ## 2024 
@@ -13,6 +19,8 @@
 
     [<span class="octicon--arrow-right-24"></span> Registration and Event Details](1_nvidia.md)
 
+</div>
+<div class="grid cards" markdown>
 
 -   ### [HPC Research Symposium](2_symposium.md)
 
@@ -22,6 +30,9 @@
 
     [<span class="octicon--arrow-right-24"></span> Registration and Event Details](2_symposium.md)
 
+</div>
+<div class="grid cards" markdown>
+
 -   ### [SLURM Workload Manager Workshop](3_slurm_workshop.md)
 
     ---
@@ -29,3 +40,4 @@
     Advanced Research Computing Services, in collaboration with SchedMD, is hosting a two-day SLURM Workload Manager workshop. The workshop includes lectures, demos, and lab environments to enhance understanding of SLURM job scheduling, resource management, and troubleshooting.
 
     [<span class="octicon--arrow-right-24"></span> Registration and Event Details](3_slurm_workshop.md)
+</div>
