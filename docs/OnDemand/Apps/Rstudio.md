@@ -3,7 +3,7 @@
 ## Launching RStudio
 
 * Navigate to the Interactive Apps section.
-* Select RStudio from the list of available applications.
+* Select `RStudio` from the list of available applications.
 
 ## Loading the R Environment
 
