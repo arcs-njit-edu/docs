@@ -22,7 +22,7 @@ For example, to use a Conda environment, enter:
 * Choose the number of cores you need.
 * If required, specify the number of GPUs.
 
-
+## Launching the Session
 
 ![Rstudio2](../../assets/ondemand/Rstudio2.png){ width=50% height=50%}
 
