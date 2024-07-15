@@ -1,5 +1,4 @@
-# Jupyter Notebook
-
+# RStudio
 
 ## Launching RStudio
 
@@ -30,3 +29,17 @@ For example, to use a Conda environment, enter:
 ![Rstudio4](../../assets/ondemand/Rstudio4.png)
 
 ![Rstudio5](../../assets/ondemand/Rstudio5.png)
+
+Once clicking **Launch**, the request will be queued, and when resources have been allocated, you will be presented with the option to connect to the session by clicking on the blue Connect to R Studio Server button.
+Once connected, the familiar R Studio interface is presented, and you will be able to use the allocated resources, and access your research data located on Wulver.
+Installing packages
+It's likely your scripts will require additional R libraries; these can be installed using the `install.packages()` command in the console window of R Studio. 
+
+## Exiting the session
+If a session exceeds the requested running time, it will be killed. You may receive a message "The previous R session was abnormally terminated...". Click OK to acknowledge the message and continue. To avoid this message, it's good practice to exit the session cleanly when you have finished.
+To cleanly exit R Studio, click `File -> Quit Session...` and then release resources back to the cluster queues by clicking the red Delete button for the relevant session on the My Interactive Sessions page.
+
+Check the following recording below.
+
+![Rstudio6](../../assets/ondemand/ScreenRecording_Rstudio.mov)
+
