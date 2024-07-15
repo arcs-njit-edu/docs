@@ -1,6 +1,6 @@
 # Jupyter
 
-## Launching Notebook
+## Launching Jupyter Session
 
 * Navigate to the Interactive Apps section.
 * Select `Jupyter` from the list of available applications.
