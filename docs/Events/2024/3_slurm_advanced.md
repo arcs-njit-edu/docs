@@ -11,7 +11,7 @@ Elevate your High-Performance Computing skills with our advanced SLURM webinar! 
 
 - Date: Nov 20th, 2024
 - Location: Virtual
-- Time: 2 PM - 3 PM
+- Time: 2:30 PM - 3:30 PM
 
 ## Topics Covered
 
@@ -28,5 +28,5 @@ Elevate your High-Performance Computing skills with our advanced SLURM webinar! 
 
 ## Registration
 
-Click [here](https://forms.gle/NhtvEUiY2st3eQoT6) for the registration.
+Click [here](https://njit-edu.zoom.us/meeting/register/tJUuce6hrjMuH9w5wDehR8emZ2LnymMvVWdx) for the registration.
 
