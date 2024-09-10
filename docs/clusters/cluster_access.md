@@ -17,7 +17,6 @@ Here we will provide instructions for connecting to NJIT HPC on Mac/Linux and Wi
     ```
       localhost> ssh -X -Y ucid@HPC_HOST.njit.edu  
     ```
-    If you don’t yet have a public SSH key for your local machine, you need to initialize one. The process of doing so differs across operating systems. The Linux and Mac system users simply need to run the command `ssh-keygen`, which will store the keys in the `~/.ssh` folder.
     
     Users will be prompted for your password. Enter your NJIT UCID password. Users can omit the `-X -Y` if you are not using a graphic interface.
     Once the password is provided, the user will see the following
