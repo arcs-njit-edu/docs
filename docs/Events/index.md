@@ -6,12 +6,49 @@ hide:
 
 # HPC Events
 
-## 2024 
+## 2024 Fall
 
 <div class="grid cards" markdown>
 
 
--   ### [NVIDIA Workshop](1_nvidia.md)
+-   ### [SLURM Batch System Basics](1_slurm.md)
+    #### Fundamentals of Accelerated Data Science
+    ---
+
+    Join us for an informative webinar designed to introduce researchers, scientists, and HPC users to the fundamentals of the SLURM (Simple Linux Utility for Resource Management) workload manager. This virtual  session will equip you with essential skills to effectively utilize HPC resources through SLURM.
+
+    [<span class="octicon--arrow-right-24"></span> Registration and Event Details](1_slurm.md)
+
+</div>
+<div class="grid cards" markdown>
+
+-   ### [Introduction to Containers on Wulver](2_containers.md)
+
+    ---
+
+    The HPC training event on using Singularity containers provides participants with a comprehensive introduction to container technology and its advantages in high-performance computing environments. Attendees will learn the fundamentals of Singularity, including installation, basic commands, and workflow, as well as how to create and build containers using definition files and existing Docker images.
+
+    [<span class="octicon--arrow-right-24"></span> Registration and Event Details](2_containers.md)
+
+</div>
+<div class="grid cards" markdown>
+
+-   ### [Job Arrays and Advanced Submission Techniques for HPC](3_slurm_advanced.md)
+
+    ---
+
+    Elevate your High-Performance Computing skills with our advanced SLURM webinar! This session is designed for HPC users who are familiar with basic SLURM commands and are ready to dive into more sophisticated job management techniques.
+
+    [<span class="octicon--arrow-right-24"></span> Registration and Event Details](3_slurm_advanced.md)
+</div>
+
+## 2024 Summer
+
+
+<div class="grid cards" markdown>
+
+
+-   ### [NVIDIA Workshop](4_nvidia.md)
     #### Fundamentals of Accelerated Data Science
     ---
 
@@ -22,7 +59,7 @@ hide:
 </div>
 <div class="grid cards" markdown>
 
--   ### [HPC Research Symposium](2_symposium.md)
+-   ### [HPC Research Symposium](5_symposium.md)
 
     ---
 
@@ -33,7 +70,7 @@ hide:
 </div>
 <div class="grid cards" markdown>
 
--   ### [SLURM Workload Manager Workshop](3_slurm_workshop.md)
+-   ### [SLURM Workload Manager Workshop](6_slurm_workshop.md)
 
     ---
 
