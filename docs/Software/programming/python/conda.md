@@ -18,7 +18,7 @@ Conda as a package manager helps you find and install packages. If you need a pa
 
 !!! warning
 
-    Users can use conda after using any of the modules mentioned above. However, please note that in future, the `Anaconda` module may be removed as Anaconda is no longer free for non-profit academic research use at institutions with more than 200 employees. While we have not recived any offical communication from Ananconda yet, please use `Miniforge3` module instead of Anaconda. You don't need to reinstall or recreate any environmnt if you already created Conda environment with Anaconda. Just load Miniforge3 and the remaining steps are same.
+    Users can use Conda after loading any of the modules mentioned above. However, please note that the Anaconda module may be removed in the future, as Anaconda is no longer free for non-profit academic research at institutions with more than 200 employees. While we have not received any official communication from Anaconda yet, please use the Miniforge3 module instead of Anaconda. You do not need to reinstall or recreate any environment if you have already created a Conda environment with Anaconda. Simply load Miniforge3, and the remaining steps are the same.
 
 ## Create and Activate a Conda Virtual Environment
 
