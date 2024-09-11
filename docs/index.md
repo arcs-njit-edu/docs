@@ -48,6 +48,9 @@ NJIT provides High Performance Computing resources to support scientific computi
     !!! njit inline "Cluster Maintenance Updates"
         
         To see the latest maintenance updates on NJIT cluster, please visit [Cluster Maintenance](news/index.md).
+    !!! njit inline "HPC Events"
+        
+        Check the upcoming events hosted by HPC team and register from [HPC Events](Events/index.md).
 
     !!! njit inline "HPC Trainings and Webinars"
         
@@ -62,15 +65,15 @@ NJIT provides High Performance Computing resources to support scientific computi
 
     ---
 
-    !!! important "HPC Summer Events"
+    !!! important "HPC Fall Events"
         
-        ARCS HPC is hosting the  following events in summer. Please register for the follwoing events you plan to attend.
+        ARCS HPC is hosting the  following events in this fall. Please register for the follwoing events you plan to attend.
 
-        * NVIDIA Workshop
-        * NJIT HPC Research Symposium 
-        * SLURM Workload Manager Workshop
+        * [SLURM Batch System Basics](1_slurm.md)
+        * [Introduction to Containers on Wulver](2_containers.md)
+        * [Job Arrays and Advanced Submission Techniques for HPC](3_slurm_advanced.md)
 
-        For dates and registration, visit [Summer Events](news/2024/06/18/hpc-summer-events).
+        For dates and registration, visit [Fall Events](news/2024/09/11/hpc-fall-events).
 
     ---
 

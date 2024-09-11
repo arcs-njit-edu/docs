@@ -11,7 +11,7 @@ The HPC training event on using Singularity containers provides participants wit
 
 - Date: Oct 16th, 2024
 - Location: Virtual
-- Time: 2 PM - 3 PM
+- Time: 2:30 PM - 3:30 PM
 
 ## Topics Covered
 

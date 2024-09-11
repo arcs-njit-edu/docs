@@ -12,7 +12,6 @@ hide:
 
 
 -   ### [SLURM Batch System Basics](1_slurm.md)
-    #### Fundamentals of Accelerated Data Science
     ---
 
     Join us for an informative webinar designed to introduce researchers, scientists, and HPC users to the fundamentals of the SLURM (Simple Linux Utility for Resource Management) workload manager. This virtual  session will equip you with essential skills to effectively utilize HPC resources through SLURM.
