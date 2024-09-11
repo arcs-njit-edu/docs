@@ -6,11 +6,11 @@ hide:
 # ARCS Leadership 
 
 
-|                Name                 |                          Title                          | Phone | Email |  Office   |
-|:-----------------------------------:|:-------------------------------------------------------:|:-----:|:-----:|:---------:|
+|                Name                 |                          Title                          |     Phone      | Email |  Office   |
+|:-----------------------------------:|:-------------------------------------------------------:|:--------------:|:-----:|:---------:|
 |    [Alex Pacheco](#alex-pacheco)    |       Associate CIO - Advanced Research Computing       | (973) 596-2672 | alex.pacheco@njit.edu | GITC 5401 |
-| [Gedaliah Wolosh](#gedaliah-wolosh) |      Director, High Performance Research Computing      | (973) 596-5436 | gwolosh@njit.edu | GITC 5203 |
-|               Vacant                |  Director, Research and Academic Technologies           |  |  |  |
+| [Gedaliah Wolosh](#gedaliah-wolosh) |      Director, High Performance Research Computing      | (973) 596-5437 | gwolosh@njit.edu | GITC 5203 |
+|               Vacant                |  Director, Research and Academic Technologies           |                |  |  |
 |     [Kate Cahill](#kate-cahill)     |  Associate Director, High Performance Research Computing  | (973) 596-2721 | katharine.cahill@njit.edu | GITC 2203 |
 |     [Kevin Walsh](#kevin-walsh)     |  Assistant Director, Advanced Computing Infrastructure  | (973) 596-5747 | walsh@njit.edu | GITC 2202 | |
 
@@ -28,10 +28,10 @@ hide:
 
 # Research and Academic Technologies
 
-| Name | Title | Phone | Email | Office |
-|:----:|:-----:|:-----:|:-----:|:------:|
-| Vacant | Director, Research and Academic Technologies |  |  |  |
-| Rick Gaine | Research Technology System Administrator | (973) 596-5441 | rgaine@njit.edu | GITC 2316B |
+| Name | Title | Phone | Email |  Office   |
+|:----:|:-----:|:-----:|:-----:|:---------:|
+| Vacant | Director, Research and Academic Technologies |  |  |           |
+| Rick Gaine | Research Technology System Administrator | (973) 596-5441 | rgaine@njit.edu | GITC 2404 |
 | Charles Yan | Research Technology Support Specialist | (973) 596-2907 | cyan@njit.edu | GITC 2301 |
 
 

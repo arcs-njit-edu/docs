@@ -8,7 +8,9 @@ Faculty can obtain a login to NJIT's HPC by sending an email to [hpc@njit.edu](m
 Make sure the user is connected to `NJITsecure` if the user is on campus. If working off campus, NJIT VPN is required. Please find the details [here](https://ist.njit.edu/vpn).
 Here we will provide instructions for connecting to NJIT HPC on Mac/Linux and Windows OS.
 
+!!! Update
 
+    In the recent update (Sep 10th 2024) Cisco two-factor authentication (TFA) is deployed, similar to what is already deployed on NJIT websites and VPN. 
 
 === "Mac/Linux"
 
@@ -17,18 +19,22 @@ Here we will provide instructions for connecting to NJIT HPC on Mac/Linux and Wi
     ```
       localhost> ssh -X -Y ucid@HPC_HOST.njit.edu  
     ```
-    If you don’t yet have a public SSH key for your local machine, you need to initialize one. The process of doing so differs across operating systems. The Linux and Mac system users simply need to run the command `ssh-keygen`, which will store the keys in the `~/.ssh` folder.
     
-    Users will be prompted for your password. Enter your NJIT UCID password. Users can omit the `-X -Y` if you are not using a graphic interface.
-    Once the password is provided, the user will see the following
+    Users will be prompted for your password. Enter your NJIT UCID password. Users can omit the `-X -Y` if you are not using a graphic interface. Once the password is provided, User will authenticate via Cisco two-factor authentication (TFA)
     
     ```
-    The authenticity of host 'user@lochness.njit.edu' cannot be established.
-     DSA key fingerprint is 01:23:45:67:89:ab:cd:ef:ff:fe:dc:ba:98:76:54:32:10. 
-     Are you sure you want to continue connecting (yes/no)?
+    (guest@wulver.njit.edu) Duo two-factor login for guest
+
+    Enter a passcode or select one of the following options:
+
+    1. Duo Push to XXX-XXX-2332
+    2. Phone call to XXX-XXX-2332
+    3. SMS passcodes to XXX-XXX-2332 (next code starts with: 1)
+
+    Passcode or option (1-3):
     ```
       
-    Answering `yes` to the prompt will cause the session to continue. Once the host key has been stored in the known_hosts file, the client system can connect directly to that server again without the need for any approvals. 
+    Based on the option provided, user will be logged in after succesfull authetication.  
 
 === "Windows"
 
@@ -67,33 +73,39 @@ Here we will provide instructions for connecting to NJIT HPC on Mac/Linux and Wi
     login-1-41 ~ >:
     ```
 
-## Key based Authentication to the NJIT Cluster
-
-
-=== "Mac/Linux"
-
-    To access to NJIT cluster without the password, you need to have a public ssh key on your Mac or Linux system. If you don’t yet have a public SSH key for your local machine, you need to initialize one. The process of doing so differs across operating systems. The Linux and Mac system users simply need to run the command `ssh-keygen`, which will store the keys in the `~/.ssh` folder. The public key is typically `id_rsa.pub` which is located in `~/.ssh/`.
-    Once you have a public SSH key, copy it to the set of authorized keys on the computing cluster. Since you’ve already connected to the cluster in the previous step, simply navigate to the `/.ssh` folder on the computing cluster and open the file `~/.ssh/authorized_keys` and paste the content of your public key from your local machine. Double-check that the pasted key begins with `ssh-rsa`.
-
-=== "Windows"
-
-    Windows users can save the public key through MobaXterm settings.
-
 ## Transfer the Data from the Local Machine to Clusters or vice versa
 
 === "Mac/Linux"
 
     Users need to use the command in the terminal to transfer in and out the data 
-     
+
+    ### `rsync`:
+    * Transfer the data from local machine to HPC cluster
     ```
-    rsync -avzP /path/to/local/machine ucid@HPC_HOST.njit.edu:/path/to/destination
+    rsync -avzP /path/to/local/machine ucid@wulver.njit.edu:/path/to/destination
     ```
-    Replace `HPC_HOST` with `lochness` or `wulver`. This will transfer the data from the ocal machine to HPC cluster. 
-    To transfer the data from HPC cluster to local machine use
-      
+    
+    * To transfer the data from HPC cluster to local machine use
     ```
-    rsync -avzP ucid@HPC_HOST.njit.edu:/path/to/source /path/to/local/machine
+    rsync -avzP ucid@wulver.njit.edu:/path/to/source /path/to/local/machine
     ```
+    ### `scp`:
+    * Copy files from remote machine to local machine
+    ```
+    scp [option] [ucid@wulver.njit.edu:path/to/source/file] [target/path]
+    ```
+
+    * Copy files from local machine to remote machine
+    ```
+    scp [option] [path/to/source/file] [ucid@wulver.njit.edu:target/path] 
+    ```
+
+    * Example of scp:
+    ```
+    scp -r example ucid@wulver.njit.edu:/home/dir 
+    ```
+    Copy the “example” folder recursively to `/home/dir`
+
 
 === "Windows"
 
