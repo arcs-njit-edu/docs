@@ -12,18 +12,20 @@ Conda as a package manager helps you find and install packages. If you need a pa
     
     df = pd.read_csv('docs/assets/tables/module_wulver.csv')
     # Header values to be added
-    soft = df.query('Software == "Anaconda3" | Software == "Miniconda3"')
+    soft = df.query('Software == "Anaconda3" | Software == "Miniconda3" | Software == "Miniforge3" ')
     print(soft.to_markdown(index=False))
     ```
 
-Users can use conda after using any of the modules mentioned above. Once `Anaconda3` module is loaded, users can create virtual Python environments to manage Python modules.
+!!! important
+
+    Users can use conda after using any of the modules mentioned above. Once `Miniforge3` module is loaded, users can create virtual Python environments to manage Python modules.
 
 ## Create and Activate a Conda Virtual Environment
 
 Load the Anaconda Module
 
 ```
-module load Anaconda3
+module load Miniforge3
 ```
 
 ### Create Environment with `conda`
@@ -35,7 +37,7 @@ Once you create an environment, you need to activate the environment to install 
 Use `conda activate ENV` to activate the Conda environment (`ENV` is the name of the environment). Following the activation of the conda environment, the name of the environment appears at the left of the hostname in the terminal. 
 
 ```bash
-login1-41 ~ >: module load Anaconda3
+login1-41 ~ >: module load Miniforge3
 login1-41 ~ >: source conda.sh
 login1-41 ~ >: conda create --name ENV python=3.9
 login1-41 ~ >: conda activate ENV
@@ -85,7 +87,7 @@ Here, we provide some examples of how to use `conda` to install application
 The following example will create a new conda environment based on Python 3.9 and install TensorFlow in the environment.
 
 ```bash
-login1-41 ~ >: module load Anaconda3
+login1-41 ~ >: module load Miniforge3
 login1-41 ~ >: conda create --name tf python=3.9
 Collecting package metadata (current_repodata.json): done
 Solving environment: done
@@ -202,7 +204,7 @@ Simple TensorFlow test program to make sure the virtual env can access a GPU. Pr
         # Purge any module loaded by default
         module purge > /dev/null 2>&1
         module load wulver # Load slurm, easybuild
-        module load Anaconda3
+        module load Miniforge3
         source conda.sh
         conda activate tf
         srun python tf.gpu.test.py
@@ -242,7 +244,7 @@ Default GPU Device: /device:GPU:0
 Next, deactivate the environment using `conda deactivate tf` command.
 
 #### Install PyTorch with GPU
-To install PyTorch with GPU, load the `Anaconda3` module as described above and then use the following
+To install PyTorch with GPU, load the `Miniforge3` module as described above and then use the following
 
 ```
 conda create --name torch-cuda python=3.8
@@ -330,7 +332,7 @@ User can use the following job script to run the script.
         # Purge any module loaded by default
         module purge > /dev/null 2>&1
         module load wulver # Load slurm, easybuild
-        module load Anaconda3
+        module load Miniforge3
         source conda.sh
         conda activate torch-cuda
         srun python touch_tensor.py
@@ -344,7 +346,7 @@ User can use the following job script to run the script.
 Mamba is a fast, robust, and cross-platform package manager and particularly useful for building complicated environments, where `conda` is unable to 'solve' the required set of packages within a reasonable amount of time.
 Users can install packages with `mamba` in the same way as with `conda`.
 ```bash
-module load Mamba Anaconda3
+module load Miniforge3
 
 # create new environment
 mamba create --name env_name python numpy pandas 
@@ -353,14 +355,13 @@ source conda.sh
 conda activate env_name
 mamba install scipy
 ```
-### Example of Installing PyTorch via Mamba
+### Example of Installing PyTorch via mamba
 
 ```bash
-module load Anaconda3
+module load Miniforge3
 conda create --name torch-cuda
 source conda.sh
 conda activate torch-cuda
-module load Mamba
 mamba install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 ```
 
@@ -441,7 +442,7 @@ conda activate /project/hpcadmins/abc3/conda_env/my_env
 (/project/hpcadmins/abc3/conda_env/my_env) abc3@login01:~$ conda env list
 # conda environments:
 #
-base /apps/easybuild/software/Anaconda3/2023.09-0
+base /apps/easybuild/software/Miniforge3/2023.09-0
 * /project/hpcadmins/abc3/conda_env/my_env
 ```
 By following these steps, you can successfully export a conda environment from one machine and import it to another, ensuring a consistent working environment across different machines or directories.
@@ -457,7 +458,7 @@ By following these steps, you can successfully export a conda environment from o
 | Activate environment:                     |          `conda activate [environment_name]`           |
 | Deactivate environment:                   |         `conda deactivate [environment_name]`          |
 | Show the list of environments:            |                    `conda env list`                    |
-| Delete environment:                       |  `conda conda remove --name [environment_name] --all`  |
+| Delete environment:                       |     `conda remove --name [environment_name] --all`     |
 | Export environment:                       |      `conda env export > [environment_name].yml`       |
 | Import environment from YAML:             |      `conda env create -f [environment_name].yml`      |
 | Import environment to different location: | `conda env create -f [environment_name].yml -p [PATH]` | 
