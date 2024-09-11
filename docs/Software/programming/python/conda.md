@@ -16,13 +16,13 @@ Conda as a package manager helps you find and install packages. If you need a pa
     print(soft.to_markdown(index=False))
     ```
 
-!!! important
+!!! warning
 
-    Users can use conda after using any of the modules mentioned above. Once `Miniforge3` module is loaded, users can create virtual Python environments to manage Python modules.
+    Users can use conda after using any of the modules mentioned above. However, please note that in future, the `Anaconda` module may be removed as Anaconda is no longer free for non-profit academic research use at institutions with more than 200 employees. While we have not recived any offical communication from Ananconda yet, please use `Miniforge3` module instead of Anaconda. You don't need to reinstall or recreate any environmnt if you already created Conda environment with Anaconda. Just load Miniforge3 and the remaining steps are same.
 
 ## Create and Activate a Conda Virtual Environment
 
-Load the Anaconda Module
+Load the Miniforge3 Module
 
 ```
 module load Miniforge3
@@ -76,9 +76,8 @@ Users can prioritize channels by listing them in a specific order, so that Conda
 auto_activate_base: false
 channels:
   - conda-forge
-  - defaults
 ```
-The advantage of using `.condarc` is that you don't have to mention the channel name every time you install a package. However, please note that you still need to use the channel name if you want to install Python packages that require a specific channel other than the default channels (`conda-forge` and `defaults`).
+The advantage of using `.condarc` is that you don't have to mention the channel name every time you install a package. However, please note that you still need to use the channel name if you want to install Python packages that require a specific channel other than the `conda-forge` channel.
 
 ### Examples
 Here, we provide some examples of how to use `conda` to install application 
@@ -247,12 +246,13 @@ Next, deactivate the environment using `conda deactivate tf` command.
 To install PyTorch with GPU, load the `Miniforge3` module as described above and then use the following
 
 ```
-conda create --name torch-cuda python=3.8
+conda create --name torch-cuda
 source conda.sh
 conda activate torch-cuda
-conda install -c "nvidia/label/cuda-11.7.0" cuda-toolkit
-conda install -c pytorch -c nvidia pytorch torchvision torchaudio pytorch-cuda=11.7
+conda install -c "nvidia/label/cuda-12.2.0" cuda-toolkit
+conda install -c pytorch -c nvidia pytorch torchvision torchaudio pytorch-cuda -y
 ```
+
 !!! note
     
     In the example above, we mentioned the channel name as we intend to install PyTorch and PyTorch-CUDA from a specific channel. For the default channel please see [Channels](conda.md#conda-channel).
