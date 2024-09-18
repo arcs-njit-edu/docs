@@ -18,9 +18,9 @@ hide:
 
 # High Performance Research Computing
 
-|                   Name                    | Title | Phone | Email | Office |
-|:-----------------------------------------:|:-----:|:-----:|:-----:|:------:|
-|    [Gedaliah Wolosh](#gedaliah-wolosh)    | Director, High Performance Research Computing | (973) 596-5436 | gwolosh@njit.edu | GITC 2203 |
+|                   Name                    | Title |     Phone      | Email | Office |
+|:-----------------------------------------:|:-----:|:--------------:|:-----:|:------:|
+|    [Gedaliah Wolosh](#gedaliah-wolosh)    | Director, High Performance Research Computing | (973) 596-5437 | gwolosh@njit.edu | GITC 2203 |
 |        [Kevin Walsh](#kevin-walsh)        | Assistant Director, Advanced Computing Infrastructure | (973) 596-5747 | walsh@njit.edu | GITC 2202 |
 |        [Kate Cahill](#kate-cahill)        |  Associate Director, High Performance Research Computing  | (973) 596-2721 | katharine.cahill@njit.edu | GITC 2203 |
 | [Abhishek Mukherjee](#abhishek-mukherjee) | Research Computing Facilitator | (973) 642-4132 | abhishek.mukherjee@njit.edu | GITC 2316B |
