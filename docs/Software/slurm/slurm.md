@@ -97,17 +97,17 @@ Here, 'xy1234' represents the UCID of the PI, and 'SLURM Service Units (CPU Hour
 ??? example "Sample Job Script to use: submit.sh"
 
     ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=job_nme
-        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --error=%x.%j.err
-        #SBATCH --partition=general
-        #SBATCH --qos=standard
-        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=8
-        #SBATCH --time=59:00  # D-HH:MM:SS
-        #SBATCH --mem-per-cpu=4000M
+    #!/bin/bash -l
+    #SBATCH --job-name=job_nme
+    #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+    #SBATCH --error=%x.%j.err
+    #SBATCH --partition=general
+    #SBATCH --qos=standard
+    #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+    #SBATCH --nodes=1
+    #SBATCH --ntasks-per-node=8
+    #SBATCH --time=59:00  # D-HH:MM:SS
+    #SBATCH --mem-per-cpu=4000M
     ```
 
 * Here, the job requests 1 node with 8 cores, on the `general` partition with `qos=standard`. Please note that the memory relies on the number of cores you are requesting. 
@@ -127,18 +127,18 @@ In case of submitting the jobs on GPU, you can use the following SLURM script
 ??? example "Sample Job Script to use: gpu_submit.sh"
 
     ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=gpu_job
-        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --error=%x.%j.err
-        #SBATCH --partition=gpu
-        #SBATCH --qos=standard
-        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=8
-        #SBATCH --gres=gpu:2
-        #SBATCH --time=59:00  # D-HH:MM:SS
-        #SBATCH --mem-per-cpu=4000M
+    #!/bin/bash -l
+    #SBATCH --job-name=gpu_job
+    #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+    #SBATCH --error=%x.%j.err
+    #SBATCH --partition=gpu
+    #SBATCH --qos=standard
+    #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+    #SBATCH --nodes=1
+    #SBATCH --ntasks-per-node=8
+    #SBATCH --gres=gpu:2
+    #SBATCH --time=59:00  # D-HH:MM:SS
+    #SBATCH --mem-per-cpu=4000M
     ```
 This will request 2 GPUS per node on the `GPU` partition.
 
@@ -148,17 +148,17 @@ The "debug" QoS in Slurm is intended for debugging and testing jobs. It usually 
 ??? example "Sample Job Script to use: debug_submit.sh"
 
     ```slurm
-        #!/bin/bash -l
-        #SBATCH --job-name=debug
-        #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
-        #SBATCH --error=%x.%j.err
-        #SBATCH --partition=debug
-        #SBATCH --qos=debug
-        #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
-        #SBATCH --nodes=1
-        #SBATCH --ntasks-per-node=4
-        #SBATCH --time=7:59:00  # D-HH:MM:SS, Maximum allowable Wall Time 8 hours
-        #SBATCH --mem-per-cpu=4000M
+    #!/bin/bash -l
+    #SBATCH --job-name=debug
+    #SBATCH --output=%x.%j.out # %x.%j expands to slurm JobName.JobID
+    #SBATCH --error=%x.%j.err
+    #SBATCH --partition=debug
+    #SBATCH --qos=debug
+    #SBATCH --account=PI_ucid # Replace PI_ucid which the NJIT UCID of PI
+    #SBATCH --nodes=1
+    #SBATCH --ntasks-per-node=4
+    #SBATCH --time=7:59:00  # D-HH:MM:SS, Maximum allowable Wall Time 8 hours
+    #SBATCH --mem-per-cpu=4000M
     ```
 
 ### Interactive session on a compute node
