@@ -25,38 +25,7 @@ NJIT HPC provides practical training in high performance computing for students 
 
     <iframe src="https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=581f2cd1-047c-4517-a50c-b1ef015376f5&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="HPC Monthly Webinar Fall 2024" ></iframe>
 
-    [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/NJIT_HPC_Seminar-Part-I.pdf)
-
-</div>
-
-<div class="grid cards" markdown>
--   ### Getting Started on Wulver: Session II
-
-    ---
-
-    This session offered an overview of the environment on the Wulver cluster, including file management, working with the batch system (SLURM), and accessing software. 
-    #### Key Highlights:
-    * HPC allocations
-    * Using [SLURM](slurm.md)
-    * Job submissions
-    
-    <iframe src=https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=da615cd0-2071-4f99-bc63-b155015e0544&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all height="420" width="896" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NJIT HPC Training Webinar" ></iframe>
-
-    [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/NJIT_HPC_Seminar-Part-II.pdf)
-</div>
-<div class="grid cards" markdown>
--   ### Introduction to Python and Conda
-
-    ---
-    Participants will gain an introductory understanding of using Python for HPC and effectively managing their Python environments using [Conda](conda.md). This knowledge will empower them to leverage the power of Python for their scientific computing needs on HPC systems.
-
-    #### Key Highlights:
-  * Learn how to manage Python environments for HPC using Conda.
-  * Become familiar with common tools and libraries for scientific computing in Python.
-    
-    <iframe src="https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=952312e4-d685-46c1-bbc2-b15c0150df0e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height=420" width="896" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="NJIT HPC Training Webinar" ></iframe>
-
-    [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/intro-to-Python-and-Conda.pdf)
+    [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/NJIT_HPC_Seminar-SLURM.pdf)
 
 </div>
 
