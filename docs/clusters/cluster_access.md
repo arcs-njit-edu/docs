@@ -77,7 +77,7 @@ Here we will provide instructions for connecting to NJIT HPC on Mac/Linux and Wi
 
 === "Mac/Linux"
 
-    Users need to use the command in the terminal to transfer in and out the data 
+    Users need to use the command in the terminal to transfer in and out the data.  
 
     ### `rsync`:
     * Transfer the data from local machine to HPC cluster
