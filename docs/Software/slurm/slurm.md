@@ -90,7 +90,7 @@ Usage for account: xy1234
      User ab1234 Usage: 50 GB (No quota)
 HOME Storage ab1234 Usage: 0 GB (of 50 GB quota)
 ```
-Here, 'xy1234' represents the UCID of the PI, and 'SLURM Service Units (CPU Hours): 277557 (300000 Quota)' indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs. Please ensure that you load the 'wulver' module before running the 'quota_info' command. This command also displays the storage usage of directories such as $HOME, /project, and /scratch. Users can view both the group usage and individual usage of each storage. In the given example, the group usage from the 2TB project quota is 867 GB, with the user's usage being 11 GB out of that 867 GB. For more details file system quota, see [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
+Here, `xy1234` represents the UCID of the PI, and "SLURM Service Units (CPU Hours): 277557 (300000 Quota)" indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs. Please ensure that you load the `wulver` module before running the `quota_info` command. This command also displays the storage usage of directories such as `$HOME`, `/project`, and `/scratch`. Users can view both the group usage and individual usage of each storage. In the given example, the group usage from the 2TB project quota is 867 GB, with the user's usage being 11 GB out of that 867 GB. For more details file system quota, see [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
 
 ### Example of slurm script
 #### Submitting Jobs on CPU Nodes
@@ -143,7 +143,7 @@ In case of submitting the jobs on GPU, you can use the following SLURM script
 This will request 2 GPUS per node on the `GPU` partition.
 
 #### Submitting Jobs on `debug`
-The "debug" QoS in Slurm is intended for debugging and testing jobs. It usually provides a shorter queue wait time and quicker job turnaround. Jobs submitted with the "debug" QoS have access to a limited set of resources (Only 4 CPUS on Wulver), making it suitable for rapid testing and debugging of applications without tying up cluster resources for extended periods. 
+The `debug` QoS in Slurm is intended for debugging and testing jobs. It usually provides a shorter queue wait time and quicker job turnaround. Jobs submitted with the `debug` QoS have access to a limited set of resources (Only 4 CPUS on Wulver), making it suitable for rapid testing and debugging of applications without tying up cluster resources for extended periods. 
 
 ??? example "Sample Job Script to use: debug_submit.sh"
 
