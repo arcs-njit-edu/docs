@@ -3,7 +3,7 @@ hide:
   - toc
 ---
 
-# High Performance Computing (HPC)
+# High Performance Computing 
 
 Welcome to HPC at [New Jersey Institute of Technology (NJIT)](https://www.njit.edu).
 
