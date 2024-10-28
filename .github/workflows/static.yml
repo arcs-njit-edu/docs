@@ -3,12 +3,12 @@ on:
   push:
     branches:
       - main
-      - ARCS-March
+      - ARCS-Lakshya
       - abhi_patch
       - julia_patch      
     workflow_dispatch:
       - main
-      - ARCS-March
+      - ARCS-Lakshya
       - abhi_patch
       - julia_patch
 permissions:
