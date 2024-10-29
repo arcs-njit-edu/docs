@@ -1,5 +1,5 @@
- ,Regular,Bigmem,GPU
-Partition,regular,bigmem,gpu
+ ,General,Bigmem,GPU
+Partition,`general`,`bigmem`,`gpu`
 Nodes,100,2,25
 CPU Type,AMD EPYC 7753,AMD EPYC 7753,AMD EPYC 7713
 CPU Speed (GHZ),2.45,2.45,2.0
