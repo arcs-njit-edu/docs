@@ -25,5 +25,5 @@ The HPC training event on using Singularity containers provides participants wit
 
 ## Registration
 
-Click [here](https://njit-edu.zoom.us/meeting/register/tJUuce6hrjMuH9w5wDehR8emZ2LnymMvVWdx) for the registration.
+Registration is now closed. Check the [HPC training](training.md#introduction-to-containers-on-wulver) for the webinar recording and slides.
 
