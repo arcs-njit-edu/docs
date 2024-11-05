@@ -67,7 +67,7 @@ Kate started at NJIT in September 2023. Previously, she was the Education & Trai
 
 ## Abhishek Mukherjee 
 
-![Abhishek Mukherjee](../assets/images/mukherjee.jpg){ align=left, width="300" }
+![Abhishek Mukherjee](../assets/images/mukherjee.jpeg){ align=left, width="300" }
 
 Abhishek Mukherjee is a computational scientist and has experience in multidisciplinary projects, providing engineering solutions for computational fluid dynamics problems. He has expertise in HPC software installation and is an active contributor to EasyBuild that allows to manage software on HPC systems in an efficient way.
 <a href="https://github.com/absrocks">![https://github.com/absrocks](../assets/images/github-color.svg){ width="15" }</a>

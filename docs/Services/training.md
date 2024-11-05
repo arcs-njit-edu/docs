@@ -5,6 +5,28 @@ NJIT HPC provides practical training in high performance computing for students 
 ## Training Programs
 
 ### 2024 Fall
+<div class="grid cards" markdown>
+
+-   ### [Introduction to Containers on Wulver](2_containers.md)
+
+    ---
+
+    This is the second in a series of three webinars in the fall semester. designed to introduce researchers, scientists, and HPC users to the fundamentals of the containers. Attendees will learn the fundamentals of Singularity, including installation, basic commands, and workflow, as well as how to create and build containers using definition files and existing Docker images. The training will cover executing containerized applications on HPC clusters and integrating with job schedulers like SLURM, while also addressing security considerations and performance optimization techniques.
+    
+    #### Key Highlights:
+    * Introduction to containers and its role in HPC environments
+    * Fundamentals of Singularity, including installation, basic commands, and workflow
+    * Create and build containers using definition files and existing Docker images
+    * How to execute containerized applications on HPC clusters
+    * Use Containers via SLURM
+    * Performance optimization techniques
+ 
+
+    <iframe src="https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=62fbaaca-e0ce-43e7-b25f-b20b01526a00&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="HPC Monthly Webinar Fall 2024" ></iframe>
+
+    [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/container_HPC_10-16-2024.pdf)
+
+</div>
 
 <div class="grid cards" markdown>
 
