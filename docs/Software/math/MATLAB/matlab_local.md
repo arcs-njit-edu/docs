@@ -22,42 +22,17 @@
 ## Setup Slurm profile to run MATLAB on Lochness
 Following this procedure a user will be able to submit jobs on Wulver from Matlab running locally on the user's computer.
 
-### Installing the Add-On
+| Name                     |       Value       |  Type   |
+|--------------------------|:-----------------:|:-------:|
+| ClusterHost              | `wulver.njit.edu` | String  |
+| AuthenticationMode       |    Multifactor    | String  |
+| UseUniqueSubfolders      |       True        | Logical |
+| UseIdentityFile          |       False       | Logical |
+| RemoteJobStorageLocation |      `$PATH`      | String  |
+| user                     |      `$UCID`      | String  |
 
-Download the [Slurm-Add-on](../../../assets/parallel_slurm.mlpkginstall) and double-click on it to install. Make sure to keep the MATLAB window open while installing it.
+Replace `$PATH` with the actual path of Wulver where you want to save the output file. Make sure to use `/project` directory for remote job storage as `$HOME` has fixed quota of 50GB and cannot be increased. See [Wulver Filesystems](Wulver_filesystems.md) for details.
 
-### Creating a Profile for Wulver
-
-The following steps will create a profile for lochness (or stheno). Click <kbd>Next</kbd> to begin.
-
-![matlab_profile1](img/GenericProfile1.png){ width=50% height 50%}
-
-In the "Operating System" screen `Unix` is already selected. Click <kbd>Next</kbd> to continue.
-
-![matlab_profile2](img/GenericProfile2.png){ width=50% height 50%}
-
-This "Submission Mode" screen determines whether to use a `shared` or `nonshared` submission mode. Since Matlab installed on your personal computer or laptop does not use a shared job location storage, select "No" where indicated and click <kbd>Next</kbd> to continue.
-
-![matlab_profile3](img/GenericProfile3.png){ width=50% height 50%}
-
-Click <kbd>Next</kbd> to continue.
-
-![matlab_profile4](img/GenericProfile4.png){ width=50% height 50%}
-
-In the `Connection Details` screen, enter the cluster host as `wulver.njit.edu`. Enter your UCID for the `username`. Select `No` for the `Do you want to use an identity file to log in to the cluster` option and click <kbd>next</kbd> to continue.
-
-![matlab_profile5](img/GenericProfile5.png){ width=50% height 50%}
-
-In the `Cluster Details` screen enter the full path to the directory on lochness to store the Matlab job files. In the case the directory is `$HOME/MDCS`. `MDCS` stands for Matlab Distributed Computing Server. It is not necessary to name this directory as `MDCS`. This directory can be named anything you wish. To determine the value of `$HOME`, connect to Wulver and run the following:
-
-```
-  login-1-45 ~ >: echo $HOME
-  /home/g/guest24
-```
-
-Make sure to check the box <kbd>Use unique subfolders</kbd> . Click <kbd>Next</kbd> to continue.
-
-![matlab_profile6](img/GenericProfile6.png){ width=50% height 50%}
 
 In the `Workers`, enter `512` for the number of workers. For `MATLAB installation folders for workers`, use `module av MATLAB` command first.
 
