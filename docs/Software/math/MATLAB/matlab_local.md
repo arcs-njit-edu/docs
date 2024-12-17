@@ -31,7 +31,8 @@ Following this procedure a user will be able to submit jobs on Wulver from Matla
 | RemoteJobStorageLocation |      `$PATH`      | String  |
 | user                     |      `$UCID`      | String  |
 
-Replace `$PATH` with the actual path of Wulver where you want to save the output file. Make sure to use `/project` directory for remote job storage as `$HOME` has fixed quota of 50GB and cannot be increased. See [Wulver Filesystems](Wulver_filesystems.md) for details.
+Replace `$PATH` with the actual path of Wulver where you want to save the output file. Make sure to use `/project` directory for remote job storage as `$HOME` has fixed quota of 50GB and cannot be increased. See [Wulver Filesystems](Wulver_filesystems.md) for details. Replace `$UCID` with the NJIT UCID.
+
 
 
 In the `Workers`, enter `512` for the number of workers. For `MATLAB installation folders for workers`, use `module av MATLAB` command first.
