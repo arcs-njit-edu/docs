@@ -19,7 +19,23 @@
 
 * Continue by selecting **Next** and MATLAB will be installed on your computer.
 
-## Setup Slurm profile to run MATLAB on Lochness
+## Setup Slurm profile to run MATLAB on Wulver
+* Open MATLAB --> select Create and Manage Clusters
+
+![matlab_slurm_profile_1](img/matlab_slurm_profile_1.png){ width=50% height 50%}
+
+* A new dialogue box will open and under the Add Cluster Profile, select Slurm
+
+![matlab_slurm_profile_2](img/matlab_slurm_profile_2.png){ width=50% height 50%}
+
+![matlab_slurm_profile_3](img/matlab_slurm_profile_3.png){ width=50% height 50%}
+
+* This will open a Slurm cluster Profile and select the edit option to modify the parameters
+
+![matlab_slurm_profile_4](img/matlab_slurm_profile_settings.png){ width=50% height 50%}
+
+* 
+
 Following this procedure a user will be able to submit jobs on Wulver from Matlab running locally on the user's computer.
 
 | Name                     |       Value       |  Type   |
@@ -80,7 +96,7 @@ setenv("_JAVA_OPTIONS","-Xmx2048m")
 ```
 The MATLAB installation path is defined by the EBROOTMATLAB environment variable, which, in the above example, is set to `/apps/easybuild/software/MATLAB/R2023a`. Mention that path in `MATLAB installation folders for workers` and click <kbd>Next</kbd> to continue.
 
-![matlab_profile7](img/GenericProfile7.png){ width=50% height 50%}
+
 
 In the "License" screen make sure to select "Network license manager" and click <kbd>Next</kbd> to continue.
 
