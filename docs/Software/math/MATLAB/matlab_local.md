@@ -20,17 +20,17 @@
 * Continue by selecting **Next** and MATLAB will be installed on your computer.
 
 ## Setup Slurm profile to run MATLAB on Wulver
-* Open MATLAB --> select Create and Manage Clusters
+* Open MATLAB --> select <kbd>Create and Manage Clusters</kbd>.
 
 ![matlab_slurm_profile_1](img/matlab_slurm_profile_1.png){ width=50% height 50%}
 
-* A new dialogue box will open and under the Add Cluster Profile, select Slurm
+* A new dialogue box will open and under the <kbd>Add Cluster Profile</kbd>, select <kbd>Slurm</kbd>.
 
 ![matlab_slurm_profile_2](img/matlab_slurm_profile_2.png){ width=50% height 50%}
 
 ![matlab_slurm_profile_3](img/matlab_slurm_profile_3.png){ width=50% height 50%}
 
-* This will open a Slurm cluster Profile and select the edit option to modify the parameters
+* This will open a Slurm cluster Profile and select the <kbd>edit</kbd> option to modify the parameters
 
 ![matlab_slurm_profile_4](img/matlab_slurm_profile_settings.png){ width=50% height 50%}
 
@@ -98,21 +98,11 @@ The MATLAB installation path is defined by the EBROOTMATLAB environment variable
 
 
 
-In the "License" screen make sure to select "Network license manager" and click <kbd>Next</kbd> to continue.
-
-![matlab_profile8](img/GenericProfile8.png){ width=50% height 50%}
-
-In the `Profile Details` screen enter "Wulver". The "Cluster description" is optional and may be left blank. Click <kbd>Next</kbd> to continue.
-
-![matlab_profile9](img/GenericProfile9.png){ width=50% height 50%}
 
 In the `Summary` screen make sure everything is correct and click <kbd>Create</kbd>.
 
 ![matlab_profile10](img/GenericProfile10.png){ width=50% height 50%}
 
-In the `Profile Created Successfully` screen, check the `Set the new profile as default` box and click on <kbd>Finish</kbd>.
-
-![matlab_profile11](img/GenericProfile11.png){ width=50% height 50%}
 
 ## Submitting a Serial Job
 This section will demonstrate how to create a cluster object and submit a simple job to the cluster. The job will run the 'hostname' command on the node assigned to the job. The output will indicate clearly that the job ran on the cluster and not on the local computer.
@@ -124,11 +114,11 @@ The hostname.m file used in this demonstration can be downloaded [here](https://
 ```
  ![](https://wiki.hpc.arcs.njit.edu/images/2/22/C%3Dparcluster_1.png){ width=70% height 70%}
 
-Certain arguments need to be passed to SLURM in order for the job to run properly. Here we will set values for partion, mem-per-cpu and time. In the Matlab window enter:
+Certain arguments need to be passed to SLURM in order for the job to run properly. Here we will set values for partition, and time. In the Matlab window enter:
 ```
- >> c.AdditionalProperties.AdditionalSubmitArgs=['--partition=general --qos=standard --account=PI_UCID --mem-per-cpu=4G --time=2-00:00:00'] 
+ >> c.AdditionalProperties.AdditionalSubmitArgs=['--partition=general --qos=standard --account=$PI_UCID --time=2-00:00:00'] 
 ```
-Replace `PI_UCID` with the UCID of PI. Check the [SLURM Documentation](slurm.md) for other SLURM parameters.
+Replace `$PI_UCID` with the UCID of PI. Check the [SLURM Documentation](slurm.md) for other SLURM parameters.
 To make this persistent between Matlab sessions these arguments need to be saved to the profile. In the Matlab window enter:
 ```
  >> c.saveProfile 
