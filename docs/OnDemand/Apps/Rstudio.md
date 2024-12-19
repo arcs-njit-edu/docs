@@ -24,7 +24,7 @@ For example, to use a Conda environment, enter:
 
 ## Launching the Session
 
-![Rstudio2](../../assets/ondemand/Rstudio2.png){ width=50% height=50%}
+![Rstudio2](../../assets/ondemand/Rstudio2.png){ width=40% height=20%}
 
 Once clicking **Launch**, the request will be queued, and when resources have been allocated, you will be presented with the option to connect to the session by clicking on the blue Connect to R Studio Server button.
 ![Rstudio3](../../assets/ondemand/Rstudio3.png){ width=50% height=50%}
