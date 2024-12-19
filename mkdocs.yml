@@ -35,6 +35,7 @@ nav:
 theme: 
   name: material
   logo: img/Logo_NJIT.png
+  custom_dir: overrides
   favicon: favicon.ico
   palette:
 
@@ -63,6 +64,7 @@ theme:
     - content.tabs.link
     - announce.dismiss
     - content.tooltips
+    - header.autohide
 
 extra_css:
     - stylesheets/extra.css
