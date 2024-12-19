@@ -148,10 +148,6 @@ We will now submit the hostname.m function to the cluster. In the Matlab window 
 
 When the job is submitted, you will be prompted for your password.
 
-For more information see the Mathworks page: [batch](https://www.mathworks.com/help/parallel-computing/batch.html) 
-
-![](https://wiki.hpc.arcs.njit.edu/images/6/6a/BatchEnterPasswd.png){ width=70% height 70%}
-
 To wait for the job to finish, enter the following in the Matlab window:
 ```
  >>j.wait
@@ -160,16 +156,11 @@ Finally, to get the results:
 ```
  >>fetchOutputs(j)
 ```
-As can be seen, this job ran on node720
-
-![](https://wiki.hpc.arcs.njit.edu/images/e/e5/BatchHostname.png){ align=left, width=70% height 70%}
 
 ### Submitting a Parallel Function
 The `Job Monitor` is a convenient way to monitor jobs submitted to the cluster. In the Matlab window select `Parallel` and then `Monitor Jobs`.
 
 For more information see the Mathworks page: [Job Monitor](https://www.mathworks.com/help/parallel-computing/job-monitor.html).
-
-![](https://wiki.hpc.arcs.njit.edu/images/c/c4/MonitorJobs.png){ width=70% height 70%}
 
 Here we will submit a simple function using a "parfor" loop. The code for this example is as follows:
 ```
@@ -189,13 +180,7 @@ To submit this job:
 ```
 Since this is a parallel job a 'Pool' must be started. The actual number of tasks started will be one more than requested in the pool. In this case, the batch command calls for a pool of seven. Eight tasks will be started on the cluster.
 
-Also see that the state of the job in the `Job Monitor` is `running`.
-
-![](https://wiki.hpc.arcs.njit.edu/images/d/db/SubmitParallel.png){ width=70% height 70%}
-
 The job takes a few minutes to run and the state of the job changes to "finished."
-
-![](https://wiki.hpc.arcs.njit.edu/images/0/0f/JobFinished.png){ width=70% height 70%}
 
 Once again to get the results enter:
 ```
@@ -263,13 +248,11 @@ Submit the job as before. Since a script is submitted as opposed to a function, 
 ```
  >> j=c.batch('gpu', 'AutoAddClientPath', false) 
 ```
- ![](https://wiki.hpc.arcs.njit.edu/images/8/8d/GpuSubmit.png){ width=70% height 70%}
  
 To get the result:
 ```
  >> j.diary 
 ```
-![](https://wiki.hpc.arcs.njit.edu/images/4/4a/GpuDiary.png){ width=70% height 70%}
 
 ## Load and Plot Results from A Job
 In this section we will run a job on the cluster and then load and plot the results in the local Matlab workspace. The code for this example is as follows:
@@ -284,17 +267,15 @@ As before submit the job:
 ```
  >> j=c.batch('plot_demo', 'AutoAddClientPath', false);
 ```
-![](https://wiki.hpc.arcs.njit.edu/images/d/d4/PlotDemoSub.png){ width=70% height 70%}
 
 To load 'x' into the local Matlab workspace:
 ```
  >> load(j,'x') 
 ```
- ![](https://wiki.hpc.arcs.njit.edu/images/2/26/Load_x.png){ width=70% height 70%}
  
  Finally, plot the results:
 ```
  >> plot(x) 
 ```
-![](https://wiki.hpc.arcs.njit.edu/images/9/90/Plot_x.png){ width=70% height 70%}
+
  
