@@ -2,7 +2,7 @@
 
 !!! warning
     
-    Please note that the following instructions are applicatible for Lochness only. We will soon update the instructions for Wulver.
+    Please note that since MFA is enabled, the instructions for running MATLAB via HPC resources have been modified. If you already installed MATLAB on the local machine, skip to [Setup Slurm profile to run MATLAB on Wulver](matlab_local.md#setup-slurm-profile-to-run-matlab-on-wulver). 
 
 ## Installation steps of MATLAB on local machine
 * Go to [Mathworks Download](https://www.mathworks.com/downloads/) and register with your NJIT email address.
@@ -34,39 +34,34 @@
 
 ![matlab_slurm_profile_4](img/matlab_slurm_profile_settings.png){ width=50% height 50%}
 
-* 
+* Modify the following parameters as mentioned in the screenshot
 
-Following this procedure a user will be able to submit jobs on Wulver from Matlab running locally on the user's computer.
+![matlab_slurm_profile_5](img/matlab_slurm_profile_settings_6.png)
 
-| Name                     |       Value       |  Type   |
-|--------------------------|:-----------------:|:-------:|
-| ClusterHost              | `wulver.njit.edu` | String  |
-| AuthenticationMode       |    Multifactor    | String  |
-| UseUniqueSubfolders      |       True        | Logical |
-| UseIdentityFile          |       False       | Logical |
-| RemoteJobStorageLocation |      `$PATH`      | String  |
-| user                     |      `$UCID`      | String  |
+a. `Description` - Set the name as `Wulver`
 
-Replace `$PATH` with the actual path of Wulver where you want to save the output file. Make sure to use `/project` directory for remote job storage as `$HOME` has fixed quota of 50GB and cannot be increased. See [Wulver Filesystems](Wulver_filesystems.md) for details. Replace `$UCID` with the NJIT UCID.
+b. `JobStorageLocation` - No Change
 
+c. `NumWorkers` - 512
 
+d. `NumThreads` - No Change
 
-In the `Workers`, enter `512` for the number of workers. For `MATLAB installation folders for workers`, use `module av MATLAB` command first.
+e. `ClusterMatlabRoot` - Use `module av MATLAB` command first.
 
 ```bash
   login-1-45 ~ >: module av MATLAB
   ------------------------------------/apps/easybuild/modules/all/Core---------------------------------------------------------
-   MATLAB/2023a
+   MATLAB/2024a
 
 Use "module spider" to find all possible modules and extensions.
 Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
 ```
-This will show you the list of MATLAB versions installed on Wulver. Next, use `module show MATLAB/2023a` to check MATLAB installation path.
+This will show you the list of MATLAB versions installed on Wulver. Next, use `module show MATLAB/2024a` to check MATLAB installation path.
 
 ```bash
-   login-1-45 ~ >: module show MATLAB/2023a
+   login-1-45 ~ >: module show MATLAB/2024a
 ---------------------------------------------------------------------------------------------------------------------------------
-   /apps/easybuild/modules/all/Core/MATLAB/2023a.lua:
+   /apps/easybuild/modules/all/Core/MATLAB/2024a.lua:
 ---------------------------------------------------------------------------------------------------------------------------------
 help([[
 Description
@@ -82,26 +77,38 @@ whatis("Description: The MATLAB Parallel Server Toolbox.")
 whatis("Homepage: https://www.mathworks.com/help/matlab/matlab-engine-for-python.html")
 whatis("URL: https://www.mathworks.com/help/matlab/matlab-engine-for-python.html")
 conflict("MATLAB")
-prepend_path("CMAKE_PREFIX_PATH","/apps/easybuild/software/MATLAB/R2023a")
-prepend_path("PATH","/apps/easybuild/software/MATLAB/R2023a/bin")
-setenv("EBROOTMATLAB","/apps/easybuild/software/MATLAB/R2023a")
-setenv("EBVERSIONMATLAB","R2023a")
+prepend_path("CMAKE_PREFIX_PATH","/apps/easybuild/software/MATLAB/2024a")
+prepend_path("PATH","/apps/easybuild/software/MATLAB/2024a/bin")
+setenv("EBROOTMATLAB","/apps/easybuild/software/MATLAB/2024a")
+setenv("EBVERSIONMATLAB","2024a")
 setenv("EBDEVELMATLAB","/apps/easybuild/software/MATLAB/R2023a/easybuild/Core-MATLAB-2023a-easybuild-devel")
-prepend_path("PATH","/apps/easybuild/software/MATLAB/R2023a/toolbox/parallel/bin")
-prepend_path("PATH","/apps/easybuild/software/MATLAB/R2023a")
-prepend_path("LD_LIBRARY_PATH","/apps/easybuild/software/MATLAB/R2023a/runtime/glnxa64")
-prepend_path("LD_LIBRARY_PATH","/apps/easybuild/software/MATLAB/R2023a/bin/glnxa64")
-prepend_path("LD_LIBRARY_PATH","/apps/easybuild/software/MATLAB/R2023a/sys/os/glnxa64")
+prepend_path("PATH","/apps/easybuild/software/MATLAB/2024a/toolbox/parallel/bin")
+prepend_path("PATH","/apps/easybuild/software/MATLAB/2024a")
+prepend_path("LD_LIBRARY_PATH","/apps/easybuild/software/MATLAB/2024a/runtime/glnxa64")
+prepend_path("LD_LIBRARY_PATH","/apps/easybuild/software/MATLAB/2024a/bin/glnxa64")
+prepend_path("LD_LIBRARY_PATH","/apps/easybuild/software/MATLAB/2024a/sys/os/glnxa64")
 setenv("_JAVA_OPTIONS","-Xmx2048m")
 ```
-The MATLAB installation path is defined by the EBROOTMATLAB environment variable, which, in the above example, is set to `/apps/easybuild/software/MATLAB/R2023a`. Mention that path in `MATLAB installation folders for workers` and click <kbd>Next</kbd> to continue.
+The MATLAB installation path is defined by the `EBROOTMATLAB` environment variable, which, in the above example, is set to `/apps/easybuild/software/MATLAB/2024a`.
+
+f. `RequireOnlineLicensing` - false
+
+g. `AdditionalProperties` - Select <kbd>add</kbd>  and add the following as mentioned in the table. 
+
+![matlab_slurm_profile_6](img/matlab_slurm_profile_settings_7.png)
 
 
 
+| Name                       |       Value       |  Type   |
+|----------------------------|:-----------------:|:-------:|
+| `ClusterHost`              | `wulver.njit.edu` | String  |
+| `AuthenticationMode`       |    Multifactor    | String  |
+| `UseUniqueSubfolders`      |       True        | Logical |
+| `UseIdentityFile`          |       False       | Logical |
+| `RemoteJobStorageLocation` |      `$PATH`      | String  |
+| `user`                     |      `$UCID`      | String  |
 
-In the `Summary` screen make sure everything is correct and click <kbd>Create</kbd>.
-
-![matlab_profile10](img/GenericProfile10.png){ width=50% height 50%}
+Replace `$PATH` with the actual path of Wulver where you want to save the output file. Make sure to use `/project` directory for remote job storage as `$HOME` has fixed quota of 50GB and cannot be increased. See [Wulver Filesystems](Wulver_filesystems.md) for details. Replace `$UCID` with the NJIT UCID.
 
 
 ## Submitting a Serial Job
