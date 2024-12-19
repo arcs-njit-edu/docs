@@ -174,6 +174,8 @@ t=toc(t0);
 ```
 To submit this job:
 ```
+ >> c.AdditionalProperties.AdditionalSubmitArgs=['--partition=general --qos=standard --account=$PI_UCID --ntasks=8 --time=2-00:00:00'] 
+ >> c.saveProfile
  >> j=c.batch(@parallel_example, 1, {}, 'AutoAddClientPath', false, 'Pool', 7)
 ```
 Since this is a parallel job a 'Pool' must be started. The actual number of tasks started will be one more than requested in the pool. In this case, the batch command calls for a pool of seven. Eight tasks will be started on the cluster.
