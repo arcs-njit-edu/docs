@@ -244,7 +244,7 @@ We will need to change the partition to `gpu` to request a gpu. In the Matlab wi
 ```
  ![matlab_profile12](img/md8jfxI.jpeg){ width=70% height 70%}
 
-Submit the job as before. Since a script is submitted as opposed to a function, only the name of the script is included in the batch command. Do not include the '@' symbol. In a script there are no inputs or ouptuts.
+Submit the job as before. Since a script is submitted as opposed to a function, only the name of the script is included in the batch command. Do not include the `@` symbol. In a script there are no inputs or ouptuts.
 ```
  >> j=c.batch('gpu', 'AutoAddClientPath', false) 
 ```
