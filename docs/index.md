@@ -67,7 +67,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
     !!! important "HPC Fall Events"
         
-        ARCS HPC is hosting the following events this fall. Please register for the events you plan to attend.
+        ARCS HPC has hosted the following events this fall. Please access the HPC training videos to view the webinar recordings and slides
 
         * [SLURM Batch System Basics](1_slurm.md)
         * [Introduction to Containers on Wulver](2_containers.md)

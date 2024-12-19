@@ -1,8 +1,8 @@
 # Use MATLAB on NJIT HPC
 
-!!! warning
+!!! tip
     
-    Please note that since MFA is enabled, the instructions for running MATLAB via HPC resources have been modified. If you already installed MATLAB on the local machine, skip to [Setup Slurm profile to run MATLAB on Wulver](matlab_local.md#setup-slurm-profile-to-run-matlab-on-wulver). 
+    Since MFA is enabled, the instructions for running MATLAB via HPC resources have been modified. If you already installed MATLAB on the local machine, skip to [Setup Slurm profile to run MATLAB on Wulver](matlab_local.md#setup-slurm-profile-to-run-matlab-on-wulver). 
 
 ## Installation steps of MATLAB on local machine
 * Go to [Mathworks Download](https://www.mathworks.com/downloads/) and register with your NJIT email address.
