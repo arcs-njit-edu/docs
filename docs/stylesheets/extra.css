@@ -1,6 +1,6 @@
 [data-md-color-scheme="njit"] {
   --md-primary-fg-color:                #d8272d;
-  --md-primary-fg-color--light:         #d8272d;
+  --md-primary-fg-color--light:         rgb(0,0,0);
   --md-admonition-icon--njit:           url('../img/Logo_NJIT.png');
   /* Code highlighting color shades
   --md-code-hl-color:                  hsla(#{hex2hsl($clr-red-a200)}, 1);
@@ -20,10 +20,8 @@
   */
 
   --md-typeset-mark-color:              #d8272d;
-  --md-default-fg-color:                rgb(0,0,0);
-
-  --md-footer-fg-color:                 #d8272d;
   --md-footer-bg-color:                 #d8272d;
+  --md-footer-fg-color:                 #d8272d;
 
   --md-accent-fg-color:                 #d8272d;
 }
