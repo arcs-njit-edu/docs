@@ -119,7 +119,6 @@ The hostname.m file used in this demonstration can be downloaded [here](https://
 ```
  >> c=parcluster 
 ```
- ![](https://wiki.hpc.arcs.njit.edu/images/2/22/C%3Dparcluster_1.png){ width=70% height 70%}
 
 Certain arguments need to be passed to SLURM in order for the job to run properly. Here we will set values for partition, and time. In the Matlab window enter:
 ```
@@ -130,7 +129,6 @@ To make this persistent between Matlab sessions these arguments need to be saved
 ```
  >> c.saveProfile 
 ```
- ![](https://wiki.hpc.arcs.njit.edu/images/5/51/AdditionalArguments.png){ width=70% height 70%}
  
 We will now submit the hostname.m function to the cluster. In the Matlab window enter the following:
 ```
