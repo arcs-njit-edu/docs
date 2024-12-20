@@ -1,26 +1,39 @@
+:root {
+    --md-primary-fg-color: #AB0520;
+    --md-accent-fg-color: #EF4056;
+    --md-typeset-a-color:                 #d8272d;
+    --md-typeset-mark-color:              #d8272d;
+}
+
 [data-md-color-scheme="njit"] {
   --md-primary-fg-color:                #d8272d;
+  --md-primary-fg-color--light:         #d8272d;
   --md-admonition-icon--njit:           url('../img/Logo_NJIT.png');
   --md-typeset-mark-color:              #d8272d;
   --md-footer-bg-color:                 #d8272d;
   --md-footer-fg-color:                 #d8272d;
   --md-accent-fg-color:                 #d8272d;
   --md-typeset-a-color:                 #d8272d;
+  --md-primary-fg-color--dark:          #90030C;
 }
 
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color:                #d8272d;
-  --md-primary-fg-color--light:         #d8272d;
+
   --md-admonition-icon--njit:           url('../img/Logo_NJIT.png');
-  --md-code-hl-color:                   hsla(#{hex2hsl($clr-blue-a200)}, 0.15);
+
   --md-accent-fg-color:                 #d8272d;
-  --md-hue:                             360;
+  --md-hue:                             100;
+  --md-background
   --md-typeset-a-color:                 #d8272d;
   --md-typeset-mark-color:              #d8272d;
 }
 
 .md-grid {
   max-width: initial;
+}
+.grid.cards > ul > li, .md-typeset .grid > .card {
+  background-color:  rgba(84, 15, 17, 0.05);
 }
 
 md-typeset .admonition.njit,

@@ -40,24 +40,24 @@ theme:
   palette:
 
     # Palette toggle for automatic mode
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/brightness-auto
-        name: Switch to light mode
+    #- media: "(prefers-color-scheme)"
+    #  toggle:
+    #    icon: material/brightness-auto
+    #   name: Switch to light mode
 
     # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: njit #rgb(204,0,0)
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
+    #- media: "(prefers-color-scheme: light)"
+    scheme: njit
+     # toggle:
+     #   icon: material/toggle-switch
+     #   name: Switch to dark mode
 
     # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to light mode
+    #- media: "(prefers-color-scheme: dark)"
+    #  scheme: slate
+    #  toggle:
+    #    icon: material/toggle-switch-off-outline
+    #    name: Switch to light mode
   features:
     - navigation.instant
     - navigation.tracking
