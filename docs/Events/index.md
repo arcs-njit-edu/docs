@@ -6,6 +6,31 @@ hide:
 
 # HPC Events
 
+## 2025 Spring
+
+<div class="grid cards" markdown>
+
+
+-   ### [Introduction to Wulver: Getting Started](1_intro_to_Wulver_I.md)
+    ---
+
+    Join us for an informative webinar designed to introduce NJIT's HPC environment, Wulver. This virtual session will provide essential information about the Wulver cluster, how to get an account, and allocation details.
+
+    [<span class="octicon--arrow-right-24"></span> Registration and Event Details](1_intro_to_Wulver_I.md)
+
+</div>
+<div class="grid cards" markdown>
+
+-   ### [Introduction to Wulver: Accessing System & Running Jobs](2_intro_to_Wulver_II.md)
+
+    ---
+
+    The HPC training event focuses on providing the fundamentals of SLURM (Simple Linux Utility for Resource Management), a workload manager. This virtual session will equip you with the essential skills needed to effectively utilize HPC resources using SLURM.
+
+    [<span class="octicon--arrow-right-24"></span> Registration and Event Details](2_intro_to_Wulver_II.md)
+
+</div>
+
 ## 2024 Fall
 
 <div class="grid cards" markdown>
