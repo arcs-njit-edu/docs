@@ -420,6 +420,18 @@ Next, edit the `my_environment.yml` file to make sure it has the correct environ
 
 Once the YAML file is ready, you can transfer the `my_environment.yml` file to the new machine or directory where you want to replicate the environment. See [cluster file transfer](cluster_access.md#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa) for details on transferring the files to clusters.
 
+### Set Different Location for Conda Environment and Package
+Since Conda, by default, downloads packages and creates environments in the `$HOME` directory, users might encounter disk quota errors if multiple environments are created. In such cases, please follow the above [steps](#export-conda-environment) to move the existing environments from `$HOME` to `/project`. For future environment and package downloads, create a `.condarc` file in the `$HOME` directory and add the following:
+```
+auto_activate_base: false
+envs_dirs:
+  - /path/to/custom/conda/envs/directory
+pkgs_dirs:
+  - /path/to/custom/conda/pkgs
+```
+
+Replace `/path/to/custom/conda/envs/directory` with the path you want to use. 
+
 ### Import Environment on New Machine
 On the new machine, first load Anaconda and initialize conda as before. Then, create the
 environment from the YAML file:
