@@ -9,7 +9,7 @@ hide:
 
 The HPC training event on using Singularity containers provides participants with a comprehensive introduction to container technology and its advantages in high-performance computing environments.
 
-- Date: Oct 16th, 2024
+- Date: Oct 16th 2024
 - Location: Virtual
 - Time: 2:30 PM - 3:30 PM
 

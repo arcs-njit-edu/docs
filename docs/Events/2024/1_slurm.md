@@ -9,7 +9,7 @@ hide:
 
 Join us for an informative webinar designed to introduce researchers, scientists, and HPC users to the fundamentals of the SLURM (Simple Linux Utility for Resource Management) workload manager. This virtual  session will equip you with essential skills to effectively utilize HPC resources through SLURM.
 
-- Date: Sep 18th, 2024
+- Date: Sep 18th 2024
 - Location: Virtual
 - Time: 2:30 PM - 3:30 PM
 
