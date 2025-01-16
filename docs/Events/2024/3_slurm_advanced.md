@@ -9,7 +9,7 @@ hide:
 
 Elevate your High-Performance Computing skills with our advanced SLURM webinar! This session is designed for HPC users who are familiar with basic SLURM commands and are ready to dive into more sophisticated job management techniques.
 
-- Date: Nov 20th, 2024
+- Date: Nov 20th 2024
 - Location: Virtual
 - Time: 2:30 PM - 3:30 PM
 

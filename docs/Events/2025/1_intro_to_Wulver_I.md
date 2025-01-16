@@ -7,7 +7,7 @@ hide:
 
 This is the first webinar of the 2025 Spring semester introducing the NJIT HPC environment. This webinar provides basic information about our new High-Performance Computing (HPC) research cluster, [Wulver](wulver.md).
 
-- Date: Jan 22nd, 2025
+- Date: Jan 22nd 2025
 - Location: Virtual
 - Time: 2:30 PM - 3:30 PM
 
