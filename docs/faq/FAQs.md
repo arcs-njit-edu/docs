@@ -15,7 +15,7 @@ Welcome to our most frequently asked questions.
     * For detail information please click [here](cluster_access.md).
 
 ??? question "Why can’t I log in to the HPC?"
-    - It’s possible that your account is not activated on Wulver. Make sure to follow the instructions in [How do I get access to the Wulver HPC cluster?]. Once your account is created, you will receive a confirmation in your NJIT email.
+    - It’s possible that your account is not activated on Wulver. Make sure to follow the instructions in [How do I get access to the Wulver HPC cluster?](). Once your account is created, you will receive a confirmation in your NJIT email.
     - Ensure that your UCID and password are correct.
     - If you are working off-campus, make sure to connect to NJIT VPN before logging into Wulver. Visit https://ist.njit.edu/vpn for more information on VPN installation.
 
@@ -28,7 +28,7 @@ Welcome to our most frequently asked questions.
     - Cluster might be having downtime due to maintenance or other reasons.
 
 ??? question "How do I transfer data to and from the HPC cluster?"
-    - Detailed instructions are given  [here](../clusters/cluster_access.md#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa).
+    - Detailed instructions are given  [here](cluster_access.md#transfer-the-data-from-the-local-machine-to-clusters-or-vice-versa).
 
 ??? question "What security measures should I be aware of when using the HPC cluster?"
     - Do not share your login information with anyone else or allow anyone to login with your account.
@@ -40,29 +40,29 @@ Welcome to our most frequently asked questions.
 ## File Systems / Storage
 
 ??? question "What are the different file storage systems available on Wulver?"
-    - Please visit our [file system](../clusters/Wulver_filesystems.md) page for detailed information. 
+    - Please visit our [file system](Wulver_filesystems.md) page for detailed information. 
 
 ??? question "How can I get more storage?"
     - When your account is active on Wulver, you will have access to following file systems
         - **$HOME** directory - Default quota of 50GB per user and cannot be increased
         - **/project** - Default quota of 2TB per PI group and can be increased by purchasing additional storage at $200/TB for 5 years.
-        - **/scratch** - No quota but files will be deleted after 30 days or sooner if the directory reaches 80% capacity. Users will be notified prior to deletion so they can review and move important files to **/project** if necessary.
-    - For more details, visit [file system](../clusters/Wulver_filesystems.md).
+        - **/scratch** - No quota but files will be deleted after 30 days or sooner if the directory reaches 80% capacity. Users will be notified prior to deletion so they can review and move important files to `/project` if necessary.
+    - For more details, visit [file system](Wulver_filesystems.md).
 
 ??? question "I have an error “disk quota exceeded” while running a job, how can I solve this error?"
-    - First, check which filesystem is causing the error. If it’s in $HOME, it means the 50GB quota has been exceeded. You can either delete files, compress them, or move them to /project. If the error is in /project, you need to compress or delete some files. Alternatively, you can ask your PI to purchase an increase  in the /project quota by emailing us at hpc@njit.edu. You can also run your code in /scratch and, after the simulation, transfer the important files to /project. 
-    - Use **quota_info** command to check the filesystem quota. 
-    - If you are encountering this error while running Python or Jupyter Notebook via Conda, the issue is likely due to Conda packages or cache files stored in $HOME. Use the ```sn p $HOME``` command to view a detailed breakdown of each directory in $HOME, showing how much space it is consuming. If you notice that the .cache directory is consuming a significant amount of space, you should remove it. If the .conda directory is taking up too much space, you need to move the Conda environment to /project. Refer to [this guide](../Software/programming/python/conda.md#importing-to-a-different-location) for detailed steps. 
+    - First, check which filesystem is causing the error. If it’s in `$HOME`, it means the 50GB quota has been exceeded. You can either delete files, compress them, or move them to `/project`. If the error is in `/project`, you need to compress or delete some files. Alternatively, you can ask your PI to purchase an increase  in the `/project` quota by emailing us at hpc@njit.edu. You can also run your code in `/scratch` and, after the simulation, transfer the important files to `/project`. 
+    - Use `quota_info` command to check the filesystem quota. 
+    - If you are encountering this error while running Python or Jupyter Notebook via Conda, the issue is likely due to Conda packages or cache files stored in `$HOME`. Use the ```sn p $HOME``` command to view a detailed breakdown of each directory in $HOME, showing how much space it is consuming. If you notice that the `.cache` directory is consuming a significant amount of space, you should remove it. If the `.conda` directory is taking up too much space, you need to move the Conda environment to `/project`. Refer to [this guide](conda.md#importing-to-a-different-location) for detailed steps. 
 
-??? question "What is /scratch used for?"
-    - Run your code in /scratch and, after the simulation, transfer the important files to /project. 
+??? question "What is `/scratch` used for?"
+    - Run your code in `/scratch` and, after the simulation, transfer the important files to `/project`. 
     - **NB** : This space is not backed up; files will be deleted after 30 days.
 
 ## Jobs and scheduling
 
 ??? question "How do I submit and manage jobs on the Wulver HPC cluster?"
     - We use the SLURM resource manager and scheduler on Wulver for submitting and managing jobs on the compute nodes. 
-    - Check our [SLURM page](../Software/slurm/slurm.md) on the website for more detailed guidance.
+    - Check our [SLURM page](slurm.md) on the website for more detailed guidance.
 
 ??? question "What is Walltime?"
     - Walltime refers to the maximum amount of real-world time a job is allowed to run on the cluster. The actual job may finish earlier. 
@@ -72,14 +72,14 @@ Welcome to our most frequently asked questions.
     ```
 
 ??? question "How can I monitor the status of my jobs?"
-    - For checking and monitoring the status of your job please use [this](../Software/slurm/slurm.md#managing-and-monitoring-jobs) guide for detailed information.
+    - For checking and monitoring the status of your job please use [this](slurm.md#managing-and-monitoring-jobs) guide for detailed information.
 
 ??? question "Where does my output will appear after I submit a job?"
     - Your output will appear in the file which you initialized in your job script which look like below:
     ```bash
     #SBATCH --output=file_name.%j.out # %j expands to slurm JobID
     ```
-    - By default, this file is in the same directory as the job script, unless you specify the working directory via **sbatch**
+    - By default, this file is in the same directory as the job script, unless you specify the working directory via `sbatch`
 
 ??? question "How can I see the status of the cluster?"
     - For checking the cluster load use this [link](https://hpc.njit.edu/Monitor/load.html)
@@ -95,7 +95,7 @@ Welcome to our most frequently asked questions.
     - For example: If you submit a job on Monday with a walltime of 2 days and maintenance is scheduled on Tuesday then your job overlaps with the maintenance schedule. Hence, SLURM will immediately put it on hold until the maintenance is completed and start it later.
 
 ??? question "How will maintenance affect me?"
-    - During the maintenance downtime, logins will be disabled, users will not have access to their stored data in **/project**, **/home** and **/scratch**.
+    - During the maintenance downtime, logins will be disabled, users will not have access to their stored data in `/project`, `/home` and `/scratch`.
     - All jobs that do not end **before 9AM** will be held by the scheduler until the downtime is complete and the systems are returned to service.
 
 ??? question "Will I receive a notification before maintenance?"
@@ -114,7 +114,7 @@ Welcome to our most frequently asked questions.
     - Please first check our already installed [software list](../Software/index.md#software-list), and if you still don’t find it then visit our [guide](../Software/index.md) for detailed guidance on software installation.
 
 ??? question "What are the hardware specifications of the Wulver HPC cluster?"
-    - Please checkout our [Wulver](../clusters/wulver.md) tab for complete details on hardware specifications.
+    - Please check out our [Wulver](wulver.md) page for complete details on hardware specifications.
 
 ??? question "What programming languages are commonly used on the HPC cluster?"
     - Most common ones are C, C++, Fortran, Python, R
@@ -122,17 +122,17 @@ Welcome to our most frequently asked questions.
 ??? question "What are the tools and compilers available on HPC cluster?"
     - Common programming tools include Intel and GNU compilers as well as MPI for multi-node jobs.
     - For GPU acceleration we have CUDA and OpenACC.
-    - Details on these resources are available [here](../Software/programming/compilers.md).
+    - Details on these resources are available [here](compilers.md).
 
 ??? question "How can I optimize my code for parallel processing?"
     - To optimize your code, you can use different parallelization techniques depending on your setup:
         - **MPI** and **OpenMP** for parallelizing code and then specifying the cores.
         - **CUDA** and **OpenACC** for GPU acceleration, especially for compute-heavy tasks.
     - Focus on optimizing **CPU**, **I/O**, **memory**, and **parallelism**.
-    - If you have specific questions about this, please email HPC Help at hpc@njit.edu to request support.
+    - If you have specific questions about this, please email HPC Help at [hpc@njit.edu](mailto:hpc@njit.edu) to request support.
 
 ??? question "Can I request additional resources or customization for my projects?"
-    - Please see [Wulver Usage and Condo Policy](../Policies/wulver_policies.md) for resource allocation details. 
+    - Please see [Wulver Usage and Condo Policy](wulver_policies.md) for resource allocation details. 
     - The Research Computing Advisory Board is working on establishing policies and procedures for requesting additional computing time beyond the standard **300K SU/year**.
 
 ??? question "My software requires a license, how should I proceed?"
@@ -142,8 +142,8 @@ Welcome to our most frequently asked questions.
 ## Miscellaneous
 
 ??? question "What documentation and support resources are available for Wulver users?"
-    - Please visit the [Education and Training tab](../Services/training.md) on our website.
-    - If you have any specific questions which are not covered, please contact us at hpc@njit.edu
+    - Please visit the [Education and Training tab](training.md) on our website.
+    - If you have any specific questions which are not covered, please contact us at [hpc@njit.edu](mailto:hpc@njit.edu)
 
 
 
