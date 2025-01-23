@@ -4,6 +4,28 @@ NJIT HPC provides practical training in high performance computing for students 
 
 ## Training Programs
 
+### 2025 Spring
+<div class="grid cards" markdown>
+
+-   ### [Introduction to Wulver: Getting Started](1_intro_to_Wulver_I.md)
+
+    ---
+
+    This is the first webinar of the 2025 Spring semester introducing the NJIT HPC environment. This webinar provides basic information about our new High-Performance Computing (HPC) research cluster, [Wulver](wulver.md).
+    
+    #### Key Highlights:
+    * Introduction to HPC (High Performance Computing)
+    * Hardware and architecture of Wulver
+    * Guidance on how to obtain an account and login to the cluster 
+    * Data Storage systems
+    * Understanding allocations to utilize the shared resources
+
+    <iframe src="https://njit.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=8c40523b-24d6-48de-90ef-b26d0156af08&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Introduction to Wulver: Getting Started" ></iframe>
+
+    [<span class="octicon--arrow-right-24"></span> Download Slides](../assets/slides/Intro_to_Wulver_I_01_22_2025.pdf)
+
+</div>
+
 ### 2024 Fall
 <div class="grid cards" markdown>
 
