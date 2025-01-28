@@ -7,7 +7,7 @@ Welcome to our most frequently asked questions.
 ??? question "How do I get access to the Wulver HPC cluster?"
     * If you are a student or researcher, your research/faculty advisor will need to request an account on your behalf. 
     * If you are a faculty member, then you can directly email us at hpc@njit.edu for an account.
-    * For individuals non affiliated with NJIT have to contact a faculty member in NJIT to sponsor you a guest account.
+    * For individuals non affiliated with NJIT have to contact a faculty member in NJIT to sponsor you a guest account
     * If you are taking a course that requires computation on Wulver please ask your course instructor to email hpc@njit.edu to request access for the students.
     * For detail information please click [here](cluster_access.md).
 
@@ -33,7 +33,7 @@ Welcome to our most frequently asked questions.
 ??? question "What security measures should I be aware of when using the HPC cluster?"
     - Do not share your login information with anyone else or allow anyone to login with your account.
 
-??? question "Which directory I land on when I login ?"
+??? question "Which directory will I land on when I login?"
     - You will enter into your home directory named under your UCID.
     - Please note that you are on the login node of Wulver. Do not run any computations on the login nodes, as CPU and memory usage are limited per user on these nodes. To perform computations, you need to request resources from the compute nodes via [SLURM](slurm.md).
 
@@ -99,7 +99,7 @@ Welcome to our most frequently asked questions.
     - All jobs that do not end **before 9AM** will be held by the scheduler until the downtime is complete and the systems are returned to service.
 
 ??? question "Will I receive a notification before maintenance?"
-    - Please pay attention to the ***Message of the Day*** when logging in, as it will serve as a reminder for upcoming downtimes or other crucial cluster-related information.
+    - Our regular monthly maintenance cycle is every 2nd Tuesday. If there is a change to this cycle, all users will receive notification.
 
 ??? question "What happens to my jobs during maintenance?"
     - Jobs queued just before the maintenance will be held in **Pending State** and then later gets continued.
