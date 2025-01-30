@@ -66,7 +66,7 @@ NJIT provides High Performance Computing resources to support scientific computi
 
     ---
 
-    !!! abstract "HPC Fall Events"
+    !!! abstract "HPC Spring Events, 2025"
         
         ARCS HPC has hosted the following events this Spring. Please access the HPC training videos to view the webinar recordings and slides.
 
