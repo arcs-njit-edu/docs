@@ -1,6 +1,6 @@
 # FAQs
 
-Welcome to our most frequently asked questions.
+Welcome to our most frequently asked questions. If you cannot find an entry related to your question, please [contact us](contact.md), and we will add it.
 
 ## Login Issues / Access
 
@@ -142,7 +142,7 @@ Welcome to our most frequently asked questions.
 ## Miscellaneous
 
 ??? question "What documentation and support resources are available for Wulver users?"
-    - Please visit the [Education and Training tab](training.md) on our website.
+    - Please visit the [Education and Training tab](../HPC Events and Workshops/Calender/index.md) on our website.
     - If you have any specific questions which are not covered, please contact us at [hpc@njit.edu](mailto:hpc@njit.edu)
 
 

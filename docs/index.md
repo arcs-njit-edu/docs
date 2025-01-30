@@ -41,20 +41,21 @@ NJIT provides High Performance Computing resources to support scientific computi
 
         See [Software Modules](Software/index.md) for list of software packages installed on our cluster.
 
-    !!! njit inline "Lochness to Wulver Migration"
-        
-        For details in migrating the Lochness users to Wulver, please visit [Migration](migration/index.md).
-
     !!! njit inline "Cluster Maintenance Updates"
         
         To see the latest maintenance updates on NJIT cluster, please visit [Cluster Maintenance](news/index.md).
+
     !!! njit inline "HPC Events"
         
-        Check the upcoming events hosted by HPC team and register from [HPC Events](Events/index.md).
+        Check the upcoming events hosted by HPC team and register from [HPC Events](HPC Events and Workshops/Calender/index.md).
 
     !!! njit inline "HPC Trainings and Webinars"
         
-        Make sure to stay up-to-date with the latest webinar sessions on HPC by visiting the [HPC Training](Services/training.md).
+        Make sure to stay up-to-date with the latest webinar sessions on HPC by visiting the [HPC Training](HPC Events and Workshops/Workshop and Training Videos/index.md).
+
+    !!! njit inline "FAQs"
+        
+        For any queries regarding the usage of our cluster, please visit the [FAQs](faq.md) which are organized by topic.
 </div>
 
 <div class="grid cards" markdown>
@@ -67,13 +68,12 @@ NJIT provides High Performance Computing resources to support scientific computi
 
     !!! abstract "HPC Fall Events"
         
-        ARCS HPC has hosted the following events this fall. Please access the HPC training videos to view the webinar recordings and slides.
+        ARCS HPC has hosted the following events this Spring. Please access the HPC training videos to view the webinar recordings and slides.
 
-        * [SLURM Batch System Basics](1_slurm.md)
-        * [Introduction to Containers on Wulver](2_containers.md)
-        * [Job Arrays and Advanced Submission Techniques for HPC](3_slurm_advanced.md)
+        * [Introduction to Wulver: Getting Started](HPC Events and Workshops/Workshop and Training Videos/index.md#introduction-to-wulver-getting-started)
+        * [Introduction to Wulver: Accessing System & Running Jobs](HPC Events and Workshops/Workshop and Training Videos/index.md#introduction-to-wulver-accessing-system-running-jobs)
 
-        For dates and registration, visit [Fall Events](news/2024/09/11/hpc-fall-events).
+        We will soon update [HPC Events](HPC Events and Workshops/Calender/index.md) with the upcoming events.
 
     ---
 
