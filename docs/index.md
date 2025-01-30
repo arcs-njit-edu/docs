@@ -76,9 +76,19 @@ NJIT provides High Performance Computing resources to support scientific computi
         We will soon update [HPC Events](HPC Events and Workshops/Calender/index.md) with the upcoming events.
 
     ---
+    <div class="grid cards" markdown>
 
-    !!! abstract "Wulver Scheduled Maintenance"
-        
-        Wulver will be out of service for maintenance once a month for updates, repairs, and upgrades.  The schedule is 9 a.m. to 9 p.m. the second Tuesday of every month.  During the maintenance period, the logins will be disabled and the jobs that do not end before the maintenance window begins will be held until the maintenance is complete and the cluster is returned to production. For example, if you submit a job the day before maintenance, your job will enter a pending state (you will see job status `PD` when using `squeue -u $LOGNAME`). You can either adjust the walltime or wait until maintenance ends. Please stay informed about maintenance updates at [Cluster Maintenance Updates and News](news/index.md).
+    -    !!! abstract "Wulver Scheduled Maintenance"
+            
+            Wulver will be out of service for maintenance once a month for updates, repairs, and upgrades.  The schedule is 9 a.m. to 9 p.m. the second Tuesday of every month.  During the maintenance period, the logins will be disabled and the jobs that do not end before the maintenance window begins will be held until the maintenance is complete and the cluster is returned to production. For example, if you submit a job the day before maintenance, your job will enter a pending state (you will see job status `PD` when using `squeue -u $LOGNAME`). You can either adjust the walltime or wait until maintenance ends. Please stay informed about maintenance updates at [Cluster Maintenance Updates and News](news/index.md).
+    
+    -    !!! abstract "Open Office Hours"
+            
+            This spring semester, we are offering drop-in office hours every Monday and Wednesday from 2:00 to 4:00 p.m. Stop by to meet with our student consultants and ask any questions you have about using HPC resources. There's no need to create a ticket in advance; if follow-up is needed, the student consultants will open a ticket on your behalf, and you'll receive further instructions. 
 
+             - Date: Every Monday and Wednesday
+             - Location: GITC 2404
+             - Time: 2:00 PM - 4:00 PM
+
+    </div>
 </div>
