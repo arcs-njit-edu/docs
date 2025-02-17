@@ -7,7 +7,15 @@ hide:
 # HPC Events
 
 ## 2025 Spring
+<div class="grid cards" markdown>
+-   ### [Python and Conda Environments in HPC: From Basics to Best Practices](3_conda_training.md)
+    ---
 
+    oin us for an informative webinar designed to offer a basic concept of using Python for High-Performance Computing (HPC) and effectively managing Python environments with Conda. This webinar will empower participants to leverage the power of Python for their scientific computing needs on HPC systems.
+
+    [<span class="octicon--arrow-right-24"></span> Registration and Event Details](3_conda_training.md)
+
+</div>
 <div class="grid cards" markdown>
 
 -    ### Monthly HPC User Meeting
