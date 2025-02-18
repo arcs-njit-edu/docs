@@ -31,6 +31,9 @@ See [Wulver Filesystems](Wulver_filesystems.md) for a different type of shared f
 ## Transfer Your Files
 As part of setting up and running jobs and collecting results, you will want to copy files between your computer and the clusters. We have a few options, and the best for each situation usually depends on the size and number of files you would like to transfer. For most situations, uploading a small number of smaller files through Open OnDemand's upload interface is the best option. This can be done directly through the file viewer interface by clicking the <kbd>Upload</kbd> button and dragging and dropping your files into the upload window. Check the [Ondemand file transfer](../OnDemand/index.md#files) for more details. For more information on other upload methods, see our [transferring data instructions](cluster_access.md#transfer-your-files). 
 
+## Workshop and Training Videos
+Each semester, we host webinars and training sessions. Please check the list of events and register from [HPC Events](HPC_Events_and_Workshops/Calendar/index.md). You can also check the recordings of previously hosted webinars at [HPC Training](HPC_Events_and_Workshops/Workshop_and_Training_Videos/index.md).
+
 ## Linux
 Our cluster runs Red Hat Enterprise Linux 8, utilizing the bash (or zsh set via https://myucid.njit.edu) command line interface (CLI).  A basic familiarity with Linux commands is required for interacting with the clusters. We have a list of commonly used commands here. We periodically run an Intro to Linux Training to get you started, see our Events for upcoming training. There are also many excellent beginner tutorials available for free online, including the following:
 
