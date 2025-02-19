@@ -72,6 +72,7 @@ print(df.to_markdown(index=False))
 ```python exec="on"
 import pandas as pd 
 import numpy as np
+from tabulate import tabulate
 df = pd.read_csv('docs/assets/tables/slurm_qos.csv')
 # Replace NaN with 'NA'
 df.replace(np.nan, 'NA', inplace=True)
@@ -161,10 +162,41 @@ The `debug` QoS in Slurm is intended for debugging and testing jobs. It usually 
     #SBATCH --time=7:59:00  # D-HH:MM:SS, Maximum allowable Wall Time 8 hours
     #SBATCH --mem-per-cpu=4000M
     ```
-
+To submit the jobs, `sbatch` command.
 ### Interactive session on a compute node
 
- Interactive sessions are useful for tasks that require direct interaction with the compute node's resources and software environment. To start an interactive session on the compute node, use the following after logging into Wulver
+ Interactive sessions are useful for tasks that require direct interaction with the compute node's resources and software environment. To start an interactive session on the compute node, use `interactive` after logging into Wulver.
+
+#### The `interactive` Command
+We provide a built-in shortcut command, `interactive`, that allows you to quickly and easily request a session in compute node.
+
+The `interactive` command acts as a convenient wrapper for Slurm’s [salloc](https://slurm.schedmd.com/salloc.html) command. Similar to [sbatch](https://slurm.schedmd.com/sbatch.html), which is used for batch jobs, `salloc` is specifically designed for interactive jobs. 
+
+```bash
+$ interactive -h
+Usage: interactive -a ACCOUNT -q QOS -j JOB_TYPE
+Starts an interactive SLURM job with the required account and QoS settings.
+
+Required options:
+  -a ACCOUNT       Specify the account to use.
+  -q QOS           Specify the quality of service (QoS).
+  -j JOB_TYPE      Specify the type of job: 'cpu' for CPU jobs or 'gpu' for GPU jobs.
+
+Example: Run an interactive GPU job with the 'test' account and 'test' QoS:
+  /apps/site/bin/interactive -a test -q test -j gpu
+
+This will launch an interactive job on the 'gpu' partition with the 'test' account and QoS 'test',
+using 1 GPU, 1 CPU, and a walltime of 1 hour by default.
+
+Optional parameters to modify resources:
+  -n NTASKS        Specify the number of CPU tasks (Default: 1).
+  -t WALLTIME      Specify the walltime in hours (Default: 1).
+  -g GPU           Specify the number of GPUs (Only for GPU jobs, Default: 1).
+  -p PARTITION     Specify the SLURM partition (Default: 'general' for CPU jobs, 'gpu' for GPU jobs).
+
+Use '-h' to display this help message.
+```
+
 === "CPU Nodes"
 
      ```bash
