@@ -200,20 +200,43 @@ Use '-h' to display this help message.
 === "CPU Nodes"
 
      ```bash
-     srun -p general -n 1 --ntasks-per-node=8 --qos=standard --account=PI_ucid --mem-per-cpu=2G --time=59:00 --pty bash
+     $ interactive -a $PI_UCID -q standard -j cpu
+     Starting an interactive session with the general partition and 1 core for 01:00:00 of walltime in standard priority
+     salloc: Pending job allocation 466577
+     salloc: job 466577 queued and waiting for resources
+     salloc: job 466577 has been allocated resources
+     salloc: Granted job allocation 466577
+     salloc: Nodes n0103 are ready for job   
      ```
 === "GPU Nodes"
 
      ```bash
-     srun -p gpu -n 1 --ntasks-per-node=8 --qos=standard --account=PI_ucid --mem-per-cpu=2G --gres=gpu:2 --time=59:00 --pty bash
+     $ interactive -a $PI_UCID -q standard -j gpu
+     Starting an interactive session with the GPU partition, 1 core and 1 GPU for 01:00:00 of walltime in standard priority
+     salloc: Pending job allocation 466579
+     salloc: job 466579 queued and waiting for resources
+     salloc: job 466579 has been allocated resources
+     salloc: Granted job allocation 466579
+     salloc: Nodes n0048 are ready for job
      ```
 === "Debug Nodes"
 
      ```bash
-     srun -p debug -n 1 --ntasks-per-node=4 --qos=debug --account=PI_ucid --mem-per-cpu=2G --time=59:00 --pty bash
+     $ interactive -a $PI_UCID -q debug -j cpu -p debug
+     Starting an interactive session with the debug partition and 1 core for 01:00:00 of walltime in debug priority
+     salloc: Pending job allocation 466581
+     salloc: job 466581 queued and waiting for resources
+     salloc: job 466581 has been allocated resources
+     salloc: Granted job allocation 466581
+     salloc: Waiting for resource configuration
+     salloc: Nodes n0127 are ready for job
      ```
 
-Replace `PI_ucid` with PI's NJIT UCID. 
+Replace `$PI_UCID` with PI's NJIT UCID. 
+Now, once you get the confirmation of job allocation, you can either use `srun` or `ssh` to access the particular node allocated to the job. 
+
+#### Customizing Your Resources
+Please note that, by default, this interactive session will request 1 core (for CPU jobs), 1 GPU (for GPU jobs), with a 1-hour walltime.
 
 !!! warning
 
