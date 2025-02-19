@@ -50,15 +50,11 @@ The most common commands are:
 ## Using SLURM on Wulver
 In Wulver, SLURM submission will have new requirements, intended for a more fair sharing of resources without impinging on investor/owner rights to computational resources.  All jobs must now be charged to a PI-group (Principal Investigator) account.
 
-1. To specify the job, use `--account=PI_ucid`.  You can specify `--account` as either an `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`sacctmgr show user $LOGNAME`, and you can find the PI's UCID under `Def Acct` column.
+### Account (Use `--account`)
+To specify the job, use `--account=PI_ucid`.  You can specify `--account` as either an `sbatch` or `#SBATCH` parameter. If you don't know the UCID of PI, use`quota_info`, and you will see SLURM account you sre associated with. Check [`quota_info`](#check-quota) for details.
 
-```bash
-   [ab1234@login01 ~]$ sacctmgr show user $LOGNAME
-      User   Def Acct    Admin
----------- ----------  ---------
-    ab1234     xy1234      None
-```
-2. Wulver has three partitions, differing in GPUs or RAM available:
+### Partition (Use `--partition`)
+Wulver has three partitions, differing in GPUs or RAM available:
 
 ```python exec="on"
 import pandas as pd 
@@ -68,7 +64,8 @@ df = pd.read_csv('docs/assets/tables/partitions.csv')
 df.replace(np.nan, 'NA', inplace=True)
 print(df.to_markdown(index=False))
 ```
-3. Wulver has three levels of “priority”, utilized under SLURM as Quality of Service (QoS):
+### Priority (Use `--qos`)
+Wulver has three levels of “priority”, utilized under SLURM as Quality of Service (QoS):
 ```python exec="on"
 import pandas as pd 
 import numpy as np
@@ -78,7 +75,7 @@ df = pd.read_csv('docs/assets/tables/slurm_qos.csv')
 df.replace(np.nan, 'NA', inplace=True)
 print(df.to_markdown(index=False))
 ```
-4. **Check Quota**:
+### Check Quota
 
 Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no cost, which can be utilized via `--qos=standard` on the SLURM job. It's important to regularly check the usage of SUs so that users can be aware of their consumption and switch to `--qos=low` to prevent exhausting all allocated SUs. Users can check their quota using the `quota_info UCID` command. 
 ```bash linenums="1"
@@ -86,13 +83,14 @@ Faculty PIs are allocated 300,000 Service Units (SU) per year upon request at no
 [ab1234@login01 ~]$ quota_info $LOGNAME
 Usage for account: xy1234
    SLURM Service Units (CPU Hours): 277557 (300000 Quota)
+     User ab1234 Usage: 1703 CPU Hours (of 277557 CPU Hours)
    PROJECT Storage: 867 GB (of 2048 GB quota)
      User ab1234 Usage: 11 GB (No quota)
    SCRATCH Storage: 791 GB (of 10240 GB quota)
      User ab1234 Usage: 50 GB (No quota)
 HOME Storage ab1234 Usage: 0 GB (of 50 GB quota)
 ```
-Here, `xy1234` represents the UCID of the PI, and "SLURM Service Units (CPU Hours): 277557 (300000 Quota)" indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs. Please ensure that you load the `wulver` module before running the `quota_info` command. This command also displays the storage usage of directories such as `$HOME`, `/project`, and `/scratch`. Users can view both the group usage and individual usage of each storage. In the given example, the group usage from the 2TB project quota is 867 GB, with the user's usage being 11 GB out of that 867 GB. For more details file system quota, see [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
+Here, `xy1234` represents the UCID of the PI, and "SLURM Service Units (CPU Hours): 277557 (300000 Quota)" indicates that members of the PI group have already utilized 277,557 CPU hours out of the allocated 300,000 SUs, and the user `xy1234` utilized 1703 CPU Hours out of 277,557 CPU Hours. This command also displays the storage usage of directories such as `$HOME`, `/project`, and `/scratch`. Users can view both the group usage and individual usage of each storage. In the given example, the group usage from the 2TB project quota is 867 GB, with the user's usage being 11 GB out of that 867 GB. For more details file system quota, see [Wulver Filesystem](get_started_on_Wulver.md#wulver-filesystems).
 
 ### Example of slurm script
 #### Submitting Jobs on CPU Nodes
@@ -236,8 +234,15 @@ Replace `$PI_UCID` with PI's NJIT UCID.
 Now, once you get the confirmation of job allocation, you can either use `srun` or `ssh` to access the particular node allocated to the job. 
 
 #### Customizing Your Resources
-Please note that, by default, this interactive session will request 1 core (for CPU jobs), 1 GPU (for GPU jobs), with a 1-hour walltime. To customize the resources, use the `-h` option for help. Run `interactive -h` for more details.
+Please note that, by default, this interactive session will request 1 core (for CPU jobs), 1 GPU (for GPU jobs), with a 1-hour walltime. To customize the resources, use the `-h` option for help. Run `interactive -h` for more details. Here is an explanation of each flag given below.
 
+```python exec="on"
+import pandas as pd 
+import numpy as np
+df = pd.read_csv('docs/assets/tables/interactive.csv')
+df.replace(np.nan, 'NA', inplace=True)
+print(df.to_markdown(index=False))
+```
 !!! warning
 
     Login nodes are not designed for running computationally intensive jobs. You can use the head node to edit and manage your files, or to run small-scale interactive jobs. The CPU usage is limited per user on the head node. Therefore, for serious computing either submit the job using `sbatch` command or start an interactive session on the compute node.
